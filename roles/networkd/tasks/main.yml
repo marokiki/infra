@@ -1,0 +1,32 @@
+---
+- name: Make systemd-networkd config directory
+  file:
+    path: /etc/systemd/network
+    state: directory
+
+- name: Make .network files
+  template:
+    src: dot.network.j2
+    dest: "/etc/systemd/network/{{ ifname }}.network"
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Pupulate service facts
+  service_facts:
+
+- name: Stop and disable NetwrokManager
+  service:
+    name: NetworkManager
+    state: stopped
+    enabled: false
+  when: "'NetworkManager' in ansible_facts.services"
+
+- name: Start and Enable systemd-networkd
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+  loop:
+    - systemd-networkd
+

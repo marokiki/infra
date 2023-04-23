@@ -1,0 +1,17 @@
+---
+- name: Make resolve file
+  template:
+    src: dot.resolve.j2
+    dest: "/etc/systemd/resolved.conf"
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Start and Enable systemd-resolved
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+  loop:
+    - systemd-resolved
+

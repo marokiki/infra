@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Update apt packages
+      apt:
+        update_cache: true
+        cache_valid_time: 3600
+        upgrade: full
+      when: ansible_distribution in ['Ubuntu', 'Debian']
+
+  roles:
+    - role: networkd
+      vars_files:
+        - ../host_vars/{{ ansible_hostname }}
+    - role: resolved
+
+
