@@ -1,0 +1,29 @@
+---
+- name: Install sshd
+  pacman:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - openssh
+  when: ansible_distribution == 'Archlinux'
+
+- name: Install sshd
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - openssh-server
+  when: ansible_distribution in ['Debian', 'Ubuntu']
+
+- name: Make sshd file
+  template:
+    src: dot.sshd.j2
+    dest: "/etc/ssh/sshd_config"
+    owner: root
+    group: root
+    mode: 0644
+
+- nmae: Restart sshd
+  service:
+    name: sshd
+    state: restarted
