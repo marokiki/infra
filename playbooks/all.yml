@@ -15,5 +15,6 @@
       vars_files:
         - ../host_vars/{{ ansible_hostname }}
     - role: resolved
+    - role: sshd
 
 
