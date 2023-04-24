@@ -23,7 +23,9 @@
     group: root
     mode: 0644
 
-- nmae: Restart sshd
+- name: Restart sshd
   service:
-    name: sshd
+    name: ssh
     state: restarted
+
+
