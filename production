@@ -2,7 +2,7 @@
 ikazuchi ansible_host=192.168.20.7
 
 [test]
-#flare ansible_host=192.168.20.8
+flare ansible_host=192.168.20.8
 
 [ssh]
 klee ansible_host=192.168.20.2
