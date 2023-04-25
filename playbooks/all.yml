@@ -4,7 +4,9 @@
 
   roles:
     - role: apt-update
+      when: ansible_distribution in ['Debian', 'Ubuntu']
     - role: yay-update
+      when: ansible_distribution in ['Archlinux']
     - role: networkd
       vars_files:
         - ../host_vars/{{ ansible_hostname }}
