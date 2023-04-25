@@ -10,7 +10,7 @@
         upgrade: full
       when: ansible_distribution in ['Ubuntu', 'Debian']
 
-    - name: Update packman packages
+    - name: Update pacman packages
       pacman:
         update_cache: true
         upgrade: full
