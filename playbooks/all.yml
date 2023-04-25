@@ -2,21 +2,9 @@
 - hosts: all
   become: yes
 
-  tasks:
-    - name: Update apt packages
-      apt:
-        update_cache: true
-        cache_valid_time: 3600
-        upgrade: full
-      when: ansible_distribution in ['Ubuntu', 'Debian']
-
-    - name: Update pacman packages
-      pacman:
-        update_cache: true
-        upgrade: yes
-      when: ansible_distribution in ['Archlinux']
-
   roles:
+    - role: apt-update
+    - role: yay-update
     - role: networkd
       vars_files:
         - ../host_vars/{{ ansible_hostname }}
