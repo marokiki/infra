@@ -1,4 +1,8 @@
 ---
+- name: Gather the package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
 - name: Clone yay
   git:
     repo: https://aur.archlinux.org/yay.git
