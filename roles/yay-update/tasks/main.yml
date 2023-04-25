@@ -20,7 +20,7 @@
   when: (ansible_distribution in ['Archlinux'] 
         and 'yay' not in ansible_facts.packages)
 
-- name: Update pacman packages
+- name: Update yay packages
   yay:
     update_cache: yes
     upgrade: yes
