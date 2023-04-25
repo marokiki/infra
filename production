@@ -7,3 +7,5 @@ ikazuchi.local ansible_host=192.168.20.7
 [ssh]
 klee.local ansible_host=192.168.20.2
 
+[file]
+tatsumaki ansible_host=192.168.20.6
