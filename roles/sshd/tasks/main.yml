@@ -25,7 +25,14 @@
 
 - name: Restart sshd
   service:
+    name: sshd
+    state: restarted
+  when: ansible_distribution == 'Archlinux'
+
+- name: Restart sshd
+  service:
     name: ssh
     state: restarted
+  when: ansible_distribution in ['Debian', 'Ubuntu']
 
 
