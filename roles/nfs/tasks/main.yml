@@ -1,0 +1,16 @@
+---
+- name: Install nfs
+  pacman:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - nfs-utils
+  when: ansible_distribution == 'Archlinux'
+
+- name: Install nfs
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - nfs-kernel-server
+  when: ansible_distribution in ['Debian', 'Ubuntu']
