@@ -13,7 +13,7 @@
     - name: Update pacman packages
       pacman:
         update_cache: true
-        upgrade: full
+        upgrade: yes
       when: ansible_distribution in ['Archlinux']
 
   roles:
