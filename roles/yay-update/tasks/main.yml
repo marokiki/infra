@@ -3,22 +3,21 @@
   git:
     repo: https://aur.archlinux.org/yay.git
     dest: /tmp/yay
-  when: (ansible_distribution in ['Archlinux'] and 'yay' not in ansible_facts.packages)
+  when: "'yay' not in ansible_facts.packages"
 
 - name: Install yay
   command:
     cmd: makepkg -si
     chdir: /tmp/yay
-  when: (ansible_distribution in ['Archlinux'] and 'yay' not in ansible_facts.packages)
+  when: "'yay' not in ansible_facts.packages"
 
 - name: Remove yay
   file:
     path: /tmp/yay
     state: absent
-  when: (ansible_distribution in ['Archlinux'] and 'yay' not in ansible_facts.packages)
+  when: "'yay' not in ansible_facts.packages"
 
 - name: Update yay packages
   yay:
     update_cache: yes
     upgrade: yes
-  when: ansible_distribution in ['Archlinux']
