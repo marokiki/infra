@@ -10,6 +10,12 @@
         upgrade: full
       when: ansible_distribution in ['Ubuntu', 'Debian']
 
+    - name: Update packman packages
+      pacman:
+        update_cache: true
+        upgrade: full
+      when: ansible_distribution in ['Archlinux']
+
   roles:
     - role: networkd
       vars_files:
