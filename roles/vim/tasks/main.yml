@@ -1,0 +1,12 @@
+---
+# Installation
+- import_tasks: apt.yml
+  when: ansible_distribution in ['Debian', 'Ubuntu']
+- import_tasks: pacman.yml
+  when: ansible_distribution == 'Archlinux'
+
+- name: make vimrc
+  template:
+    src: dot.vimrc.j2
+    dest: "~/.vimrc"
+    

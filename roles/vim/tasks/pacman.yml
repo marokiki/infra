@@ -1,0 +1,7 @@
+---
+- name: Install vim with pacman
+  pacman:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - gvim
