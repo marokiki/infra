@@ -39,6 +39,6 @@
   shell: "source ~/.zshrc"
 
 - name: set zsh as default shell
-  shell: "chsh -s /bin/zsh"
+  shell: "chsh -s /usr/bin/zsh"
 
 
