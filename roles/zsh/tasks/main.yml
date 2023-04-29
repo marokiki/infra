@@ -38,4 +38,7 @@
 - name: source .zshrc
   shell: "source ~/.zshrc"
 
+- name: set zsh as default shell
+  shell: "chsh -s /bin/zsh"
+
 
