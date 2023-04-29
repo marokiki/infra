@@ -1,7 +1,12 @@
 ---
+- name: Gather the package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
 - name: Install vim with pacman
   pacman:
     name: "{{ item }}"
     state: present
   loop:
     - gvim
+  when: "'gvim' not in ansible_facts.packages"
