@@ -1,0 +1,17 @@
+---
+- name: Gather the package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+- name: Install tmux with package manager
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - tmux
+  when: "'tmux' not in ansible_facts.packages"
+
+- name: make .tmux.conf
+  template:
+    src: dot.tmux.conf.j2
+    dest: "~/.tmux.conf"

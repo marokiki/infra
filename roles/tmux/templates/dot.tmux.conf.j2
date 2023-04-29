@@ -1,0 +1,39 @@
+set-option -g default-shell /bin/zsh
+
+set-option -g default-terminal screen-256color
+set -g terminal-overrides 'xterm:colors=256'
+
+set-option -g status-left '#H:[#P]'
+set-option -g status-right '#(wifi) #(battery --tmux) [%Y-%m-%d(%a) %H:%M]'
+
+set-option -g status-position top
+set-option -g status-left-length 90
+set-option -g status-right-length 90
+set-option -g status-interval 1
+
+unbind-key C-b
+set-option -g prefix C-z
+bind-key C-z send-prefix
+
+set-option -g base-index 1
+
+set-option -g status-justify centre
+set-option -g status-bg "colour238"
+set-option -g status-fg "colour255"
+
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+bind | split-window -h
+bind - split-window -v
+
+set-option -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'copy-mode -e'"
+
+set-window-option -g mode-keys vi
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "xsel -bi"
+bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xsel -bi"
