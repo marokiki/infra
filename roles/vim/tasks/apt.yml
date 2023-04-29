@@ -5,3 +5,9 @@
     state: present
   loop:
     - vim-gtk3
+
+- name: set default editor
+  file:
+    path: /etc/alternatives/editor
+    state: link
+    src: /usr/bin/vim.gtk3
