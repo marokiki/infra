@@ -14,5 +14,6 @@
     - role: sshd
     - role: vim
     - role: tmux
+    - role: zsh
 
 
