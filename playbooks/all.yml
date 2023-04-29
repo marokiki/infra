@@ -12,5 +12,6 @@
         - ../host_vars/{{ ansible_hostname }}
     - role: resolved
     - role: sshd
+    - role: vim
 
 
