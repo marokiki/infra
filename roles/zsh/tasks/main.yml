@@ -20,10 +20,10 @@
     src: dot.zshrc.j2
     dest: "~/.zshrc"
   
-- name: make manajro-zsh-config
+- name: make manjro-zsh-config
   copy:
-    src: manajro-zsh-config
-    dest: "~/.manajro-zsh-config"
+    src: manjro-zsh-config
+    dest: "~/.manjro-zsh-config"
 
 - name: make manjaro-zsh-prompt
   copy:
