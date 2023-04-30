@@ -1,0 +1,20 @@
+--- 
+# Install packages unique to package manager
+- import_tasks: apt.yml
+  when: ansible_distribution in ['Debian', 'Ubuntu']
+- import_tasks: pacman.yml
+  when: ansible_distribution == 'Archlinux'
+
+- name: Install package
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - git
+    - curl
+    - wget
+    - unzip
+    - htop
+    - tree
+
+    

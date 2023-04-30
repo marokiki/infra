@@ -1,0 +1,9 @@
+--- 
+- name: Install packages unique to pacman
+  pacman:
+    name: "{{ item }}"
+    state: present
+  loop:
+   - unarchiver
+   - python
+   - python-pip
