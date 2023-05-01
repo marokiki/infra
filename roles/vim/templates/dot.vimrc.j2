@@ -62,6 +62,7 @@ augroup MyXML
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
 augroup END
 
+if has("autocmd")
   augroup redhat
     autocmd BufRead *.txt set tw=78
     autocmd BufReadPost *
