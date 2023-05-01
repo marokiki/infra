@@ -10,10 +10,9 @@
   when: "'yay' not in ansible_facts.packages"
 
 - name: Install yay
-  command:
+  shell:
     cmd: makepkg -si
     chdir: /tmp/yay
-    become: no
   when: "'yay' not in ansible_facts.packages"
 
 - name: Remove yay
@@ -26,4 +25,4 @@
   yay:
     update_cache: yes
     upgrade: yes
-    become: no
+  become: no
