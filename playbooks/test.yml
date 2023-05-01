@@ -5,4 +5,5 @@
   roles:
    - role: essentials
    - role: yay-update
+     when: ansible_distribution == 'Archlinux'
    - role: vim
