@@ -5,3 +5,4 @@
   roles:
    - role: vim
    - role: zsh
+   - role: tmux
