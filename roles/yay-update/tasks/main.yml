@@ -20,6 +20,7 @@
   shell:
     cmd: makepkg -si
     chdir: /tmp/yay
+  become: no
   when: "'yay' not in ansible_facts.packages"
 
 - name: Remove yay
