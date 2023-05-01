@@ -9,5 +9,5 @@
   template:
     src: dot.vimrc.j2
     dest: "{{ home_dir }}/.vimrc"
-    remote_src: yes
+    force: yes
     
