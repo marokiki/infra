@@ -16,9 +16,9 @@
     path: "{{ home_dir }}/.zshrc"
   register: zshrc_file
 
-- name: Install zplug
-  shell: "curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh"
-  when: not zshrc_file.stat.exists
+#- name: Install zplug
+#  shell: "curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh"
+#  when: not zshrc_file.stat.exists
 
 - name: make .zshrc
   template:
