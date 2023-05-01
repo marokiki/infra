@@ -11,9 +11,14 @@
     - zsh
   when: "'zsh' not in ansible_facts.packages"
 
+- name: Check file exists
+  ansible.builtin.stat:
+    path: "~/.zshrc"
+  register: zshrc_file
+
 - name: Install zplug
   shell: "curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh"
-  when: "'zplug' not in ansible_facts.packages"
+  when: not zshrc_file.stat.exists
 
 - name: make .zshrc
   template:
