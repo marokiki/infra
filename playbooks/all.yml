@@ -3,9 +3,9 @@
   become: yes
 
   roles:
+    - role: essentials
     - role: apt-update
       when: ansible_distribution in ['Debian', 'Ubuntu']
-    - role: essentials
     - role: yay-update
       when: ansible_distribution in ['Archlinux']
     - role: networkd
