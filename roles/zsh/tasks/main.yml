@@ -35,9 +35,6 @@
     src: .p10k.zsh
     dest: "~/.p10k.zsh"
   
-- name: source .zshrc
-  shell: "source ~/.zshrc"
-
 - name: set zsh as default shell
   shell: "chsh -s /usr/bin/zsh"
 
