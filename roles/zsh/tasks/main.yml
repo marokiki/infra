@@ -43,6 +43,12 @@
     src: .p10k.zsh
     dest: "{{ home_dir }}/.p10k.zsh"
     force: yes
+
+- name: make z.sh
+  copy:
+    src: z.sh
+    dest: "{{ home_dir }}/z.sh"
+    force: yes
   
 - name: set zsh as default shell
   become: yes
