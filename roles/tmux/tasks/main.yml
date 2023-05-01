@@ -14,4 +14,4 @@
 - name: make .tmux.conf
   template:
     src: dot.tmux.conf.j2
-    dest: "~/.tmux.conf"
+    dest: "/home/segre/.tmux.conf"
