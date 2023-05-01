@@ -11,4 +11,4 @@ klee ansible_host=192.168.20.2
 tatsumaki ansible_host=192.168.20.6
 
 [vm]
-manaka ansible_host=192.168.20.30
+manaka ansible_host=192.168.20.10
