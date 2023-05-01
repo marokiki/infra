@@ -13,7 +13,7 @@
 
 - name: Check file exists
   ansible.builtin.stat:
-    path: "~/.zshrc"
+    path: "{{ home_dir }}/.zshrc"
   register: zshrc_file
 
 - name: Install zplug
@@ -23,22 +23,22 @@
 - name: make .zshrc
   template:
     src: dot.zshrc.j2
-    dest: "~/.zshrc"
+    dest: "{{ home_dir }}/.zshrc"
   
 - name: make manjaro-zsh-config
   copy:
     src: manjaro-zsh-config
-    dest: "~/.manjaro-zsh-config"
+    dest: "{{ home_dir }}/.manjaro-zsh-config"
 
 - name: make manjaro-zsh-prompt
   copy:
     src: manjaro-zsh-prompt
-    dest: "~/.manjaro-zsh-prompt"
+    dest: "{{ home_dir }}/.manjaro-zsh-prompt"
 
 - name: make .p10k.zsh
   copy:
     src: .p10k.zsh
-    dest: "~/.p10k.zsh"
+    dest: "{{ home_dir }}/.p10k.zsh"
   
 - name: set zsh as default shell
   shell: "chsh -s /usr/bin/zsh"

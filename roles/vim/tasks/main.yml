@@ -8,5 +8,5 @@
 - name: make vimrc
   template:
     src: dot.vimrc.j2
-    dest: "~/.vimrc"
+    dest: "{{ home_dir }}/.vimrc"
     
