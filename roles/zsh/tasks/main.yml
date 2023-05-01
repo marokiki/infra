@@ -41,6 +41,10 @@
     dest: "{{ home_dir }}/.p10k.zsh"
   
 - name: set zsh as default shell
-  shell: "chsh -s /usr/bin/zsh"
+  become: yes
+  user:
+    name: "{{ user_name }}"
+    shell: /usr/bin/zsh
+
 
 
