@@ -24,21 +24,25 @@
   template:
     src: dot.zshrc.j2
     dest: "{{ home_dir }}/.zshrc"
+    force: yes
   
 - name: make manjaro-zsh-config
   copy:
     src: manjaro-zsh-config
     dest: "{{ home_dir }}/.manjaro-zsh-config"
+    force: yes
 
 - name: make manjaro-zsh-prompt
   copy:
     src: manjaro-zsh-prompt
     dest: "{{ home_dir }}/.manjaro-zsh-prompt"
+    force: yes
 
 - name: make .p10k.zsh
   copy:
     src: .p10k.zsh
     dest: "{{ home_dir }}/.p10k.zsh"
+    force: yes
   
 - name: set zsh as default shell
   become: yes
