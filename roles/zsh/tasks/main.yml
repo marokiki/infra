@@ -41,7 +41,7 @@
 - name: make p10k.zsh
   copy:
     src: p10k.zsh
-    dest: "{{ home_dir }}/p10k.zsh"
+    dest: "/usr/share/p10k.zsh"
     force: yes
 
 - name: make z.sh
@@ -93,6 +93,12 @@
   copy:
     src: zsh-syntax-highlighting
     dest: /usr/share/zsh/plugins/
+    force: yes
+
+- name: make zsh-theme-powerlevel10k
+  copy:
+    src: zsh-theme-powerlevel10k
+    dest: /usr/share/
     force: yes
   
 - name: make p10k-portable.zsh
