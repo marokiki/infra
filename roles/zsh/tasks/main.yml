@@ -50,6 +50,18 @@
     dest: "{{ home_dir }}/z.sh"
     force: yes
   
+- name: make zsh-autosuggestions.zsh
+  copy:
+    src: zsh-autosuggestions.zsh
+    dest: /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    force: yes
+
+- name: make zsh-history-substring-search.zsh
+  copy:
+    src: zsh-history-substring-search.zsh
+    dest: /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+    force: yes
+  
 - name: set zsh as default shell
   become: yes
   user:
