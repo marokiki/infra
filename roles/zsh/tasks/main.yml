@@ -68,6 +68,15 @@
     group: root
     recurse: yes
   
+- name: make zsh-syntax-highlighting directory if not exists
+  file:
+    path: /usr/share/zsh/plugins/zsh-syntax-highlighting
+    state: directory
+    mode: 0755
+    owner: root
+    group: root
+    recurse: yes
+  
 - name: make zsh-autosuggestions.zsh
   copy:
     src: zsh-autosuggestions.zsh
@@ -79,7 +88,19 @@
     src: zsh-history-substring-search.zsh
     dest: /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
     force: yes
+
+- name: make zsh-syntax-highlighting.zsh
+  copy:
+    src: zsh-syntax-highlighting.zsh
+    dest: /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    force: yes
   
+- name: make p10k-portable.zsh
+  copy:
+    src: p10k-portable.zsh
+    dest: /usr/share/zsh/p10k-portable.zsh
+    force: yes
+
 - name: set zsh as default shell
   become: yes
   user:
