@@ -50,7 +50,7 @@
 - name: make p10k.zsh
   copy:
     src: p10k.zsh
-    dest: "/usr/share/p10k.zsh"
+    dest: "/usr/share/zsh/p10k.zsh"
     force: yes
 
 - name: make z.sh
