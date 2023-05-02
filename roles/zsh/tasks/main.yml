@@ -49,6 +49,24 @@
     src: z.sh
     dest: "{{ home_dir }}/z.sh"
     force: yes
+
+- name: make zsh-autosuggestions directory if not exists
+  file:
+    path: /usr/share/zsh/plugins/zsh-autosuggestions
+    state: directory
+    mode: 0755
+    owner: root
+    group: root
+    recurse: yes
+  
+- name: make zsh-history-substring-search directory if not exists
+  file:
+    path: /usr/share/zsh/plugins/zsh-history-substring-search
+    state: directory
+    mode: 0755
+    owner: root
+    group: root
+    recurse: yes
   
 - name: make zsh-autosuggestions.zsh
   copy:
