@@ -80,19 +80,19 @@
 - name: make zsh-autosuggestions
   copy:
     src: zsh-autosuggestions
-    dest: /usr/share/zsh/plugins/zsh-autosuggestions
+    dest: /usr/share/zsh/plugins/
     force: yes
 
 - name: make zsh-history-substring-search
   copy:
     src: zsh-history-substring-search
-    dest: /usr/share/zsh/plugins/zsh-history-substring-search
+    dest: /usr/share/zsh/plugins/
     force: yes
 
 - name: make zsh-syntax-highlighting
   copy:
     src: zsh-syntax-highlighting
-    dest: /usr/share/zsh/plugins/zsh-syntax-highlighting/
+    dest: /usr/share/zsh/plugins/
     force: yes
   
 - name: make p10k-portable.zsh
