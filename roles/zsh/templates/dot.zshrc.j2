@@ -56,3 +56,21 @@ fi
 HISTSIZE=10000
 SAVEHIST=10000
 zplug load
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt append_history
+setopt extended_history
+setopt hist_allow_clobber
+setopt hist_expire_dups_first
+setopt hist_reduce_blanks
+setopt share_history
+setopt hist_ignore_all_dups
+
+stty -ixon
+
+bindkey -e
+bindkey '^S' history-incremental-search-forward
+bindkey '^P' history-beginning-search-backward
+bindkey '^N' history-beginning-search-forward
