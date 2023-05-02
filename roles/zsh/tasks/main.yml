@@ -24,18 +24,27 @@
   template:
     src: dot.zshrc.j2
     dest: "{{ home_dir }}/.zshrc"
+    mode: 0755
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
     force: yes
   
 - name: make manjaro-zsh-config
   copy:
     src: manjaro-zsh-config
     dest: "{{ home_dir }}/.manjaro-zsh-config"
+    mode: 0755
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
     force: yes
 
 - name: make manjaro-zsh-prompt
   copy:
     src: manjaro-zsh-prompt
     dest: "{{ home_dir }}/.manjaro-zsh-prompt"
+    mode: 0755
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
     force: yes
 
 - name: make p10k.zsh
@@ -48,6 +57,9 @@
   copy:
     src: z.sh
     dest: "{{ home_dir }}/z.sh"
+    mode: 0755
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
     force: yes
 
 - name: make zsh-autosuggestions directory if not exists
