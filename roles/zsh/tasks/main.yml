@@ -102,7 +102,6 @@
     force: yes
 
 - name: set zsh as default shell
-  become: yes
   user:
     name: "{{ user_name }}"
     shell: /usr/bin/zsh
