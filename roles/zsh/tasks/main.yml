@@ -77,22 +77,22 @@
     group: root
     recurse: yes
   
-- name: make zsh-autosuggestions.zsh
+- name: make zsh-autosuggestions
   copy:
-    src: zsh-autosuggestions.zsh
-    dest: /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    src: zsh-autosuggestions
+    dest: /usr/share/zsh/plugins/zsh-autosuggestions
     force: yes
 
-- name: make zsh-history-substring-search.zsh
+- name: make zsh-history-substring-search
   copy:
-    src: zsh-history-substring-search.zsh
-    dest: /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+    src: zsh-history-substring-search
+    dest: /usr/share/zsh/plugins/zsh-history-substring-search
     force: yes
 
-- name: make zsh-syntax-highlighting.zsh
+- name: make zsh-syntax-highlighting
   copy:
-    src: zsh-syntax-highlighting.zsh
-    dest: /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    src: zsh-syntax-highlighting
+    dest: /usr/share/zsh/plugins/zsh-syntax-highlighting/
     force: yes
   
 - name: make p10k-portable.zsh
