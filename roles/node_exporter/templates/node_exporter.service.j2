@@ -1,0 +1,12 @@
+[Unit]
+Description=Node exporter for prometheus
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/default/node_exporter
+ExecStart=/opt/node_exporter/node_exporter $OPTIONS
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
