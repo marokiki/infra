@@ -76,3 +76,8 @@ bindkey -e
 bindkey '^S' history-incremental-search-forward
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
+
+{% if os.path.exists('{{ home_dir }}/.p10k.zsh') %}
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+{% endif %}
