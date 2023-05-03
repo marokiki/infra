@@ -12,3 +12,6 @@ tatsumaki ansible_host=192.168.20.6
 
 [vm]
 manaka ansible_host=192.168.20.10
+
+[observe]
+aroma ansible_host=192.168.20.11
