@@ -10,7 +10,7 @@
     repo: https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz
     dest: /tmp/node_exporter
     when: "'node_exporter' not in services.services"
-  
+
 - Name: Unarchive node_exporter
   unarchive:
     src: /tmp/node_exporter/node_exporter-1.5.0.linux-amd64.tar.gz
@@ -35,7 +35,7 @@
     owner: root
     group: root
     when: "'node_exporter' not in services.services"
-  
+
 - Name: Daemon-reload, start and enable node_exporter
   ansible.builtin.systemd:
     daemon_reload: yes
