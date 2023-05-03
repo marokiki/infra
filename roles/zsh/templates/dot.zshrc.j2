@@ -26,6 +26,8 @@ alias tmux='tmux -u2'
 alias cxx='g++ -std=c++17 -Wall -O2 -g -fsanitize=undefined -D_GLIBCXX_DEBUG'
 alias pdf="evince"
 
+export EDITOR=vim
+
 # tmux open
 count=`ps aux | grep tmux | grep -v grep | wc -l`
 if test $count -eq 0; then
