@@ -11,10 +11,15 @@
     - zsh
   when: "'zsh' not in ansible_facts.packages"
 
-- name: Check file exists
+- name: Check zshrc exists
   ansible.builtin.stat:
     path: "{{ home_dir }}/.zshrc"
   register: zshrc_file
+
+- name: Check p10k exists
+  ansible.builtin.stat:
+    path: "{{ home_dir }}/.p10k.zsh"
+  register: p10k_file
 
 #- name: Install zplug
 #  shell: "curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh"
