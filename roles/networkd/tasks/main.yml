@@ -11,7 +11,7 @@
     owner: root
     group: root
     mode: 0644
-    when: bridge is not defined
+    when: bridge is false
 
 - name: Make .network files for bridge
   template:
@@ -20,7 +20,7 @@
     owner: root
     group: root
     mode: 0644
-    when: bridge is defined
+    when: bridge is true
 
 - name: Make .network files for bridge interface
   template:
@@ -29,7 +29,7 @@
     owner: root
     group: root
     mode: 0644
-    when: bridge is defined
+    when: bridge is true
 
 - name: Make .netdev files for bridge
   template:
@@ -38,7 +38,7 @@
     owner: root
     group: root
     mode: 0644
-    when: bridge is defined
+    when: bridge is true
 
 - name: Pupulate service facts
   service_facts:
