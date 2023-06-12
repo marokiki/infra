@@ -4,13 +4,41 @@
     path: /etc/systemd/network
     state: directory
 
-- name: Make .network files
+- name: Make .network files for not bridge 
   template:
     src: dot.network.j2
     dest: "/etc/systemd/network/{{ ifname }}.network"
     owner: root
     group: root
     mode: 0644
+    when: bridge is not defined
+
+- name: Make .network files for bridge
+  template:
+    src: dot.network.bridge.j2
+    dest: "/etc/systemd/network/{{ ifname }}.network"
+    owner: root
+    group: root
+    mode: 0644
+    when: bridge is defined
+
+- name: Make .network files for bridge interface
+  template:
+    src: dot.network.bridge.interface.j2
+    dest: "/etc/systemd/network/br0.network"
+    owner: root
+    group: root
+    mode: 0644
+    when: bridge is defined
+
+- name: Make .netdev files for bridge
+  template:
+    src: dot.netdev.bridge.interface.j2
+    dest: "/etc/systemd/network/br0.netdev"
+    owner: root
+    group: root
+    mode: 0644
+    when: bridge is defined
 
 - name: Pupulate service facts
   service_facts:
