@@ -1,17 +1,11 @@
 [dns]
-ikazuchi ansible_host=192.168.20.7
+ikazuchi ansible_host=192.168.220.12
 
 [test]
-flare ansible_host=192.168.20.8
-
-[ssh]
-klee ansible_host=192.168.20.2
-
-[file]
-tatsumaki ansible_host=192.168.20.6
+flare ansible_host=192.168.220.11
 
 [vm]
-manaka ansible_host=192.168.20.10
+manaka ansible_host=192.168.220.13
 
-[observe]
-aroma ansible_host=192.168.20.11
+[monitor]
+aroma ansible_host=192.168.220.14
