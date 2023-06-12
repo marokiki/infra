@@ -2,3 +2,4 @@ ifname: enp1s0
 ipv4_cidr: 192.168.220.14/24
 gateway: 192.168.20.1
 bridge: false
+bridge_name:
