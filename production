@@ -9,3 +9,17 @@ manaka ansible_host=192.168.220.13
 
 [monitor]
 aroma ansible_host=192.168.220.14
+
+[ssh]
+klee ansible_host=192.168.220.15
+
+[file]
+tatsumaki ansible_host=192.168.220.16
+
+[k8s]
+takenoko-1 ansible_host=192.168.220.21
+takenoko-2 ansible_host=192.168.220.22
+takenoko-3 ansible_host=192.168.220.23
+takenoko-4 ansible_host=192.168.220.24
+takenoko-5 ansible_host=192.168.220.25
+
