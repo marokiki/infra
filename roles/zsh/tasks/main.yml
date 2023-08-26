@@ -66,6 +66,3 @@
   user:
     name: "{{ user_name }}"
     shell: /usr/bin/zsh
-
-
-

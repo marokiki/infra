@@ -13,6 +13,7 @@
   apt:
     name: "{{ item }}"
     state: present
+  become: yes
   loop:
     - unar
     - python3

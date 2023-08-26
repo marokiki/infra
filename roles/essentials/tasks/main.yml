@@ -9,6 +9,7 @@
   package:
     name: "{{ item }}"
     state: present
+  become: yes
   loop:
     - git
     - curl
@@ -18,5 +19,3 @@
     - tree
     - bridge-utils
     - lsof
-
-    
