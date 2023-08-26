@@ -21,9 +21,19 @@
     path: "{{ home_dir }}/.p10k.zsh"
   register: p10k_file
 
-#- name: Install zplug
-#  shell: "curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh"
-#  when: not zshrc_file.stat.exists
+- name: Install zplug via yay
+  kewlfft.aur.aur:
+    use: yay
+    name: zplug
+    state: present
+  become: yes
+  become_user: aur_builder
+
+- name: get zplug via GitHub
+  ansible.builtin.git:
+    repo: https://github.com/zplug/zplug
+    dest: "{{ home_dir }}/.zplug"
+    force: yes
 
 - name: make .zshrc
   template:
@@ -42,6 +52,15 @@
     owner: "{{ user_name }}"
     group: "{{ user_name }}"
     force: yes
+
+- name: make .p10k.zsh
+  file:
+    path: "{{ home_dir }}/.p10k.zsh"
+    state: touch
+    mode: 0755
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
+  when: not p10k_file.stat.exists
   
 - name: set zsh as default shell
   user:

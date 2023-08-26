@@ -3,34 +3,23 @@
   ansible.builtin.package_facts:
     manager: auto
 
-- name: Clone yay
-  git:
-    repo: https://aur.archlinux.org/yay.git
-    dest: /tmp/yay
-  when: "'yay' not in ansible_facts.packages"
+- name: Create the `aur_builder` user
+  become: yes
+  ansible.builtin.user:
+    name: aur_builder
+    create_home: yes
+    group: wheel
 
-- name: Change permission yay directory
-  file:
-    path: /tmp/yay
-    mode: 0777
-    state: directory
-  when: "'yay' not in ansible_facts.packages"
+- name: Allow the `aur_builder` user to run `sudo pacman` without a password
+  become: yes
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/11-install-aur_builder
+    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    create: yes
+    mode: 0644
+    validate: 'visudo -cf %s'
 
-- name: Install yay
-  shell:
-    cmd: makepkg -si
-    chdir: /tmp/yay
-  become: no
-  when: "'yay' not in ansible_facts.packages"
-
-- name: Remove yay
-  file:
-    path: /tmp/yay
-    state: absent
-  when: "'yay' not in ansible_facts.packages"
-
-- name: Update yay packages
-  yay:
-    update_cache: yes
+- name: Upgrade the system using yay
+  kewlfft.aur.aur:
     upgrade: yes
-  become: no
+    use: yay
