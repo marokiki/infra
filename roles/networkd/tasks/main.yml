@@ -12,6 +12,7 @@
     group: root
     mode: 0644
   when: not bridge
+  become: yes
 
 - name: Make .network files for bridge
   template:
@@ -21,6 +22,7 @@
     group: root
     mode: 0644
   when: bridge
+  become: yes
 
 - name: Make .network files for bridge interface
   template:
@@ -30,6 +32,7 @@
     group: root
     mode: 0644
   when: bridge
+  become: yes
 
 - name: Make .netdev files for bridge
   template:
@@ -39,6 +42,7 @@
     group: root
     mode: 0644
   when: bridge
+  become: yes
 
 - name: Pupulate service facts
   service_facts:

@@ -8,6 +8,7 @@
     name: vim
     state: absent
   when: "'vim' in ansible_facts.packages"
+  become: yes
 
 - name: Install gvim with pacman
   pacman:
@@ -16,3 +17,4 @@
   loop:
     - gvim
   when: "'gvim' not in ansible_facts.packages"
+  become: yes

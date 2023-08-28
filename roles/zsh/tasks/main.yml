@@ -10,6 +10,7 @@
   loop:
     - zsh
   when: "'zsh' not in ansible_facts.packages"
+  become: yes
 
 - name: Check zshrc exists
   ansible.builtin.stat:
@@ -66,3 +67,4 @@
   user:
     name: "{{ user_name }}"
     shell: /usr/bin/zsh
+  become: yes

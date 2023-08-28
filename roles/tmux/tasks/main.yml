@@ -10,6 +10,7 @@
   loop:
     - tmux
   when: "'tmux' not in ansible_facts.packages"
+  become: yes
 
 - name: make .tmux.conf
   template:
