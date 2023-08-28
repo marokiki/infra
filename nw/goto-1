@@ -1,0 +1,240 @@
+! NEC Portable Internetwork Core Operating System Software
+! IX Series IX2215 (magellan-sec) Software, Version 10.7.18, RELEASE SOFTWARE
+! Compiled Oct 25-Tue-2022 12:37:13 JST #2
+! Last updated Jun 10-Sat-2023 23:26:12 JST
+!
+hostname goto
+timezone +09 00
+!
+username segre password hash 7EAc9cFFd7Af841B783A89107F350b@ administrator
+!
+!
+ip ufs-cache max-entries 20000
+ip ufs-cache enable
+ip route default Tunnel0.0
+ip dhcp enable
+ip access-list dny-all deny ip src any dest any
+ip access-list pmt-all permit ip src any dest any
+ip access-list pmt-dhcp-srv permit udp src 192.168.220.1/32 sport eq 67 dest any dport eq 68
+ip access-list pmt-icmp permit icmp src any dest any
+ip access-list pmt-to-home-int permit ip src 192.168.220.0/24 dest 192.168.200.0/24
+ip access-list pmt-to-srv-int permit ip src 192.168.200.0/24 dest 192.168.220.0/24
+ip access-list dynamic cache 65535
+ip access-list dynamic conntrack access pmt-all
+!
+!
+ipv6 ufs-cache max-entries 10000
+ipv6 ufs-cache enable
+ipv6 prefix ra-servers 240b:250:9800:4a00:220::/80 2592000 604800 on-link autonomous
+ipv6 dhcp enable
+ipv6 access-list block-list deny ip src any dest any
+ipv6 access-list dhcpv6-list permit udp src any sport any dest any dport eq 546
+ipv6 access-list dhcpv6-list permit udp src any sport any dest any dport eq 547
+ipv6 access-list icmpv6-list permit icmp src any dest any
+ipv6 access-list other-list permit ip src any dest any
+ipv6 access-list tunnel-list permit 4 src any dest any
+ipv6 access-list dynamic cache 65535
+ipv6 access-list dynamic dflt-list access other-list
+!
+!
+!
+!
+!
+!
+!
+!
+!
+proxy-dns ip enable
+proxy-dns ip request both
+!
+!
+ssh-server ip enable
+!
+http-server username segre
+http-server ip enable
+!
+!
+ddns enable
+!
+!
+!
+!
+ip dhcp profile dhcpv4-sv
+  dns-server 192.168.1.1
+!
+ip dhcp profile dhcpv4-sv-1
+  assignable-range 192.168.200.128 192.168.200.191
+  subnet-mask 255.255.255.0
+  default-gateway 192.168.200.1
+  dns-server 192.168.200.1
+!
+ip dhcp profile dhcpv4-sv-3
+  assignable-range 192.168.240.128 192.168.240.191
+  subnet-mask 255.255.255.0
+  default-gateway 192.168.240.1
+  dns-server 192.168.240.1
+!
+ip dhcp profile dhcpv4-sv-4
+  assignable-range 192.168.222.128 192.168.222.191
+  subnet-mask 255.255.255.0
+  default-gateway 192.168.222.1
+  dns-server 192.168.222.1
+!
+ip dhcp profile dhcpv4-sv-2
+  assignable-range 192.168.220.168 192.168.220.191
+  subnet-mask 255.255.255.0
+  default-gateway 192.168.220.1
+  dns-server 192.168.220.1
+!
+ipv6 dhcp client-profile dhcpv6-cl
+  option-request dns-servers
+  ia-pd subscriber GigaEthernet2.0 ::/64 eui-64
+  ia-pd subscriber GigaEthernet2:1.1 ::/64 eui-64
+!
+ipv6 dhcp server-profile dhcpv6-sv
+  dns-server dhcp
+!
+ipv6 dhcp server-profile dhcpv6-sv-1
+  dns-server dhcp
+!
+ipv6 dhcp server-profile dhcpv6-sv-2
+  dns-server dhcp
+!
+ipv6 dhcp server-profile dhcpv6-sv-3
+  dns-server dhcp
+!
+ipv6 dhcp server-profile dhcpv6-sv-4
+  dns-server dhcp
+!
+ddns profile v6plus-update
+  url http://fcs.enabler.ne.jp/
+  query user=21c230523t&pass=aJP001abc
+  transport ipv6
+  update-interval 10
+!
+device GigaEthernet0
+!
+device GigaEthernet1
+!
+device GigaEthernet2
+  port 1 link-aggregation 1
+  port 2 link-aggregation 1
+  vlan-group 1 port 1 2 3 4 5 7
+  vlan-group 2 port 6 8
+!
+device BRI0
+  isdn switch-type hsd128k
+!
+device USB0
+  shutdown
+!
+interface GigaEthernet0.0
+  no ip address
+  ipv6 enable
+  ipv6 dhcp client dhcpv6-cl
+  ipv6 traffic-class tos 0
+  ipv6 filter dhcpv6-list 1 in
+  ipv6 filter icmpv6-list 2 in
+  ipv6 filter tunnel-list 3 in
+  ipv6 filter block-list 100 in
+  ipv6 filter dhcpv6-list 1 out
+  ipv6 filter icmpv6-list 2 out
+  ipv6 filter tunnel-list 3 out
+  ipv6 filter dflt-list 100 out
+  no shutdown
+!
+interface GigaEthernet1.0
+  no ip address
+  shutdown
+!
+interface GigaEthernet2.0
+  ip address 192.168.1.1/24
+  ip dhcp binding dhcpv4-sv
+  ipv6 enable
+  ipv6 interface-identifier 00:6a:b2:72:5b:00:00:00
+  ipv6 dhcp server dhcpv6-sv
+  ipv6 nd ra enable
+  ipv6 nd ra other-config-flag
+  shutdown
+!
+interface BRI0.0
+  encapsulation ppp
+  no auto-connect
+  no ip address
+  shutdown
+!
+interface USB-Serial0.0
+  encapsulation ppp
+  no auto-connect
+  no ip address
+  shutdown
+!
+interface GigaEthernet2:1.1
+  encapsulation dot1q 200 tpid 8100
+  auto-connect
+  ip address 192.168.200.1/24
+  ip dhcp binding dhcpv4-sv-1
+  ipv6 enable
+  ipv6 interface-identifier 00:6a:b2:72:5b:00:00:00
+  ipv6 dhcp server dhcpv6-sv-1
+  ipv6 nd ra enable
+  ipv6 nd ra other-config-flag
+  no shutdown
+!
+interface GigaEthernet2:1.2
+  encapsulation dot1q 220 tpid 8100
+  auto-connect
+  ip address 192.168.220.1/24
+  ip dhcp binding dhcpv4-sv-2
+  ip filter conntrack 65533 in
+  ip filter pmt-icmp 300 out
+  ip filter pmt-dhcp-srv 2000 out
+  ip filter pmt-to-srv-int 2500 out
+  ip filter dny-all 65534 out
+  ipv6 enable
+  ipv6 interface-identifier 00:6a:b2:72:5b:00:00:00
+  ipv6 address 240b:250:9800:4a00:220::1/64
+  ipv6 dhcp server dhcpv6-sv-2
+  ipv6 nd ra enable
+  ipv6 nd ra prefix-advertisement ra-servers
+  ipv6 nd ra other-config-flag
+  no shutdown
+!
+interface GigaEthernet2:1.3
+  encapsulation dot1q 240 tpid 8100
+  auto-connect
+  ip address 192.168.240.1/24
+  ip dhcp binding dhcpv4-sv-3
+  ipv6 enable
+  ipv6 interface-identifier 00:6a:b2:72:5b:00:00:00
+  ipv6 dhcp server dhcpv6-sv-3
+  ipv6 nd ra enable
+  ipv6 nd ra other-config-flag
+  no shutdown
+!
+interface GigaEthernet2:2.1
+  encapsulation dot1q 222 tpid 8100
+  auto-connect
+  ip address 192.168.222.1/24
+  ip dhcp binding dhcpv4-sv-4
+  ipv6 enable
+  ipv6 interface-identifier 00:6a:b2:72:5b:00:00:00
+  ipv6 dhcp server dhcpv6-sv-4
+  ipv6 nd ra enable
+  ipv6 nd ra other-config-flag
+  no shutdown
+!
+interface Loopback0.0
+  no ip address
+!
+interface Null0.0
+  no ip address
+!
+interface Tunnel0.0
+  tunnel mode 4-over-6
+  tunnel destination 2404:9200:225:100::65
+  ip address 106.178.114.91/32
+  ip tcp adjust-mss auto
+  ip napt enable
+  no shutdown
+!
