@@ -5,8 +5,11 @@
     state: present
   become: yes
   loop:
-   - unarchiver
-   - python
-   - python-pip
-   - go
-   - man-db
+    - unarchiver
+    - python
+    - python-pip
+    - go
+    - man-db
+    - inetutils
+    - docker
+
