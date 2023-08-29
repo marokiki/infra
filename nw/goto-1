@@ -179,6 +179,9 @@ interface GigaEthernet2:1.1
   ipv6 dhcp server dhcpv6-sv-1
   ipv6 nd ra enable
   ipv6 nd ra other-config-flag
+  vrrp 1 ip 192.168.200.1
+  vrrp 1 priority 120
+  vrrp 1 ip virtual-host
   no shutdown
 !
 interface GigaEthernet2:1.2
@@ -198,6 +201,9 @@ interface GigaEthernet2:1.2
   ipv6 nd ra enable
   ipv6 nd ra prefix-advertisement ra-servers
   ipv6 nd ra other-config-flag
+  vrrp 2 ip 192.168.220.1
+  vrrp 2 priority 120
+  vrrp 2 ip virtual-host
   no shutdown
 !
 interface GigaEthernet2:1.3
