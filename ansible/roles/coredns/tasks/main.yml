@@ -14,37 +14,42 @@
     group: root
   become: true
 
-- name: Check Corefile exists
-  ansible.builtin.stat:
+- name: Delete Corefile
+  file:
     path: /etc/coredns/Corefile
-  register: coredns_file
+    state: absent
+  become: true
 
 - name: Copy Corefile
-  file:
-    path: /etc/coredns/Corefile
-    state: touch
+  copy:
+    src: Corefile
+    dest: /etc/coredns/Corefile
     mode: 0755
     owner: root
     group: root
-  when: not coredns_file.stat.exists
   become: true
 
-- name: Check hosts exists
-  ansible.builtin.stat:
+- name: Delete hosts
+  file:
     path: /etc/coredns/hosts
-  register: coredns_hosts
+    state: absent
+  become: true
 
 - name: Copy hosts
-  file:
-    path: /etc/coredns/hosts
-    state: touch
+  copy:
+    src: hosts
+    dest: /etc/coredns/hosts
     mode: 0755
     owner: root
     group: root
-  when: not coredns_hosts.stat.exists
   become: true
 
+- name: Killall coredns
+  shell: killall coredns
+  become: true
+  ignore_errors: true
+
 - name: Run coredns
-  shell: |
-    /usr/local/bin/coredns -conf /etc/coredns/Corefile
+  shell: 
+    /usr/local/bin/coredns -conf /etc/coredns/Corefile -dns.port 1053
   become: true
