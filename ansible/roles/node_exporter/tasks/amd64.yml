@@ -6,7 +6,7 @@
   get_url:
     url: https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz
     dest: "{{ home_dir }}/node_exporter-1.5.0.linux-amd64.tar.gz"
-  when: "'node_exporter' not in ansible_facts.services"
+  when: "'node_exporter.service' not in ansible_facts.services"
 
 - name: Make node_exporter tmp directory
   file:
@@ -15,7 +15,7 @@
     mode: 0755
     owner: root
     group: root
-  when: "'node_exporter' not in ansible_facts.services"
+  when: "'node_exporter.service' not in ansible_facts.services"
 
 - name: Make node_exporter directory
   file:
@@ -24,14 +24,14 @@
     mode: 0755
     owner: root
     group: root
-  when: "'node_exporter' not in ansible_facts.services"
+  when: "'node_exporter.service' not in ansible_facts.services" 
 
 - name: Unarchive node_exporter
   unarchive:
     src: "{{ home_dir }}/node_exporter-1.5.0.linux-amd64.tar.gz"
     dest: /tmp/node_exporter
     remote_src: yes
-  when: "'node_exporter' not in ansible_facts.services"
+  when: "'node_exporter.service' not in ansible_facts.services"
 
 - name: Copy node_exporter
   copy:
@@ -41,4 +41,4 @@
     owner: root
     group: root
     remote_src: yes
-  when: "'node_exporter' not in ansible_facts.services"
+  when: "'node_exporter.service' not in ansible_facts.services"
