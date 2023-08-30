@@ -1,9 +1,9 @@
---- 
+---
 - name: Install packages unique to pacman
   pacman:
     name: "{{ item }}"
     state: present
-  become: yes
+  become: true
   loop:
     - unarchiver
     - python
@@ -12,4 +12,3 @@
     - man-db
     - inetutils
     - docker
-

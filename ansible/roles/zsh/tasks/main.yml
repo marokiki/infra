@@ -10,7 +10,7 @@
   loop:
     - zsh
   when: "'zsh' not in ansible_facts.packages"
-  become: yes
+  become: true
 
 - name: Check zshrc exists
   ansible.builtin.stat:
@@ -27,7 +27,7 @@
     use: yay
     name: zplug
     state: present
-  become: yes
+  become: true
   become_user: aur_builder
 
 - name: get zplug via GitHub
@@ -62,9 +62,9 @@
     owner: "{{ user_name }}"
     group: "{{ user_name }}"
   when: not p10k_file.stat.exists
-  
+
 - name: set zsh as default shell
   user:
     name: "{{ user_name }}"
     shell: /usr/bin/zsh
-  become: yes
+  become: true

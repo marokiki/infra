@@ -19,4 +19,4 @@
     src: /tmp/coredns_1.11.1_linux_arm64/coredns
     dest: /usr/local/bin/coredns
     mode: 0755
-  become: yes
+  become: true

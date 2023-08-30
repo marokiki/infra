@@ -22,20 +22,18 @@
     owner: root
     group: root
     mode: 0644
-  become: yes
+  become: true
 
 - name: Restart sshd
   service:
     name: sshd
     state: restarted
   when: ansible_distribution == 'Archlinux'
-  become: yes
+  become: true
 
 - name: Restart sshd
   service:
     name: ssh
     state: restarted
   when: ansible_distribution in ['Debian', 'Ubuntu']
-  become: yes
-
-
+  become: true

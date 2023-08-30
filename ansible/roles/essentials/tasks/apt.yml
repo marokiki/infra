@@ -4,16 +4,16 @@
     path: /var/run/reboot-required
   register: reboot_required_file
 
-- name: Reboot if required 
+- name: Reboot if required
   ansible.builtin.reboot:
     msg: Rebooting due to a kernel update
   when: reboot_required_file.stat.exists
 
-- name: Install packages unique to apt 
+- name: Install packages unique to apt
   apt:
     name: "{{ item }}"
     state: present
-  become: yes
+  become: true
   loop:
     - unar
     - python3

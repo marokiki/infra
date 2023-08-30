@@ -6,7 +6,7 @@
     owner: root
     group: root
     mode: 0644
-  become: yes
+  become: true
 
 - name: Start and Enable systemd-resolved
   service:
@@ -15,5 +15,4 @@
     enabled: true
   loop:
     - systemd-resolved
-  become: yes
-
+  become: true

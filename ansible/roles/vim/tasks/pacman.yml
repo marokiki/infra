@@ -2,13 +2,13 @@
 - name: Gather the package facts
   ansible.builtin.package_facts:
     manager: auto
-    
+
 - name: Remove vim if installed
   pacman:
     name: vim
     state: absent
   when: "'vim' in ansible_facts.packages"
-  become: yes
+  become: true
 
 - name: Install gvim with pacman
   pacman:
@@ -17,4 +17,4 @@
   loop:
     - gvim
   when: "'gvim' not in ansible_facts.packages"
-  become: yes
+  become: true

@@ -6,7 +6,7 @@
   when: ansible_distribution == 'Archlinux'
 
 - name: Create Directory
-  file: 
+  file:
     path: /etc/coredns
     state: directory
     mode: 0755
@@ -14,7 +14,7 @@
     group: root
 
 - name: Copy Corefile
-  file: 
+  file:
     path: /etc/coredns/Corefile
     state: touch
     mode: 0755
@@ -23,7 +23,7 @@
   when: not coredns_file.stat.exists
 
 - name: Copy hosts
-  file: 
+  file:
     path: /etc/coredns/hosts
     state: touch
     mode: 0755
@@ -34,5 +34,4 @@
 - name: Run coredns
   shell: |
     /usr/local/bin/coredns -conf /etc/coredns/Corefile
-  become: yes
-  
+  become: true

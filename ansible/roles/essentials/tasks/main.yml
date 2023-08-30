@@ -1,4 +1,4 @@
---- 
+---
 # Install packages unique to package manager
 - import_tasks: apt.yml
   when: ansible_distribution in ['Debian', 'Ubuntu']
@@ -9,7 +9,7 @@
   package:
     name: "{{ item }}"
     state: present
-  become: yes
+  become: true
   loop:
     - git
     - curl

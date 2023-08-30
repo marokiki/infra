@@ -4,7 +4,7 @@
     path: /etc/systemd/network
     state: directory
 
-- name: Make .network files for not bridge 
+- name: Make .network files for not bridge
   template:
     src: dot.network.j2
     dest: "/etc/systemd/network/{{ ifname }}.network"
@@ -12,7 +12,7 @@
     group: root
     mode: 0644
   when: not bridge
-  become: yes
+  become: true
 
 - name: Make .network files for bridge
   template:
@@ -22,7 +22,7 @@
     group: root
     mode: 0644
   when: bridge
-  become: yes
+  become: true
 
 - name: Make .network files for bridge interface
   template:
@@ -32,7 +32,7 @@
     group: root
     mode: 0644
   when: bridge
-  become: yes
+  become: true
 
 - name: Make .netdev files for bridge
   template:
@@ -42,7 +42,7 @@
     group: root
     mode: 0644
   when: bridge
-  become: yes
+  become: true
 
 - name: Pupulate service facts
   service_facts:
@@ -61,4 +61,3 @@
     enabled: true
   loop:
     - systemd-networkd
-
