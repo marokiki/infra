@@ -1,5 +1,5 @@
 ifname: enp11s0
 ipv4_cidr: 192.168.220.13/24
-gateway: 192.168.20.1
+gateway: 192.168.220.1
 bridge: true
 bridge_name: br0

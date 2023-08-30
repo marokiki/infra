@@ -13,6 +13,11 @@
     owner: root
     group: root
 
+- name: Check Corefile exists
+  ansible.builtin.stat:
+    path: /etc/coredns/Corefile
+  register: coredns_file
+
 - name: Copy Corefile
   file:
     path: /etc/coredns/Corefile
@@ -21,6 +26,11 @@
     owner: root
     group: root
   when: not coredns_file.stat.exists
+
+- name: Check hosts exists
+  ansible.builtin.stat:
+    path: /etc/coredns/hosts
+  register: coredns_hosts
 
 - name: Copy hosts
   file:
