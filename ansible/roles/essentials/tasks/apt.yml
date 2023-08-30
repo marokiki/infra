@@ -8,6 +8,7 @@
   ansible.builtin.reboot:
     msg: Rebooting due to a kernel update
   when: reboot_required_file.stat.exists
+  become: true
 
 - name: Install packages unique to apt
   apt:
