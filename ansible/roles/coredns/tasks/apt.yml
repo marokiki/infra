@@ -1,0 +1,22 @@
+---
+- name: Gather the package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+- name: Install coredns with binary
+  ansible.builtin.get_url:
+    url: https://github.com/coredns/coredns/releases/download/v1.11.1/coredns_1.11.1_linux_arm64.tgz
+    dest: /tmp/coredns_1.11.1_linux_arm64.tgz
+
+- name: Extract coredns
+  ansible.builtin.unarchive:
+    src: /tmp/coredns_1.11.1_linux_arm64.tgz
+    dest: /tmp/coredns_1.11.1_linux_arm64
+    remote_src: yes
+
+- name: Copy coredns to /usr/local/bin
+  ansible.builtin.copy:
+    src: /tmp/coredns_1.11.1_linux_arm64/coredns
+    dest: /usr/local/bin/coredns
+    mode: 0755
+  become: yes

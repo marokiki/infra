@@ -1,0 +1,38 @@
+---
+# Installation
+- import_tasks: apt.yml
+  when: ansible_distribution in ['Debian', 'Ubuntu']
+- import_tasks: yay.yml
+  when: ansible_distribution == 'Archlinux'
+
+- name: Create Directory
+  file: 
+    path: /etc/coredns
+    state: directory
+    mode: 0755
+    owner: root
+    group: root
+
+- name: Copy Corefile
+  file: 
+    path: /etc/coredns/Corefile
+    state: touch
+    mode: 0755
+    owner: root
+    group: root
+  when: not coredns_file.stat.exists
+
+- name: Copy hosts
+  file: 
+    path: /etc/coredns/hosts
+    state: touch
+    mode: 0755
+    owner: root
+    group: root
+  when: not coredns_hosts.stat.exists
+
+- name: Run coredns
+  shell: |
+    /usr/local/bin/coredns -conf /etc/coredns/Corefile
+  become: yes
+  

@@ -1,0 +1,24 @@
+. {
+  cache 30
+  errors
+  log
+  whoami
+  loop
+  reload
+  health
+  ready
+  prometheus localhost:9153
+
+  template IN A marokiki.net {
+    match "^([^\.]+)\.marokiki\.net\.$"
+    answer "{{ index .Match 1 }}.marokiki.net. IN A 192.168.220.14"
+    fallthrough
+  }
+
+  hosts /etc/coredns/hosts marokiki.net {
+    fallthrough
+  }
+
+  forward . 1.1.1.1 8.8.8.8
+  # forward . /etc/resolv.conf
+}
