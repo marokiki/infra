@@ -5,3 +5,5 @@ takenoko-3 ansible_host=192.168.220.23
 takenoko-4 ansible_host=192.168.220.24
 takenoko-5 ansible_host=192.168.220.25
 
+[all]
+aroma ansible_host=192.168.220.14
