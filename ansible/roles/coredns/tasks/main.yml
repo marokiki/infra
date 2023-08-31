@@ -49,7 +49,24 @@
   become: true
   ignore_errors: true
 
-- name: Run coredns
-  shell: 
-    /usr/local/bin/coredns -conf /etc/coredns/Corefile -dns.port 1053
-  become: true
+- name: Make Unit Directory
+  file:
+    path: "{{ home_dir }}/.config/systemd/user"
+    state: directory
+    mode: 0755
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
+  become: true 
+
+- name: Copy Systemd Unit File
+  copy:
+    src: coredns.service
+    dest: "{{ home_dir }}/.config/systemd/user/coredns.service"
+
+- name: Start CoreDNS
+  systemd:
+    daemon_reload: yes
+    name: coredns
+    enabled: true
+    state: restarted
+    scope: user
