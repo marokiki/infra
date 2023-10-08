@@ -22,8 +22,3 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: metallb
----
-apiVersion: apps/v1
-kind: Namespace
-metadata:
-  name: metallb-system
