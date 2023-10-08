@@ -9,7 +9,7 @@
   ready
   prometheus localhost:9153
 
-  hosts marokiki.net {
+  hosts {
     192.168.220.1 goto-1.marokiki.net
     192.168.220.2 takashima.marokiki.net
     192.168.220.3 izu.marokiki.net
