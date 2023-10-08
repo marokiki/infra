@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  nema: internal-dns
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: internal-dns
+  template:
+    metadata:
+      labels:
+        app: internal-dns
+    spec:
+      containers:
+        - name: internal-dns
+          image: coredns
+          args:
+            - -conf
+            - /etc/coredns/Corefile
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/coredns
+              readonly: true
+      volumes:
+        - name: config-volume
+          configMap:
+            name: internal-dns

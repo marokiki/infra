@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata: 
+	name: internal-dns-service
+spec:
+	type: LoadBalancer
+	selector:
+		k8s-app: internal-dns

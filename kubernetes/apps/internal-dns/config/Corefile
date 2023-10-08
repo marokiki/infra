@@ -1,0 +1,18 @@
+. {
+  cache 30
+  errors
+  log
+  whoami
+  loop
+  reload
+  health
+  ready
+  prometheus localhost:9153
+
+  hosts ./hosts marokiki.net {
+    fallthrough
+  }
+
+  forward . 1.1.1.1 8.8.8.8
+  # forward . /etc/resolv.conf
+}
