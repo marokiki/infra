@@ -12,4 +12,5 @@
   become_user: aur_builder
   loop:
     - coredns
+    - dnsutils
   when: "'coredns' not in ansible_facts.packages"
