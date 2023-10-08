@@ -5,8 +5,8 @@ metadata:
   name: internal-dns-service
 spec:
   type: LoadBalancer
-  elector:
-    k8s-app: internal-dns
+  selector:
+    app: internal-dns
   LoadBalancerIP: 192.168.220.152
   ports:
     - port: 53
