@@ -9,7 +9,7 @@
   ready
   prometheus localhost:9153
 
-  hosts ./internal-dns/config/hosts marokiki.net {
+  hosts ./apps/internal-dns/config/hosts marokiki.net {
     fallthrough
   }
 
