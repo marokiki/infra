@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: internal-dns
-          image: docker.io/coredns:1.11.1
+          image: coredns/coredns:1.10.1
           args:
             - -conf
             - /etc/coredns/Corefile
