@@ -5,7 +5,7 @@ commonLabels:
   app: internal-dns
 configMapGenerator:
 - name: internal-dns
-  envs:
+  files:
     - config/Corefile
     - config/hosts
 resources:
