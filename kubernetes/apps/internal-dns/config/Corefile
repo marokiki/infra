@@ -9,7 +9,7 @@
   ready
   prometheus localhost:9153
 
-  hosts ./hosts marokiki.net {
+  hosts ./kubernetes/apps/config/hosts marokiki.net {
     fallthrough
   }
 
