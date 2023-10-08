@@ -11,11 +11,11 @@ spec:
   template:
     metadata:
       labels:
-        app: internal-dns
+        k8s-app: internal-dns
     spec:
       containers:
         - name: internal-dns
-          image: coredns
+          image: coredns/coredns:latest
           args:
             - -conf
             - /etc/coredns/Corefile
@@ -23,6 +23,13 @@ spec:
             - name: config-volume
               mountPath: /etc/coredns
               readonly: true
+          resources:
+            requests:
+              cpu: 1000m
+              memory: 70Mi
+            limits:
+              cpu: 2000m
+              memory: 170Mi
       volumes:
         - name: config-volume
           configMap:

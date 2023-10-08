@@ -2,9 +2,12 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: default
 commonLabels:
-	app: internal-dns
+  app: internal-dns
 configMapGenerator:
 - name: internal-dns
-	envs:
-	- config/Corefile
-resource:
+  envs:
+    - config/Corefile
+    - config/hosts
+resources:
+    - service.yaml
+    - deployment.yaml
