@@ -22,6 +22,3 @@ kind: L2Advertisement
 metadata:
   name: default
   namespace: metallb-system
-spec:
-  IPAddressPools:
-  - default
