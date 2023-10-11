@@ -1,1 +1,3 @@
 .vscode/
+kubernetes/apps/flux-notification/cert.pem
+kubernetes/apps/flux-notification/sealed-secrets-key.yaml

@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
   - provider.yaml
   - alert.yaml
-  - slack-secret.yaml
+  - secret.yaml
+  - sealed-secrets.yaml
