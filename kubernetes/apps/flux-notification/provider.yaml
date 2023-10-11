@@ -7,4 +7,4 @@ spec:
   type: slack
   channel: segre-sysop
   secretRef:
-    name: flux-slack-notification
+    name: flux-slack-webhook
