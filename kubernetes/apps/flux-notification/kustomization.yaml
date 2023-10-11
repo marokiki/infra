@@ -4,4 +4,4 @@ resources:
   - provider.yaml
   - alert.yaml
   - secret.yaml
-  - sealed-secrets.yaml
+  - sealed-secret.yaml
