@@ -9,7 +9,7 @@
   ready
   prometheus localhost:9153
 
-  hosts /etc/coredns/hosts marokiki.net{
+  hosts /etc/coredns/hosts marokiki.net {
     fallthrough
   }
 
