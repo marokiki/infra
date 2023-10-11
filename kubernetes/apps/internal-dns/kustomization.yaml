@@ -7,6 +7,7 @@ configMapGenerator:
 - name: internal-dns
   files:
     - config/Corefile
+    - config/hosts
 resources:
     - service.yaml
     - deployment.yaml

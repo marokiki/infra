@@ -9,23 +9,7 @@
   ready
   prometheus localhost:9153
 
-  hosts {
-    192.168.220.1 goto-1.marokiki.net
-    192.168.220.2 takashima.marokiki.net
-    192.168.220.3 izu.marokiki.net
-    192.168.220.4 tsushima.marokiki.net
-    192.168.220.5 miyako.marokiki.net
-    192.168.220.11 flare.marokiki.net
-    192.168.220.12 ikazuchi.marokiki.net
-    192.168.220.13 manaka.marokiki.net
-    192.168.220.14 aroma.marokiki.net
-    192.168.220.15 klee.marokiki.net
-    192.168.220.16 tatsumaki.marokiki.net
-    192.168.220.21 takenoko-1.marokiki.net
-    192.168.220.22 takenoko-2.marokiki.net
-    192.168.220.23 takenoko-3.marokiki.net
-    192.168.220.24 takenoko-4.marokiki.net
-    192.168.220.253 goto-1.marokiki.net
+  hosts /etc/coredns/hosts marokiki.net{
     fallthrough
   }
 
