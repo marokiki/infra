@@ -16,11 +16,12 @@ metadata:
 spec:
   interval: 1m0s
   chart:
+    valuesFrom:
+      - kind: ConfigMap
+        name: values
     spec:
       chart: longhorn
       version: 1.5.1
       sourceRef:
         kind: HelmRepository
         name: longhorn
-  valuesFiles:
-    - values.yaml
