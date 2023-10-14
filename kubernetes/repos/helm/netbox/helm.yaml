@@ -1,0 +1,24 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: netbox
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  url: https://charts.boo.tc
+  timeout: 3m0s
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: netbox
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  chart:
+    spec:
+      chart: netbox
+      version: 4.1.1
+      sourceRef:
+        kind: HelmRepository
+        name: netbox
