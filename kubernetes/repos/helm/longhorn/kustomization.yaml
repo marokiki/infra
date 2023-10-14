@@ -4,7 +4,7 @@ configMapGenerator:
   - name: values
     files:
       - values.yaml
-# configurations:
-#   - kustomizeconfig.yaml
+configurations:
+  - kustomizeconfig.yaml
 resources:
   - helm.yaml
