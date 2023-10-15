@@ -41,7 +41,7 @@ defaultSettings:
   storageReservedPercentageForDefaultDisk: ~
   # -- Upgrade Checker will check for new Longhorn version periodically.
   # When there is a new version available, a notification will appear in the UI. By default true.
-  upgradeChecker: ~
+  upgradeChecker: false
   # -- The default number of replicas when a volume is created from the Longhorn UI.
   # For Kubernetes configuration, update the `numberOfReplicas` in the StorageClass. By default 3.
   defaultReplicaCount: 1
