@@ -5,13 +5,13 @@ csi:
   # -- Specify kubelet root-dir. Leave blank to autodetect
   kubeletRootDir: ~
   # -- Specify replica count of CSI Attacher. Leave blank to use default count: 3
-  attacherReplicaCount: 2
+  attacherReplicaCount: 1
   # -- Specify replica count of CSI Provisioner. Leave blank to use default count: 3
-  provisionerReplicaCount: 2
+  provisionerReplicaCount: 1
   # -- Specify replica count of CSI Resizer. Leave blank to use default count: 3
-  resizerReplicaCount: 2
+  resizerReplicaCount: 1
   # -- Specify replica count of CSI Snapshotter. Leave blank to use default count: 3
-  snapshotterReplicaCount: 2
+  snapshotterReplicaCount: 1
 
 defaultSettings:
   # -- The endpoint used to access the backupstore. Available: NFS, CIFS, AWS, GCP, AZURE.
@@ -44,7 +44,7 @@ defaultSettings:
   upgradeChecker: ~
   # -- The default number of replicas when a volume is created from the Longhorn UI.
   # For Kubernetes configuration, update the `numberOfReplicas` in the StorageClass. By default 3.
-  defaultReplicaCount: 2
+  defaultReplicaCount: 1
   # -- The 'storageClassName' is given to PVs and PVCs that are created for an existing Longhorn volume. The StorageClass name can also be used as a label,
   # so it is possible to use a Longhorn StorageClass to bind a workload to an existing PV without creating a Kubernetes StorageClass object.
   # By default 'longhorn-static'.
@@ -127,7 +127,7 @@ defaultSettings:
   kubernetesClusterAutoscalerEnabled: ~
   # -- This setting allows Longhorn to delete the orphan resource and its corresponding orphaned data automatically like stale replicas.
   # Orphan resources on down or unknown nodes will not be cleaned up automatically.
-  orphanAutoDeletion: ~
+  orphanAutoDeletion: true
   # -- Longhorn uses the storage network for in-cluster data traffic. Leave this blank to use the Kubernetes cluster network.
   storageNetwork: ~
   # -- This flag is designed to prevent Longhorn from being accidentally uninstalled which will lead to data lost.
@@ -170,7 +170,7 @@ defaultSettings:
 
 longhornUI:
   # -- Replica count for longhorn ui
-  replicas: 2
+  replicas: 1
   # -- Priority class count for longhorn ui
   priorityClass: ~
   # -- Tolerate nodes to run Longhorn UI
