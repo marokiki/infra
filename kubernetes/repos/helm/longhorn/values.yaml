@@ -15,7 +15,7 @@ csi:
 
 defaultSettings:
   # -- The endpoint used to access the backupstore. Available: NFS, CIFS, AWS, GCP, AZURE.
-  backupTarget: "nfs://tatsumaki.marokiki.net/share/md0/longhorn" 
+  backupTarget: "nfs://tatsumaki.marokiki.net:/share/md0/longhorn" 
   # -- The name of the Kubernetes secret associated with the backup target.
   backupTargetCredentialSecret: ~
   # -- If this setting is enabled, Longhorn will automatically attaches the volume and takes snapshot/backup 
