@@ -11,7 +11,7 @@
     owner: root
     group: root
     mode: 0644
-  when: not bridge
+  when: bridge == false
   become: true
 
 - name: Make .network files for bridge
@@ -21,7 +21,7 @@
     owner: root
     group: root
     mode: 0644
-  when: bridge
+  when: bridge == true
   become: true
 
 - name: Make .network files for bridge interface
@@ -31,7 +31,7 @@
     owner: root
     group: root
     mode: 0644
-  when: bridge
+  when: bridge == true
   become: true
 
 - name: Make .netdev files for bridge
@@ -41,7 +41,7 @@
     owner: root
     group: root
     mode: 0644
-  when: bridge
+  when: bridge == true
   become: true
 
 - name: Pupulate service facts
