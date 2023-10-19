@@ -10,6 +10,7 @@
   loop:
     - vim-gtk3
   when: "'vim-gtk3' not in ansible_facts.packages"
+  become: true
 
 - name: set default editor
   file:
