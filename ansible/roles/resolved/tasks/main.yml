@@ -1,4 +1,16 @@
 ---
+- name: Gather the package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+- name: Create Symblic link
+  file:
+    src: "/run/systemd/resolve/stub-resolv.conf"
+    dest: "/etc/resolv.conf"
+    state: link
+  become: true
+  when: ansible_distribution == 'Archlinux'
+
 - name: Make resolve file
   template:
     src: dot.resolve.j2
