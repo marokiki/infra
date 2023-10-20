@@ -5,7 +5,8 @@ takenoko-3 ansible_host=192.168.220.23
 takenoko-4 ansible_host=192.168.220.24
 
 [all]
-kinoko-1 ansible_host=192.168.220.25
+kinoko-2.marokiki.net ansible_host=192.168.220.26
 
 [aroma]
 aroma.marokiki.net ansible_host=192.168.220.14
+

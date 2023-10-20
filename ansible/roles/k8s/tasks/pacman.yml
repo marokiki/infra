@@ -1,0 +1,30 @@
+- name: Install package with yay
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ item }}"
+    state: present
+  become: true
+  become_user: aur_builder
+  loop:
+    - kubelet
+    - kubectl
+    - kubeadm
+    - docker
+    - cri-o
+    - cni-plugins
+
+- name: start and enable crio
+  service:
+    name: crio
+    state: started
+    enabled: true
+  become: true
+
+- name: make cni config
+  copy:
+    src: 00-plugin-dir.conf
+    dest: /etc/crio/crio.conf.d/00-plugin-dir.conf
+    mode: 0644
+    owner: root
+    group: root
+  become: true

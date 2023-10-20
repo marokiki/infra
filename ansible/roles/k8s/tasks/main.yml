@@ -1,0 +1,22 @@
+---
+- name: Gather the package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+- name: swapoff
+  command: swapoff -a
+  become: true
+  ignore_errors: true
+
+- name: Remove swap from fstab
+  lineinfile:
+    path: /etc/fstab
+    regexp: '^/swapfile'
+    state: absent
+  become: true
+  ignore_errors: true
+
+- import_tasks: apt.yml
+  when: ansible_distribution in ['Debian', 'Ubuntu']
+- import_tasks: pacman.yml
+  when: ansible_distribution == 'Archlinux'

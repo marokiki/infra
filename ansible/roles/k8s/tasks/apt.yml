@@ -1,0 +1,71 @@
+- name: setting for crio
+  shell: 
+    cmd: |
+      cat <<EOF | tee /etc/modules-load.d/crio.conf
+      overlay
+      br_netfilter
+      EOF
+      modprobe overlay
+      modprobe br_netfilter
+      cat <<EOF | tee /etc/sysctl.d/99-kubernetes-cri.conf
+      net.bridge.bridge-nf-call-iptables  = 1
+      net.ipv4.ip_forward = 1
+      net.ipv4.ip_nonlocal_bind = 1
+      net.bridge.bridge-nf-call-ip6tables = 1
+      EOF
+      sysctl --system
+  become: true
+
+- name: add crio repository
+  shell:
+    cmd: |
+      cat <<EOF | tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
+      deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_22.04/ /
+      EOF
+      cat <<EOF | tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:cri-o:1.27.list
+      deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/1.27/xUbuntu_22.04/ /
+      EOF
+      curl -L https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable:cri-o:1.27/xUbuntu_22.04/Release.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/libcontainers.gpg add -
+      curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_22.04/Release.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/libcontainers.gpg add -
+  become: true
+    
+- name: apt update
+  apt:
+    update_cache: yes
+  become: true
+
+- name: install cri-o
+  shell:
+    cmd: |
+      apt-get install cri-o cri-o-runc -y
+  become: true
+
+- name: start and enable crio
+  service:
+    name: crio
+    state: started
+    enabled: true
+  become: true
+
+- name: add kubernetes repository
+  shell:
+    cmd: |
+      apt-get update &&  apt-get install -y apt-transport-https curl
+      curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg |  apt-key add -
+      cat <<EOF |  tee /etc/apt/sources.list.d/kubernetes.list
+      deb https://apt.kubernetes.io/ kubernetes-xenial main
+      EOF
+      apt update
+      apt install -y kubelet kubeadm kubectl
+      cat <<EOF |  tee /etc/default/kubelet
+      KUBELET_EXTRA_ARGS=--container-runtime-endpoint='unix:///var/run/crio/crio.sock'
+      EOF
+  become: true
+
+- name: start and enable kubelet
+  service:
+    name: kubelet
+    state: started
+    daemon-reload: yes
+    enabled: true
+  become: true
