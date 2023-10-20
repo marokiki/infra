@@ -49,19 +49,11 @@
   become: true
   ignore_errors: true
 
-- name: Make Unit Directory
-  file:
-    path: "{{ home_dir }}/.config/systemd/user"
-    state: directory
-    mode: 0755
-    owner: "{{ user_name }}"
-    group: "{{ user_name }}"
-  become: true 
-
 - name: Copy Systemd Unit File
   copy:
     src: coredns.service
-    dest: "{{ home_dir }}/.config/systemd/user/coredns.service"
+    dest: "/etc/systemd/system/coredns.service"
+  become: true
 
 - name: Start CoreDNS
   systemd:
@@ -69,4 +61,4 @@
     name: coredns
     enabled: true
     state: restarted
-    scope: user
+  become: true
