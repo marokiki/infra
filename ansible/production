@@ -1,12 +1,22 @@
 [k8s]
-takenoko-1 ansible_host=192.168.220.21
-takenoko-2 ansible_host=192.168.220.22
-takenoko-3 ansible_host=192.168.220.23
-takenoko-4 ansible_host=192.168.220.24
-
-[all]
+takenoko-1.marokiki.net ansible_host=192.168.220.21
+takenoko-2.marokiki.net ansible_host=192.168.220.22
+takenoko-3.marokiki.net ansible_host=192.168.220.23
+takenoko-4.marokiki.net ansible_host=192.168.220.24
+kinoko-1.marokiki.net ansible_host=192.168.220.25
 kinoko-2.marokiki.net ansible_host=192.168.220.26
 
-[aroma]
-aroma.marokiki.net ansible_host=192.168.220.14
+[all]
+flare.marokiki.net ansible_host=192.168.220.11 
+ikazuchi.marokiki.net ansible_host=192.168.220.12 
+manaka.marokiki.net ansible_host=192.168.220.13 
+aroma.marokiki.net ansible_host=192.168.220.14 
+klee.marokiki.net ansible_host=192.168.220.15 
+tatsumaki.marokiki.net ansible_host=192.168.220.16 
+takenoko-1.marokiki.net ansible_host=192.168.220.21 
+takenoko-2.marokiki.net ansible_host=192.168.220.22 
+takenoko-3.marokiki.net ansible_host=192.168.220.23 
+takenoko-4.marokiki.net ansible_host=192.168.220.24 
+kinoko-1.marokiki.net ansible_host=192.168.220.25 
+kinoko-2.marokiki.net ansible_host=192.168.220.26 
 
