@@ -61,3 +61,4 @@
     enabled: true
   loop:
     - systemd-networkd
+  become: true
