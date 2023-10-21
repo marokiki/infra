@@ -13,93 +13,93 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-# ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-# kind: Kustomization
-# metadata:
-#   name: internal-dns
-#   namespace: flux-system
-# spec:
-#   interval: 10m0s
-#   retryInterval: 2m0s
-#   timeout: 3m0s
-#   path: ./kubernetes/apps/internal-dns
-#   prune: true
-#   sourceRef:
-#     kind: GitRepository
-#     name: flux-system
-# ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-# kind: Kustomization
-# metadata:
-#   name: flux-notification
-#   namespace: flux-system
-# spec:
-#   interval: 10m0s
-#   retryInterval: 2m0s
-#   timeout: 3m0s
-#   path: ./kubernetes/apps/flux-notification
-#   prune: true
-#   sourceRef:
-#     kind: GitRepository
-#     name: flux-system
-# ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-# kind: Kustomization
-# metadata:
-#   name: metallb
-#   namespace: flux-system
-# spec:
-#   interval: 10m0s
-#   retryInterval: 2m0s
-#   timeout: 3m0s
-#   path: ./kubernetes/repos/helm/metallb
-#   prune: true
-#   sourceRef:
-#     kind: GitRepository
-#     name: flux-system
-# ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-# kind: Kustomization
-# metadata:
-#   name: sealed-secrets
-#   namespace: flux-system
-# spec:
-#   interval: 10m0s
-#   retryInterval: 2m0s
-#   timeout: 3m0s
-#   path: ./kubernetes/repos/helm/sealed-secrets
-#   prune: true
-#   sourceRef:
-#     kind: GitRepository
-#     name: flux-system
-# ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-# kind: Kustomization
-# metadata:
-#   name: netbox
-#   namespace: flux-system
-# spec:
-#   interval: 10m0s
-#   retryInterval: 2m0s
-#   timeout: 3m0s
-#   path: ./kubernetes/repos/helm/netbox
-#   prune: true
-#   sourceRef:
-#     kind: GitRepository
-#     name: flux-system
-# ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-# kind: Kustomization
-# metadata:
-#   name: longhorn
-#   namespace: flux-system
-# spec:
-#   interval: 10m0s
-#   retryInterval: 2m0s
-#   timeout: 3m0s
-#   path: ./kubernetes/repos/helm/longhorn
-#   prune: true
-#   sourceRef:
-#     kind: GitRepository
-#     name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: internal-dns
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  retryInterval: 2m0s
+  timeout: 3m0s
+  path: ./kubernetes/apps/internal-dns
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: flux-notification
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  retryInterval: 2m0s
+  timeout: 3m0s
+  path: ./kubernetes/apps/flux-notification
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: metallb
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  retryInterval: 2m0s
+  timeout: 3m0s
+  path: ./kubernetes/repos/helm/metallb
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: sealed-secrets
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  retryInterval: 2m0s
+  timeout: 3m0s
+  path: ./kubernetes/repos/helm/sealed-secrets
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: netbox
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  retryInterval: 2m0s
+  timeout: 3m0s
+  path: ./kubernetes/repos/helm/netbox
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: longhorn
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  retryInterval: 2m0s
+  timeout: 3m0s
+  path: ./kubernetes/repos/helm/longhorn
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
