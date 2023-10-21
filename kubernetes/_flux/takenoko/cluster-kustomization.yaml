@@ -62,6 +62,20 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
+  name: metallb-ip
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  timeout: 3m0s
+  path: ./kubernetes/apps/metallb-ip
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
   name: sealed-secrets
   namespace: flux-system
 spec:
