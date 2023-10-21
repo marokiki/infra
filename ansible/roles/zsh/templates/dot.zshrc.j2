@@ -27,9 +27,9 @@ alias cxx='g++ -std=c++17 -Wall -O2 -g -fsanitize=undefined -D_GLIBCXX_DEBUG'
 alias pdf="evince"
 alias k="kubectl"
 alias kg="kubectl get"
-alias kgn="kubectl get nodes"
-alias kgp="kubectl get pods"
-alias kd="kubeclt describe"
+alias kgn="kubectl get nodes -o wide"
+alias kgp="kubectl get pods -o wide"
+alias kd="kubectl describe"
 alias kl="kubectl logs"
 
 export EDITOR=vim
