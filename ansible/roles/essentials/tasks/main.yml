@@ -4,6 +4,8 @@
   when: ansible_distribution in ['Debian', 'Ubuntu']
 - import_tasks: pacman.yml
   when: ansible_distribution == 'Archlinux'
+- import_tasks: yay.yml
+  when: ansible_distribution == 'Archlinux'
 
 - name: Install package
   package:
