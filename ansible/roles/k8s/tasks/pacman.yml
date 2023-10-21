@@ -12,6 +12,7 @@
     - docker
     - cri-o
     - cni-plugins
+    - open-iscsi
 
 - name: start and enable crio
   service:
