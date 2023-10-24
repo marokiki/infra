@@ -5,6 +5,10 @@ auth:
   secretKeys:
     adminPasswordKey: admin-password
     userPasswrodKey: user-password
+image:
+  registry: docker.io
+  repository: bitnami/postgresql
+  tag: 15.2.0-debian-11-r13
 primary:
   resources:
     requests:
@@ -16,3 +20,4 @@ primary:
   persistence:
     enabled: true
     existingClaim: "postgres-pvc"
+  
