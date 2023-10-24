@@ -2,3 +2,7 @@
 kubernetes/apps/flux-notification/cert.pem
 kubernetes/apps/flux-notification/sealed-secrets-key.yaml
 kubernetes/apps/flux-notification/secret.yaml
+kubernetes/repos/helm/postgresql/secrets-values
+kubernetes/repos/helm/postgresql/cert.pem
+kubernetes/repos/helm/postgresql/secret.yaml
+
