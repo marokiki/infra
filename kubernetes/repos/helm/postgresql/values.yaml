@@ -9,6 +9,7 @@ image:
   registry: docker.io
   repository: bitnami/postgresql
   tag: 16.0.0-debian-11-r13
+  debug: true
 primary:
   resources:
     requests:
