@@ -5,8 +5,8 @@ kubernetes/apps/flux-notification/secret.yaml
 kubernetes/repos/helm/postgresql/secrets-values
 kubernetes/repos/helm/postgresql/cert.pem
 kubernetes/repos/helm/postgresql/secret.yaml
-*/cert.pem
-*/secret-values
-*/secrets-values
-*/secrets.yaml
+**/cert.pem
+**/secret-values
+**/secrets-values
+**/secrets.yaml
 
