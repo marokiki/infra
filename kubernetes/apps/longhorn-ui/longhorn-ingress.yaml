@@ -33,6 +33,9 @@ metadata:
   namespace: flux-system
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: longhorn-ingress
   template:
     metadata:
       labels:
