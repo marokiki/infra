@@ -3,7 +3,7 @@ kind: Kustomization
 configMapGenerator:
   - name: values
     namespace: flux-system
-    files:
+    envs:
       - values.yaml
 configurations:
   - kustomizeconfig.yaml
