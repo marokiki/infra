@@ -4,4 +4,10 @@ controller:
     enableHttp: true
     enableHttps: true
     loadBalancerIP: 192.168.220.65
+    ports:
+      http: 80
+      https: 443
+    targetPorts:
+      http: http
+      https: https
     type: LoadBalancer
