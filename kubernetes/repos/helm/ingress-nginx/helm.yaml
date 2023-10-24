@@ -17,11 +17,11 @@ spec:
   interval: 1m0s
   chart:
     spec:
-      chart: ingress-nginx/ingress-nginx
+      chart: ingress-nginx
       version: 4.7.3
       sourceRef:
         kind: HelmRepository
-        name: metallb
+        name: ingress-nginx
   valuesFrom:
   - kind: ConfigMap
     name: values
