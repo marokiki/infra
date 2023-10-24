@@ -1,5 +1,5 @@
 controller:
   service:
-    enableHttp: false
+    enableHttp: true
     enableHttps: true
     loadBalancerIP: 192.168.220.65
