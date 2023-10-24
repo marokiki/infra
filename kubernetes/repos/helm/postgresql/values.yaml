@@ -8,7 +8,7 @@ auth:
 image:
   registry: docker.io
   repository: bitnami/postgresql
-  tag: 15.2.0-debian-11-r13
+  tag: 16.0.0-debian-11-r13
 primary:
   resources:
     requests:
