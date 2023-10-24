@@ -9,3 +9,5 @@ configurations:
   - kustomizeconfig.yaml
 resources:
   - helm.yaml
+  - pvc.yaml
+  - sealed-secret.yaml
