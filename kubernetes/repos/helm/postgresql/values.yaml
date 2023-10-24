@@ -1,10 +1,10 @@
 auth:
   username: "segre"
   database: "postgres"
-  existingSecret: "postgresql"
+  existingSecret: "postgres-secret"
   secretKeys:
-    adminPasswordKey: postgres-password
-    userPasswrodKey: password
+    adminPasswordKey: admin-password
+    userPasswrodKey: user-password
 image:
   registry: docker.io
   repository: bitnami/postgresql
