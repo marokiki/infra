@@ -14,7 +14,6 @@ metadata:
     nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required '
     # custom max body size for file uploading like backing image uploading
     nginx.ingress.kubernetes.io/proxy-body-size: 10000m
-    
 spec:
   rules:
   - http:
@@ -23,6 +22,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: ingress-nginx-controller
+            name: ingress-nginx
             port:
               number: 80
