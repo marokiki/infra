@@ -1,5 +1,5 @@
 controller:
-  # watchIngressWithoutClass: true
+  watchIngressWithoutClass: true
   service:
     enableHttp: true
     enableHttps: true
