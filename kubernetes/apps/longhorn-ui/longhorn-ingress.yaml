@@ -3,8 +3,9 @@ kind: Ingress
 metadata:
   name: longhorn-ingress
   namespace: flux-system
-  annotations:
+  label:
     app.kubernetes.io/managed-by: Helm
+  annotations:
     meta.helm.sh/release-name: longhorn
     meta.helm.sh/release-namespace: flux-system
   #   # type of authentication
