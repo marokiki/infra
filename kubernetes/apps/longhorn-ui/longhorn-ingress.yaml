@@ -5,6 +5,8 @@ metadata:
   namespace: flux-system
   annotations:
     app.kubernetes.io/managed-by: Helm
+    meta.helm.sh/release-name: longhorn
+    meta.helm.sh/release-namespace: flux-system
   #   # type of authentication
   #   nginx.ingress.kubernetes.io/auth-type: basic
   #   # prevent the controller from redirecting (308) to HTTPS
