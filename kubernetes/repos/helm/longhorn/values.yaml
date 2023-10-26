@@ -2,7 +2,6 @@ defaultSettings:
   allowNodeDrainWithLastHealthyReplica: true
   orphanAutoDeletion: true
   backupTarget: "nfs://tatsumaki.marokiki.net:/share/md0/longhorn"
-  # backupTargetCredentialSecret: ""
 csi:
   attacherReplicaCount: 1
   provisionerReplicaCount: 1
