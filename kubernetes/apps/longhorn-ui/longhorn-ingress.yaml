@@ -23,6 +23,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: longhorn-ingress-controller
+            name: longhorn-frontend
             port:
               number: 80
