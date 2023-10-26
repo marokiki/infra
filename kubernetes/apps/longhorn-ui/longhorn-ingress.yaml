@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: longhorn-ingress
   namespace: flux-system
-  label:
+  labels:
     app.kubernetes.io/managed-by: Helm
   annotations:
     meta.helm.sh/release-name: longhorn
