@@ -2,6 +2,7 @@ defaultSettings:
   allowNodeDrainWithLastHealthyReplica: true
   orphanAutoDeletion: true
   backupTarget: "nfs://tatsumaki.marokiki.net:/share/md0/longhorn"
+  defaultDataPath: "/var/lib/longhorn"
 csi:
   attacherReplicaCount: 1
   provisionerReplicaCount: 1
@@ -20,3 +21,5 @@ longhornAdmissionWebhook:
   replicas: 1
 longhornRecoveryBackend:
   replicas: 1
+ingress:
+  enabled: true
