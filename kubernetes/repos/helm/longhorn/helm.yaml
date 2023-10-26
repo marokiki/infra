@@ -14,10 +14,6 @@ metadata:
   name: longhorn
   namespace: flux-system
 spec:
-  install:
-    disableWait: true
-  upgrade:
-    disableWait: true
   interval: 1m0s
   chart:
     spec:
