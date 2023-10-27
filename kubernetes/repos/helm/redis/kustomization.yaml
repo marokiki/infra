@@ -10,3 +10,6 @@ configurations:
 resources:
   - helm.yaml
   - sealed-secrets.yaml
+  - pvc-master.yaml
+  - pvc-replica.yaml
+  - pvc-sentinel.yaml

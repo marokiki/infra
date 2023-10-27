@@ -1,4 +1,29 @@
 auth:
   enable: true
+  sentinel: true
   existingSecret: redis-secret
   exsitingSEcretPasswordKey: redis-secret-password
+image:
+  registry: docker.io
+  repository: bitnami/redis
+  tag: 7.2.2-debian-11-r0
+master:
+  count: 1
+  persistence:
+    enable: true
+    existingClaim: redis-pvc-master
+replica:
+  replicaCount: 2
+  persistence:
+    enable: true
+    existingClaim: redis-pvc-replica
+sentinel:
+  enable: true
+  image:
+    registry: docker.io
+    repository: bitnami/redis-sentinel
+    tag: 7.2.2-debian-11-r0
+  quorum: 3
+  persistence:
+    enable: true
+    existingClaim: redis-pvc-sentinel
