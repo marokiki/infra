@@ -11,5 +11,4 @@ resources:
   - helm.yaml
   - sealed-secret.yaml
   - pvc-master.yaml
-  - pvc-replica.yaml
   - pvc-sentinel.yaml
