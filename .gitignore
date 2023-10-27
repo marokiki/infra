@@ -5,4 +5,4 @@ secret-values
 secrets-values
 secret.yaml
 auth
-redis-secret-password
+redis-password
