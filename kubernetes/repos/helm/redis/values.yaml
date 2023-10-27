@@ -16,7 +16,8 @@ replica:
   replicaCount: 3
   persistence:
     enable: true
-    existingClaim: redis-pvc-replica
+    storageClass: longhorn
+    size: 8Gi
 sentinel:
   enable: true
   image:
