@@ -1,0 +1,4 @@
+auth:
+  enable: true
+  existingSecret: redis-secret
+  exsitingSEcretPasswordKey: redis-secret-password
