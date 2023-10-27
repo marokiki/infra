@@ -13,4 +13,3 @@ resources:
   - pvc-master.yaml
   - pvc-replica.yaml
   - pvc-sentinel.yaml
-  - statefulset.yaml
