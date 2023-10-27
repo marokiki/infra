@@ -2,7 +2,7 @@ auth:
   enable: true
   sentinel: true
   existingSecret: redis-secret
-  exsitingSEcretPasswordKey: redis-secret-password
+  exsitingSecretPasswordKey: redis-secret-password
 image:
   registry: docker.io
   repository: bitnami/redis
