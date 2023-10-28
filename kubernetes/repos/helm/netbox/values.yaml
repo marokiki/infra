@@ -4,62 +4,53 @@ image:
   repository: netboxcommunity/netbox
   pullPolicy: IfNotPresent
 postgresql:
-  # enabled: false
-  enabled: true
-  auth:
-    username: netbox
-    database: netbox-flux
-# externalDatabase:
-#   host: netbox-postgresql.flux-system.svc.cluster.local
-#   port: 5432
-#   database: netbox-postgres
-#   username: netbox
-#   existingSecretName: netbox-postgres-secret
-#   existingSecretKey: postgres-password
+  enabled: false
+externalDatabase:
+  host: netbox-postgresql.flux-system.svc.cluster.local
+  port: 5432
+  database: netbox-postgres
+  username: netbox
+  existingSecretName: netbox-postgres-secret
+  existingSecretKey: postgres-password
 redis:
-  # enabled: false
-  enabled: true
-# tasksRedis:
-#   sentinels: 
-#     - redis://redis-master.flux-system.svc.cluster.local:6379
-#   sentinelService: redis-master
-#   username: segre
-#   existingSecretName: redis-secret
-#   existingSecretKey: redis-password
-# cachingRedis:
-#   sentinels: 
-#     - redis://redis-master.flux-system.svc.cluster.local:6379
-#   sentinelService: redis-master
-#   username: segre
-#   existingSecretName: redis-secret
-#   existingSecretKey: redis-password
+  enabled: false
+tasksRedis:
+  sentinels: 
+    - redis://redis-master.flux-system.svc.cluster.local:6379
+  sentinelService: redis-master
+  username: segre
+  existingSecretName: redis-secret
+  existingSecretKey: redis-password
+cachingRedis:
+  sentinels: 
+    - redis://redis-master.flux-system.svc.cluster.local:6379
+  sentinelService: redis-master
+  username: segre
+  existingSecretName: redis-secret
+  existingSecretKey: redis-password
 persistence: 
   enabled: true
-  storageClass: longhorn
-  accessModes: ReadWriteOnce
-  size: 1Gi
-  # existingClaim: netbox-pvc
+  existingClaim: netbox-pvc
 service:
   type: ClusterIP
 ingress:
-  enabled: false
-  # enabled: true
-  # className: nginx
-  # annotations:
-  #   meta.helm.sh/release-name: netbox
-  #   meta.helm.sh/release-namespace: flux-system
-  #   nginx.ingress.kubernetes.io/auth-type: basic
-  #   nginx.ingress.kubernetes.io/auth-secret: flux-system/netbox-basic-auth
-  #   nginx.ingress.kubernetes.io/auth-secret-type: auth-file
-  #   nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required '
-  #   nginx.ingress.kubernetes.io/proxy-body-size: 10000m
-  # hosts:
-  #   # - host: netbox.marokiki.net
-  #   - paths: 
-  #       - path: /
-  #         pathType: Prefix
-  #         backend:
-  #           service:
-  #             name: netbox
-  #             port:
-  #             number: 80
+  enabled: true
+  className: nginx
+  annotations:
+    meta.helm.sh/release-name: netbox
+    meta.helm.sh/release-namespace: flux-system
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: flux-system/netbox-basic-auth
+    nginx.ingress.kubernetes.io/auth-secret-type: auth-file
+    nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required '
+    nginx.ingress.kubernetes.io/proxy-body-size: 10000m
+  hosts:
+    # - host: netbox.marokiki.net
+    - paths: 
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: netbox
+              port:
+              number: 80
