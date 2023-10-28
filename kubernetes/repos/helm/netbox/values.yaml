@@ -3,7 +3,7 @@ image:
   repository: netboxcommunity/netbox
   pullPolicy: IfNotPresent
 postgresql:
-  enable: false
+  enabled: false
 externalDatabase:
   host: netbox-postgresql.flux-system.svc.cluster.local
   port: 5432
@@ -11,7 +11,7 @@ externalDatabase:
   username: netbox
   exsitingSecretName: netbox-postgres-secret
   existingSecretPasswordKey: password
-redis.enable: false
+redis.enabled: false
 tasksRedis:
   sentinels: [redis://redis-master.flux-system.svc.cluster.local:6379]
   sentinelService: redis-master
