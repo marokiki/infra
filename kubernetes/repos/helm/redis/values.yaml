@@ -16,8 +16,7 @@ replica:
   replicaCount: 3
   persistence:
     enable: true
-    storageClass: longhorn
-    size: 8Gi
+    existingClaim: redis-pvc-replica
 sentinel:
   enable: true
   masterSet: mymaster
