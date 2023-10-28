@@ -9,7 +9,7 @@ externalDatabase:
   port: 5432
   database: netbox-postgres
   username: netbox
-  exsitingSecretName: netbox-postgres-secret
+  existingSecretName: netbox-postgres-secret
   existingSecretPasswordKey: password
 redis:
   enabled: false
