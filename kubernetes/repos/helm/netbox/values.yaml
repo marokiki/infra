@@ -6,6 +6,9 @@ image:
 postgresql:
   # enabled: false
   enabled: true
+  auth:
+    username: netbox
+    database: netbox-flux
 # externalDatabase:
 #   host: netbox-postgresql.flux-system.svc.cluster.local
 #   port: 5432
