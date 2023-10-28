@@ -43,7 +43,7 @@ ingress:
   hosts:
     # - host: netbox.marokiki.net
     - paths: 
-        - path: /
+        - path: /netbox
           pathType: Prefix
           backend:
             service:
