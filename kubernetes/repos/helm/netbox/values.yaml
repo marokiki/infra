@@ -11,7 +11,8 @@ externalDatabase:
   username: netbox
   exsitingSecretName: netbox-postgres-secret
   existingSecretPasswordKey: password
-redis.enabled: false
+redis:
+  enabled: false
 tasksRedis:
   sentinels: [redis://redis-master.flux-system.svc.cluster.local:6379]
   sentinelService: redis-master
