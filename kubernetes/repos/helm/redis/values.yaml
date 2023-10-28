@@ -20,6 +20,7 @@ replica:
     size: 8Gi
 sentinel:
   enable: true
+  masterSet: mymaster
   image:
     registry: docker.io
     repository: bitnami/redis-sentinel
