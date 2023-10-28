@@ -8,8 +8,8 @@ externalDatabase:
   host: netbox-postgresql.flux-system.svc.cluster.local
   port: 5432
   database: netbox-postgres
-  username: segre
-  exsitingSecretName: netbox-postgres-secret
+  username: netbox
+  exsitingSecretName: netbox-postgres-secret-netbox
   existingSecretPasswordKey: password
 redis.enable: false
 tasksRedis:
