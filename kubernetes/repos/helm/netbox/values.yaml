@@ -1,0 +1,8 @@
+replicaCount: 2
+image:
+  repository: netboxcommunity/netbox
+  pullPolicy: IfNotPresent
+postgresql:
+  enable: false
+externalDatabase:
+  host: 
