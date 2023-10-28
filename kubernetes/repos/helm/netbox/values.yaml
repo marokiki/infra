@@ -24,6 +24,7 @@ redis:
 tasksRedis:
   sentinels: 
     - redis://redis-master.flux-system.svc.cluster.local:6379
+      redis://redis-master.flux-system.svc.cluster.local:26379
   sentinelService: redis-master
   username: segre
   existingSecretName: redis-secret
@@ -32,6 +33,7 @@ tasksRedis:
 cachingRedis:
   sentinels: 
     - redis://redis-master.flux-system.svc.cluster.local:6379
+      redis://redis-master.flux-system.svc.cluster.local:26379
   sentinelService: redis-master
   username: segre
   existingSecretName: redis-secret
