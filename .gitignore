@@ -6,3 +6,4 @@ secrets-values
 secret.yaml
 auth
 redis-password
+secret-values-postgres
