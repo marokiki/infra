@@ -7,3 +7,5 @@ secret.yaml
 auth
 redis-password
 secret-values-postgres
+secret-postgres.yaml
+cert-postgres.pem
