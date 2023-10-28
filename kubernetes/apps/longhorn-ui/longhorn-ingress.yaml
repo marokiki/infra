@@ -17,8 +17,7 @@ metadata:
 spec:
   ingressClassName: "nginx"
   rules:
-  - host: longhorn.marokiki.net
-    http:
+  - http:
       paths:
       - pathType: Prefix
         path: "/"
