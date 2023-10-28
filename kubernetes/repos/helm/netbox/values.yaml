@@ -22,13 +22,13 @@ redis:
 tasksRedis:
   sentinels: [redis://redis-master.flux-system.svc.cluster.local:6379]
   sentinelService: redis-master
-  # username: segre
+  username: segre
   existingSecretName: redis-secret
   existingSecretKey: redis-password
 cachingRedis:
   sentinels: [redis://redis-master.flux-system.svc.cluster.local:6379]
   sentinelService: redis-master
-  # username: segre
+  username: segre
   existingSecretName: redis-secret
   existingSecretKey: redis-password
 persistence: 
