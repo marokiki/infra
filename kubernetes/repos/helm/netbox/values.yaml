@@ -5,6 +5,11 @@ readinessProbe:
 image:
   repository: netboxcommunity/netbox
   pullPolicy: IfNotPresent
+superuser:
+  name: segre
+  email: admin@example.com
+  password: admin
+  apiToken: 0123456789abcdef0123456789abcdef01234567
 postgresql:
   enabled: false
 externalDatabase:
