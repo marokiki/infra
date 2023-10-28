@@ -32,7 +32,10 @@ redis:
 #   existingSecretKey: redis-password
 persistence: 
   enabled: true
-  existingClaim: netbox-pvc
+  storageClass: longhorn
+  accessModes: ReadWriteOnce
+  size: 1Gi
+  # existingClaim: netbox-pvc
 service:
   type: ClusterIP
 ingress:
