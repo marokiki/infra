@@ -10,7 +10,7 @@ externalDatabase:
   database: netbox-postgres
   username: netbox
   existingSecretName: netbox-postgres-secret
-  existingSecretKey: password
+  existingSecretKey: postgres-password
 redis:
   enabled: false
 tasksRedis:
