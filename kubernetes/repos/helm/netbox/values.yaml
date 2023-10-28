@@ -33,6 +33,7 @@ persistence:
   existingClaim: netbox-pvc
 service:
   type: ClusterIP
+  port: 8080
 ingress:
   enabled: true
   className: nginx
