@@ -21,6 +21,7 @@ tasksRedis:
   username: segre
   existingSecretName: redis-secret
   existingSecretKey: redis-password
+  ssl: true
 cachingRedis:
   sentinels: 
     - redis://redis-master.flux-system.svc.cluster.local:6379
@@ -28,6 +29,7 @@ cachingRedis:
   username: segre
   existingSecretName: redis-secret
   existingSecretKey: redis-password
+  ssl: true
 persistence: 
   enabled: true
   existingClaim: netbox-pvc
