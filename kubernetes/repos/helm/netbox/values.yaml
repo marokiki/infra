@@ -1,4 +1,5 @@
 replicaCount: 2
+dbWaitDebug: true
 image:
   repository: netboxcommunity/netbox
   pullPolicy: IfNotPresent
