@@ -18,21 +18,22 @@ externalDatabase:
   existingSecretName: netbox-postgres-secret
   existingSecretKey: postgres-password
 redis:
-  enabled: false
-tasksRedis:
-  sentinels: 
-    - redis://redis-master.flux-system.svc.cluster.local:6379
-  sentinelService: redis-master
-  username: segre
-  existingSecretName: redis-secret
-  existingSecretKey: redis-password
-cachingRedis:
-  sentinels: 
-    - redis://redis-master.flux-system.svc.cluster.local:6379
-  sentinelService: redis-master
-  username: segre
-  existingSecretName: redis-secret
-  existingSecretKey: redis-password
+  # enabled: false
+  enabled: true
+# tasksRedis:
+#   sentinels: 
+#     - redis://redis-master.flux-system.svc.cluster.local:6379
+#   sentinelService: redis-master
+#   username: segre
+#   existingSecretName: redis-secret
+#   existingSecretKey: redis-password
+# cachingRedis:
+#   sentinels: 
+#     - redis://redis-master.flux-system.svc.cluster.local:6379
+#   sentinelService: redis-master
+#   username: segre
+#   existingSecretName: redis-secret
+#   existingSecretKey: redis-password
 persistence: 
   enabled: true
   existingClaim: netbox-pvc
