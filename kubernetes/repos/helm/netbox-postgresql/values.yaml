@@ -1,6 +1,6 @@
 auth:
   username: "segre"
-  database: "netbox-postgres"
+  database: "postgres"
   existingSecret: "netbox-postgres-secret"
   secretKeys:
     adminPasswordKey: password
