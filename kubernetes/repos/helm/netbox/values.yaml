@@ -49,4 +49,4 @@ ingress:
             service:
               name: netbox
               port:
-                number: 55380
+                number: 15380
