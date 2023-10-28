@@ -13,7 +13,7 @@ master:
     enable: true
     existingClaim: redis-pvc-master
 replica:
-  replicaCount: 3
+  replicaCount: 2
   persistence:
     enable: true
     existingClaim: redis-pvc-replica
