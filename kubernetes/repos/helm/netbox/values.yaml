@@ -2,6 +2,8 @@ replicaCount: 2
 image:
   repository: netboxcommunity/netbox
   pullPolicy: IfNotPresent
+podAnnotations: 
+  meta.helm.sh/release-name: netbox
 postgresql:
   enable: false
 externalDatabase:
