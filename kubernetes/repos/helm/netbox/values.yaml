@@ -58,4 +58,4 @@ ingress:
             service:
               name: netbox
               port:
-                number: 15380
+              number: 80
