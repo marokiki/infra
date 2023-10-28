@@ -4,14 +4,15 @@ image:
   repository: netboxcommunity/netbox
   pullPolicy: IfNotPresent
 postgresql:
-  enabled: false
-externalDatabase:
-  host: netbox-postgresql.flux-system.svc.cluster.local
-  port: 5432
-  database: netbox-postgres
-  username: netbox
-  existingSecretName: netbox-postgres-secret
-  existingSecretKey: postgres-password
+  # enabled: false
+  enabled: true
+# externalDatabase:
+#   host: netbox-postgresql.flux-system.svc.cluster.local
+#   port: 5432
+#   database: netbox-postgres
+#   username: netbox
+#   existingSecretName: netbox-postgres-secret
+#   existingSecretKey: postgres-password
 redis:
   # enabled: false
   enabled: true
