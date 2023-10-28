@@ -3,11 +3,6 @@ dbWaitDebug: true
 image:
   repository: netboxcommunity/netbox
   pullPolicy: IfNotPresent
-readinessProbe:
-  enabled: true
-  initialDelaySeconds: 30
-  periodSeconds: 10
-  timeoutSeconds: 5
 postgresql:
   enabled: false
 externalDatabase:
