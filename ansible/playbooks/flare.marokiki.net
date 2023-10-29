@@ -1,5 +1,5 @@
 ---
-- hosts: aroma
+- hosts: flare
   become: no
 
   roles:
