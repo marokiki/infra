@@ -81,3 +81,26 @@ ingress:
               name: netbox
               port:
                 number: 80
+housekeeping:
+  enabled: true
+  affinity:
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - kinoko-2
+worker:
+  enabled: true
+  replicaCount: 1
+  affinity:
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - kinoko-2
