@@ -1,5 +1,5 @@
 ---
-- hosts: flare
+- hosts: flare.marokiki.net
   become: no
 
   roles:
