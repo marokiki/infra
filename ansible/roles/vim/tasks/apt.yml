@@ -12,10 +12,10 @@
   when: "'vim-gtk3' not in ansible_facts.packages"
   become: true
 
-- name: set default editor
-  file:
-    path: /etc/alternatives/editor
-    state: link
-    src: /usr/bin/vim.gtk3
-  become: true
-  when: "'vim.gtk3' not in ansible_facts.alternatives.editor.link"
+# - name: set default editor
+#   file:
+#     path: /etc/alternatives/editor
+#     state: link
+#     src: /usr/bin/vim.gtk3
+#   become: true
+#   when: "'vim.gtk3' not in ansible_facts.alternatives.editor.link"
