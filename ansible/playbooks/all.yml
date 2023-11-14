@@ -12,6 +12,7 @@
       vars_files:
         - ../host_vars/{{ ansible_hostname }}
     - role: resolved
+      when: inventory_hostname != 'aroma.marokiki.net'
     - role: sshd
     - role: vim
     - role: tmux

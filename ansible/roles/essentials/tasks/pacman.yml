@@ -11,4 +11,5 @@
     - go
     - man-db
     - inetutils
-    - docker
+    - reflector
+    - rsync
