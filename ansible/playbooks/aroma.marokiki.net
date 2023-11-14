@@ -1,5 +1,5 @@
 ---
-- hosts: aroma
+- hosts: aroma.marokiki.net
   become: no
 
   roles:
