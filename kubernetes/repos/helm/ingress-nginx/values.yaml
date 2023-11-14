@@ -3,7 +3,7 @@ controller:
   service:
     enableHttp: true
     enableHttps: true
-    loadBalancerIP: 192.168.220.65
+    loadBalancerIP: 192.168.20.201
     ports:
       http: 80
       https: 443

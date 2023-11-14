@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   addresses:
-  - 192.168.220.64-192.168.220.67
+  - 192.168.20.201-192.168.20.229
   autoAssign: true
 ---
 apiVersion: metallb.io/v1beta1
