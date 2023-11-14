@@ -16,6 +16,5 @@
     - role: vim
     - role: tmux
     - role: zsh
-    - role: k8s
 
 
