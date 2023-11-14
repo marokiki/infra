@@ -1,4 +1,4 @@
 ifname: enp3s0
-ipv4_cidr: 192.168.220.21/24
-gateway: 192.168.220.1
+ipv4_cidr: 192.168.20.111/24
+gateway: 192.168.20.1
 bridge: false

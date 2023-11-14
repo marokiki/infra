@@ -1,0 +1,18 @@
+---
+- hosts: hikari.marokiki.net
+  become: no
+
+  roles:
+    - role: yay-update
+      when: ansible_distribution in ['Archlinux']
+    - role: apt-update
+      when: ansible_distribution in ['Debian', 'Ubuntu']
+    - role: essentials
+    - role: networkd
+      vars_files:
+        - ../host_vars/{{ ansible_hostname }}
+    - role: resolved
+    - role: sshd
+    - role: vim
+    - role: tmux
+    - role: zsh
