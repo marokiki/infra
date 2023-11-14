@@ -3,5 +3,4 @@ kind: Kustomization
 resources:
   - provider.yaml
   - alert.yaml
-  - secret.yaml
   - sealed-secret.yaml
