@@ -1,7 +1,14 @@
 192.168.20.1 goto.marokiki.net
-192.168.20.21 izu.marokiki.net
+192.168.20.2 takashima.marokiki.net
+192.168.20.11 yaku-1.marokiki.net
+192.168.20.12 yaku-2.marokiki.net
+192.168.20.21 koshiki-1.marokiki.net
+192.168.20.22 koshiki-2.marokiki.net
+192.168.20.31 mikura.marokiki.net
+192.168.20.32 izu.marokiki.net
 192.168.20.103 manaka.marokiki.net
 192.168.20.104 aroma.marokiki.net
+192.168.20.105 hikari.marokiki.net
 192.168.20.106 tatsumaki.marokiki.net
 192.168.20.111 takenoko-1.marokiki.net
 192.168.20.112 takenoko-2.marokiki.net
@@ -9,3 +16,6 @@
 192.168.20.114 takenoko-4.marokiki.net
 192.168.20.115 kinoko-1.marokiki.net
 192.168.20.116 kinoko-2.marokiki.net
+
+240b:250:9800:4a20::31 mikura.marokiki.net
+240b:250:9800:4a20::32 izu.marokiki.net
