@@ -12,3 +12,10 @@ takenoko-4   Ready    <none>          119m   v1.28.2   192.168.220.24   <none>  
 ```
 # Install
 `ansible/roles/k8s`
+
+```
+export GITHUB_TOKEN=github_pat_*****                 
+export GITHUB_USER=segre5458  
+# kubernetes/で実行
+flux bootstrap github --owner=$GITHUB_USER --repository=infra --branch=master --path=./kubernetes/_flux/takenoko --personal --components-extra=image-reflector-controller,image-automation-controller --reconcile
+```
