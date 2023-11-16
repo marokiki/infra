@@ -71,6 +71,11 @@ ingress:
     nginx.ingress.kubernetes.io/auth-secret-type: auth-file
     nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required '
     nginx.ingress.kubernetes.io/proxy-body-size: 10000m
+    cert-manager.io/issuer: letsencrypt-issuer
+  tls:
+    - hosts:
+      - netbox.marokiki.net
+      secretName: netbox-tls
   hosts:
     - host: netbox.marokiki.net
       paths: 
