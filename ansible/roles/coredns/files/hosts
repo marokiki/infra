@@ -20,5 +20,7 @@
 192.168.20.115 kinoko-1.marokiki.net
 192.168.20.116 kinoko-2.marokiki.net
 
+192.168.20.201 ingress-nginx.marokiki.net
+
 240b:250:9800:4a20::31 mikura.marokiki.net
 240b:250:9800:4a20::32 izu.marokiki.net
