@@ -1,0 +1,21 @@
+$ORIGIN marokiki.net.
+$TTL 300 
+
+@               IN      SOA     chloe.ns.cloudflare.com. dns.cloudflare.com. (
+                                2023111601 ; serial
+                                3600      ; refresh
+                                600       ; retry
+                                604800     ; expire
+                                300       ; minimum
+                                )
+
+@               IN      NS      chloe.ns.cloudflare.com.
+@               IN      NS      syeef.ns.cloudflare.com.
+@               IN      A       106.178.114.91
+
+ns1             IN      A       20.212.241.28
+
+www             IN      CNAME   takenoko
+
+; takenoko        IN      A       
+
