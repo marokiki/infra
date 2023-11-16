@@ -17,7 +17,7 @@ spec:
   interval: 1m0s
   chart:
     spec:
-      chart: cert-manager
+      chart: jetstack/cert-manager
       version: 1.13.2
       sourceRef:
         kind: HelmRepository
