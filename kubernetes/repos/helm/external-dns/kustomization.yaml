@@ -9,4 +9,4 @@ configurations:
   - kustomizeconfig.yaml
 resources:
   - helm.yaml
-  - sealed-secrets.yaml
+  - sealed-secret.yaml
