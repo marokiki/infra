@@ -20,8 +20,8 @@ spec:
   - host: longhorn.marokiki.net
     http:
       paths:
-      - pathType: Prefix
-        path: "/longhorn"
+      - path: / 
+        pathType: Prefix
         backend:
           service:
             name: longhorn-frontend
