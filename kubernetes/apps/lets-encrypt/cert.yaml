@@ -8,7 +8,7 @@ spec:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: 'segre@marokiki.net'
     privateKeySecretRef:
-      name: segre-client-letsencrypt
+      name: acme-client-letsencrypt
     solvers:
       - http01:
           ingress:
