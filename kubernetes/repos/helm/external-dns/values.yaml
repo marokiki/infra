@@ -1,0 +1,14 @@
+serviceAccount:
+  create: true
+sources:
+  - ingress
+  - service
+policy: sync
+registry: txt
+txtOwnerId: segre
+env:
+  - name: CF_API_TOKEN
+    valueFrom:
+      secretKeyRef:
+        name: cloudflare-external-dns
+        key: api-token

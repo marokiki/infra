@@ -10,3 +10,4 @@ secret-values-postgres
 secret-postgres.yaml
 cert-postgres.pem
 webhook
+cloudflare-external-dns
