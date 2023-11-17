@@ -9,11 +9,11 @@ spec:
     privateKeySecretRef:
       name: acme-letsencrypt-secret
     solvers:
-      # - dns01:
-      #     cloudflare:
-      #       apiTokenSecretRef:
-      #         name: cloudflare-lets-encrypt
-      #         key: api-token
-      - http01:
-          ingress:
-            class: nginx
+      - dns01:
+          cloudflare:
+            apiTokenSecretRef:
+              name: cloudflare-lets-encrypt
+              key: api-token
+      # - http01:
+      #     ingress:
+      #       class: nginx
