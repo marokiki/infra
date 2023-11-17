@@ -1,15 +1,15 @@
 apiVersion: cert-manager.io/v1
-kind: Issuer
+kind: ClusterIssuer
 metadata:
-  name: letsencrypt-issuer
+  name: letsencrypt-staging
   namespace: flux-system
 spec:
   acme:
-    server: https://acme-v02.api.letsencrypt.org/directory
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
     email: 'segre@marokiki.net'
     privateKeySecretRef:
-      name: acme-client-letsencrypt
+      name: acme-letsencrypt
     solvers:
       - http01:
           ingress:
-            class: nginx
+            ingressClassName: nginx
