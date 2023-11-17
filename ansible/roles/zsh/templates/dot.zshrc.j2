@@ -41,12 +41,15 @@ export EDITOR=vim
 export LC_ALL=C
 
 # tmux open
-count=`ps aux | grep tmux | grep -v grep | wc -l`
-if test $count -eq 0; then
-      echo `tmux`
-elif test $count -ge 1; then
-          echo `tmux a`
+if [[ -z $TMUX ]]; then
+    count=$(ps aux | grep tmux | grep -v grep | wc -l)
+    if test $count -eq 0; then
+        echo $(tmux)
+    elif test $count -ge 1; then
+        echo $(tmux a)
+    fi
 fi
+
 
 # zplug
 source ~/.zplug/init.zsh
