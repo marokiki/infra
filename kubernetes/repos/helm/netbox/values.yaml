@@ -65,7 +65,7 @@ ingress:
   className: nginx
   annotations:
     meta.helm.sh/release-name: netbox
-    meta.helm.sh/release-namespace: cert-manager
+    # meta.helm.sh/release-namespace: cert-manager
     nginx.ingress.kubernetes.io/auth-type: basic
     nginx.ingress.kubernetes.io/auth-secret: flux-system/netbox-basic-auth
     nginx.ingress.kubernetes.io/auth-secret-type: auth-file
@@ -74,11 +74,11 @@ ingress:
     external-dns.alpha.kubernetes.io/hostname: netbox.marokiki.net
     kubernetes.io/tls-acme: "true"
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-staging
-  tls:
-    - secretName: letsencrypt-cert
-      hosts:
-        - netbox.marokiki.net
+    # cert-manager.io/cluster-issuer: letsencrypt-staging
+  # tls:
+  #   - secretName: letsencrypt-cert
+  #     hosts:
+  #       - netbox.marokiki.net
   hosts:
     - host: netbox.marokiki.net
       paths: 
