@@ -3,4 +3,7 @@ kind: Namespace
 metadata:
   name: cert-manager
   labels:
-    name: cert-manager
+    kubernetes.io/metadata.name: cert-manager
+    kustomize.toolkit.fluxcd.io/name: namespaces
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
+
