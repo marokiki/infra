@@ -12,6 +12,6 @@ kind: Namespace
 metadata:
   name: ingress-nginx
   labels:
-    kubernetes.io/metadata.name: cert-manager
+    kubernetes.io/metadata.name: ingress-nginx
     kustomize.toolkit.fluxcd.io/name: namespaces
     kustomize.toolkit.fluxcd.io/namespace: flux-system
