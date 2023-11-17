@@ -11,8 +11,10 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: cert-manager
-  annotatinos:
-    meta.helm.sh/release-namespace: cert-manager
+  namespace: cert-manager
+  annotations:
+    meta.helm.sh/release-name: cilium
+    meta.helm.sh/release-namespace: kube-system
 spec:
   interval: 1m0s
   chart:
