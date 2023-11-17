@@ -11,6 +11,6 @@ spec:
     solvers:
       - dns01:
           cloudflare:
-            apiTOkenSecretRef:
+            apiTokenSecretRef:
               name: cloudflare-lets-encrypt
               key: api-token
