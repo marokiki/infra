@@ -22,3 +22,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: metallb
+  valuesFrom:
+  - kind: ConfigMap
+    name: values
