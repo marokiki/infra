@@ -13,8 +13,7 @@ metadata:
   name: cert-manager
   namespace: cert-manager
   annotations:
-    meta.helm.sh/release-name: cilium
-    meta.helm.sh/release-namespace: kube-system
+    meta.helm.sh/release-namespace: cert-manager
 spec:
   interval: 1m0s
   chart:
