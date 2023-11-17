@@ -28,38 +28,38 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: cert-manager
-  namespace: flux-system
-  # namespace: cert-manager
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/cert-manager
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-    namespace: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: lets-encrypt
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/apps/lets-encrypt
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: cert-manager
+#   namespace: flux-system
+#   # namespace: cert-manager
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/cert-manager
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#     namespace: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: lets-encrypt
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/apps/lets-encrypt
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
 # ---
 # apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 # kind: Kustomization
