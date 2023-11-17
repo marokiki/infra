@@ -14,7 +14,7 @@ spec:
     kind: GitRepository
     name: flux-system
 ---
-apiToken: kustomize.config.k8s.io/v1beta2
+apiToken: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: namespaces
