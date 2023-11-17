@@ -88,7 +88,7 @@ ingress:
             service:
               name: netbox
               port:
-                number: 443
+                number: 80
 housekeeping:
   enabled: true
   affinity:
