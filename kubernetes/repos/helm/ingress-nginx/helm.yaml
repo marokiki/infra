@@ -23,5 +23,5 @@ spec:
         kind: HelmRepository
         name: ingress-nginx
   valuesFrom:
-  - kind: ConfigMap
-    name: values
+    - kind: ConfigMap
+      name: values

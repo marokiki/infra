@@ -22,3 +22,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: external-dns
+  valuesFrom:
+    - kind: ConfigMap
+      name: values
