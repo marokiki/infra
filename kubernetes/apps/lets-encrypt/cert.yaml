@@ -14,6 +14,3 @@ spec:
             apiTokenSecretRef:
               name: cloudflare-lets-encrypt
               key: api-token
-      # - http01:
-      #     ingress:
-      #       class: nginx
