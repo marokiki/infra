@@ -7,7 +7,7 @@ spec:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: 'segre@marokiki.net'
     privateKeySecretRef:
-      name: acme-letsencrypt
+      name: acme-letsencrypt-secret
     solvers:
       - dns01:
           cloudflare:
