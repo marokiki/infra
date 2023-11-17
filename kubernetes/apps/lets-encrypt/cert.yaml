@@ -4,11 +4,13 @@ metadata:
   name: letsencrypt-issuer
 spec:
   acme:
-    server: https://acme-v02.api.letsencrypt.org/directory
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
     email: 'segre@marokiki.net'
     privateKeySecretRef:
       name: acme-letsencrypt-secret
     solvers:
-      - http01:
-          ingress:
-            ingressClassName: nginx
+      - dns01:
+          cloudflare:
+            apiTOkenSecretRef:
+              name: cloudflare-lets-encrypt
+              key: api-token
