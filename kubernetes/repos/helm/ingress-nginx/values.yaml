@@ -1,5 +1,7 @@
 controller:
   watchIngressWithoutClass: true
+  extra-args:
+    enable-ssl-passthrough: true
   service:
     enableHttp: true
     enableHttps: true
