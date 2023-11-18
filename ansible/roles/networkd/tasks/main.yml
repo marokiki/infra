@@ -62,3 +62,11 @@
   loop:
     - systemd-networkd
   become: true
+
+- name: Restart systemd-networkd
+  service:
+    name: "{{ item }}"
+    state: restarted
+  loop:
+    - systemd-networkd
+  become: true

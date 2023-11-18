@@ -28,3 +28,10 @@
   loop:
     - systemd-resolved
   become: true
+
+- name: Restart systemd-resolved
+  systemd:
+    daemon_reload: yes
+    name: systemd-resolved
+    state: restarted
+  become: true
