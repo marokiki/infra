@@ -2,3 +2,5 @@ ifname: enp3s0
 ipv4_cidr: 192.168.20.113/24
 gateway: 192.168.20.1
 bridge: false
+ipv6: true
+ipv6_network: "::113"

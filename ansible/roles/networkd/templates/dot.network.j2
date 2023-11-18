@@ -4,3 +4,8 @@ Name={{ ifname }}
 [Network]
 Address={{ ipv4_cidr }}
 Gateway={{ gateway }}
+
+{% if ipv6 == true %}
+IPv6AcceptRA=yes
+IPv6Token={{ ipv6_network }}
+{% endif %}

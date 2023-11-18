@@ -3,3 +3,5 @@ ipv4_cidr: 192.168.20.103/24
 gateway: 192.168.20.1
 bridge: true
 bridge_name: br0
+ipv6: true
+ipv6_network: "::103"
