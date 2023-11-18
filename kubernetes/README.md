@@ -35,7 +35,6 @@ nodeRegistration:
 sudo kubeadm join --config=kubeadm-join.yaml
 ```
 ```
-```
 export GITHUB_TOKEN=github_pat_*****                 
 export GITHUB_USER=segre5458  
 # kubernetes/で実行
