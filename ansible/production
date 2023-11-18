@@ -7,13 +7,11 @@ kinoko-1.marokiki.net ansible_host=192.168.20.115
 kinoko-2.marokiki.net ansible_host=192.168.20.116
 
 [all]
-<!-- ikazuchi.marokiki.net ansible_host=192.168.20.102  -->
 manaka.marokiki.net ansible_host=192.168.20.103 
 aroma.marokiki.net ansible_host=192.168.20.104 
 hikari.marokiki.net ansible_host=192.168.20.105
 tatsumaki.marokiki.net ansible_host=192.168.20.106 
 anna.marokiki.net ansible_host=192.168.20.107
-<!-- emo.marokiki.net ansible_host=192.168.20.108 -->
 takenoko-1.marokiki.net ansible_host=192.168.20.111
 takenoko-2.marokiki.net ansible_host=192.168.20.112
 takenoko-3.marokiki.net ansible_host=192.168.20.113
