@@ -1,0 +1,16 @@
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+clusterName: takenoko 
+networking:
+  podSubnet: 10.244.0.0/16,2001:db8:42:0::/56
+  serviceSubnet: 10.96.0.0/16,2001:db8:42:1::/112
+---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: "192.168.20.111,240b:250:9800:4a20::111"
+  bindPort: 6443
+nodeRegistration:
+  kubeletExtraArgs:
+    node-ip: 192.168.20.111,240b:250:9800:4a20::111
+  criSocket: /var/run/crio/crio.sock

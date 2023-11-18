@@ -13,6 +13,10 @@ takenoko-4   Ready    <none>          119m   v1.28.2   192.168.220.24   <none>  
 # Install
 `ansible/roles/k8s`
 
+## init
+```
+sudo kubeadm init --config=init/takenoko-1.yaml
+```
 ```
 export GITHUB_TOKEN=github_pat_*****                 
 export GITHUB_USER=segre5458  
