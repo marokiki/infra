@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kubernetes-dashboard
+  namespace: flux-system
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    meta.helm.sh/release-name: kubernetes-dashboard
+    meta.helm.sh/release-namespace: flux-system
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+    nginx.ingress.kubernetes.io/auth-secret: flux-system/kubernetes-dashboard-basic-auth
+    nginx.ingress.kubernetes.io/auth-secret-type: auth-file
+    nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required '
+    nginx.ingress.kubernetes.io/proxy-body-size: 10000m
+    external-dns.alpha.kubernetes.io/hostname: kubernetes-dashboard.marokiki.net
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/issuer: letsencrypt-issuer
+spec:
+  ingressClassName: "nginx"
+  tls:
+    - secretName: cloudflare-lets-encrypt-kubernetes-dashboard
+      hosts:
+      - kubernetes-dashboard.marokiki.net
+  rules:
+  - host: kubernetes-dashboard.marokiki.net
+    http:
+      paths:
+      - path: / 
+        pathType: Prefix
+        backend:
+          service:
+            name: kubernetes-dashboard
+            port:
+              number: 80
