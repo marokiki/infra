@@ -1,9 +1,11 @@
 app:
-  ingress:
-    enabled: false
-  cert-manager:
-    enabled: false
+  metrics-server:
+    enabled: true
+    args:
+      - --kubelet-preferred-address-types=InternalIP
+      - --kubelet-insecure-tls
+  metricsScraper:
+    enabled: true
+    role: metrics-scraper
 extraArgs:
   - --namespace=flux-system
-  - --enable-skip-login
-  - --disable-settings-authorizer
