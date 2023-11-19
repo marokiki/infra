@@ -3,3 +3,6 @@ app:
     enabled: false
   cert-manager:
     enabled: false
+extraArgs:
+  - --enable-skip-login
+  - --disable-settings-authorizer
