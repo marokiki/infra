@@ -7,7 +7,6 @@ metadata:
 spec:
   addresses:
   - 192.168.20.201-192.168.20.229
-  - 240b:250:9800:4a20::201-240b:250:9800:4a20::229
   autoAssign: true
 ---
 apiVersion: metallb.io/v1beta1
