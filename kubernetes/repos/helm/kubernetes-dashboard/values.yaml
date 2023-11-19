@@ -5,3 +5,4 @@ app:
     enabled: false
 extraArgs:
   - --namespace=flux-system
+  - --enable-skip-login
