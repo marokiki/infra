@@ -13,8 +13,16 @@ metadata:
     nginx.ingress.kubernetes.io/auth-secret: flux-system/longhorn-basic-auth
     nginx.ingress.kubernetes.io/auth-secret-type: auth-file
     nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required '
-    # nginx.ingress.kubernetes.io/proxy-body-size: 10000m
+    nginx.ingress.kubernetes.io/proxy-body-size: 10000m
+    external-dns.alpha.kubernetes.io/hostname: longhorn.marokiki.net
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/issuer: letsencrypt-issuer
 spec:
+  tls:
+    - secretName: cloudflare-lets-encrypt
+      hosts:
+        - longhorn.marokiki.net
   ingressClassName: "nginx"
   rules:
   - host: longhorn.marokiki.net
