@@ -6,3 +6,4 @@ app:
 extraArgs:
   - --namespace=flux-system
   - --enable-skip-login
+  - --disable-settings-authorizer
