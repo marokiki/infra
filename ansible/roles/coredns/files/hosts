@@ -23,7 +23,6 @@
 192.168.20.201 netbox.marokiki.net longhorn.marokiki.net ingress-nginx.marokiki.net kubernetes-dashboard.marokiki.net
 192.168.20.107 www.marokiki.net
 
-
 240b:250:9800:4a20::1 goto.marokiki.net
 240b:250:9800:4a20::11 yaku-1.marokiki.net
 240b:250:9800:4a20::12 yaku-2.marokiki.net
