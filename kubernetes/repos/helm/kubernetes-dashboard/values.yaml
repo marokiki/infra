@@ -4,5 +4,4 @@ app:
   cert-manager:
     enabled: false
 extraArgs:
-  - --auto-generate-certificates=true
   - --namespace=flux-system
