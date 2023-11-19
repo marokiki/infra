@@ -195,48 +195,48 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: redis
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/redis
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: netbox
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/netbox
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: external-dns
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/external-dns
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: redis
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/redis
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: netbox
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/netbox
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: external-dns
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/external-dns
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
