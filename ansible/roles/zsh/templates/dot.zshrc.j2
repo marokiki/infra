@@ -27,17 +27,21 @@ alias cxx='g++ -std=c++17 -Wall -O2 -g -fsanitize=undefined -D_GLIBCXX_DEBUG'
 alias pdf="evince"
 alias k="kubectl"
 alias kg="kubectl get"
+alias ke="kubectl edit"
+alias ks="kubectl get secret -A"
+alias kga="kubectl get all -A"
 alias kgn="kubectl get nodes -o wide"
 alias kgp="kubectl get pods -o wide"
 alias kd="kubectl describe"
 alias kl="kubectl logs"
+alias fga="flux get all -A"
+alias fgf="flux get all -A --status-selector ready=false"
 alias watch="watch "
 alias ss="sudo systemctl start"
 alias sst="sudo systemctl status"
-alias st="sudo systemctl stop"
 alias sr="sudo systemctl restart"
 alias se="sudo systemctl enable"
-alias sd="sudo systemctl disable"
+
 
 export EDITOR=vim
 export LC_ALL=C
