@@ -4,5 +4,4 @@ app:
   cert-manager:
     enabled: false
 extraArgs:
-  - --enable-skip-login
-  - --disable-settings-authorizer
+  - --auto-generate-certificates=true
