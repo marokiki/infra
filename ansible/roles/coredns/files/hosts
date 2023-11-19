@@ -20,8 +20,8 @@
 192.168.20.115 kinoko-1.marokiki.net
 192.168.20.116 kinoko-2.marokiki.net
 
-192.168.20.201 netbox.marokiki.net
-192.168.20.201 ingress-nginx.marokiki.net
+192.168.20.201 netbox.marokiki.net longhorn.marokiki.net ingress-nginx.marokiki.net kubernetes-dashboard.marokiki.net
+192.168.20.107 www.marokiki.net
 
 
 240b:250:9800:4a20::1 goto.marokiki.net
@@ -44,4 +44,3 @@
 240b:250:9800:4a20::114 takenoko-4.marokiki.net
 240b:250:9800:4a20::115 kinoko-1.marokiki.net
 240b:250:9800:4a20::116 kinoko-2.marokiki.net
-
