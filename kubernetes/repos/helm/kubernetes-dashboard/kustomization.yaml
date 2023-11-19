@@ -11,3 +11,4 @@ resources:
   - helm.yaml
   - sealed-secret.yaml
   - ingress.yaml
+  - serviceaccount.yaml
