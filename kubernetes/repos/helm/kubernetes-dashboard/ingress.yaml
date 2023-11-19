@@ -9,7 +9,7 @@ metadata:
     meta.helm.sh/release-name: kubernetes-dashboard
     meta.helm.sh/release-namespace: flux-system
     nginx.ingress.kubernetes.io/auth-type: basic
-    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
     nginx.ingress.kubernetes.io/auth-secret: flux-system/kubernetes-dashboard-basic-auth
     nginx.ingress.kubernetes.io/auth-secret-type: auth-file
     nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required '
