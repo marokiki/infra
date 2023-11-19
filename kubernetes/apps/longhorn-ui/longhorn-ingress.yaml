@@ -34,4 +34,4 @@ spec:
           service:
             name: longhorn-frontend
             port:
-              number: 8080
+              number: 80
