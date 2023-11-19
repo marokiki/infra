@@ -5,4 +5,4 @@ app:
     enabled: false
 extraArgs:
   - --auto-generate-certificates=true
-  - --authentication-mode=basic
+  - --namespace=flux-system
