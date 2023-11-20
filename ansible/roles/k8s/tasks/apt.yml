@@ -37,7 +37,7 @@
 - name: install cri-o
   shell:
     cmd: |
-      apt-get install cri-o cri-o-runc -y
+      apt install cri-o cri-o-runc -y
   become: true
 
 - name: start and enable crio
