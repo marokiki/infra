@@ -1,0 +1,22 @@
+---
+- hosts: akatsuki-1.marokiki.net
+  become: false
+
+  roles:
+    - role: yay-update
+      when: ansible_distribution in ['Archlinux']
+    - role: apt-update
+      when: ansible_distribution in ['Debian', 'Ubuntu']
+    - role: essentials
+    - role: networkd
+      vars_files:
+        - ../host_vars/{{ ansible_hostname }}
+    - role: resolved
+      when: inventory_hostname != 'aroma.marokiki.net'
+    - role: sshd
+    - role: vim
+    - role: tmux
+    - role: zsh
+    - role: k8s
+
+
