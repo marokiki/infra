@@ -19,4 +19,6 @@ takenoko-3.marokiki.net ansible_host=192.168.20.113
 takenoko-4.marokiki.net ansible_host=192.168.20.114
 kinoko-1.marokiki.net ansible_host=192.168.20.115
 kinoko-2.marokiki.net ansible_host=192.168.20.116
-
+akatuski-1.marokiki.net ansible_host=192.168.20.121
+akatuski-2.marokiki.net ansible_host=192.168.20.122
+akatuski-3.marokiki.net ansible_host=192.168.20.123
