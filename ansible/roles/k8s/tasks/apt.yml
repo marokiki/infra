@@ -19,14 +19,14 @@
 - name: add crio repository
   shell:
     cmd: |
-      cat <<EOF | tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
-      deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_22.04/ /
-      EOF
-      cat <<EOF | tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:cri-o:1.27.list
-      deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/1.27/xUbuntu_22.04/ /
-      EOF
-      curl -L https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable:cri-o:1.27/xUbuntu_22.04/Release.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/libcontainers.gpg add -
-      curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_22.04/Release.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/libcontainers.gpg add -
+        cat <<EOF | tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
+        deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_22.04/ /
+        EOF
+        cat <<EOF | tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:cri-o:1.27.list
+        deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/1.27/xUbuntu_22.04/ /
+        EOF
+        curl -L https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable:cri-o:1.27/xUbuntu_22.04/Release.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/libcontainers.gpg add -
+        curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_22.04/Release.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/libcontainers.gpg add -
   become: true
     
 - name: apt update
