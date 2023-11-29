@@ -20,6 +20,15 @@ spec:
         imagePullPolicy: Always
         ports:
           - containerPort: 8080
+        env:
+          - name: POSTGRES_HOST
+            value: le4db-postgres-service  # Postgresサービスの名前を指定
+          - name: POSTGRES_USER
+            value: postgres
+          - name: POSTGRES_PASSWORD
+            value: postgres
+          - name: POSTGRES_DB
+            value: postgres
         resources:
           limits: 
             cpu: 100m
