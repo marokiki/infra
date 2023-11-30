@@ -59,7 +59,7 @@ internalDatabase:
 externalDatabase:
   enabled: true
   type: postgresql
-  host: netbox-postgresql.flux-system.svc.cluster.local
+  host: postgresql.flux-system.svc.cluster.local
   database: nextcloud
   existingSecret:  
     enabled: true
