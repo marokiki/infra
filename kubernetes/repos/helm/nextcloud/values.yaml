@@ -43,7 +43,7 @@ ingress:
   path: /
   pathType: Prefix
 nextcloud:
-  houst: nextcloud.marokiki.net
+  host: nextcloud.marokiki.net
   existingSecret:
     enabled: true
     secretName: nextcloud-secret
