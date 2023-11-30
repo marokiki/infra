@@ -44,9 +44,9 @@ nextcloud:
   houst: nextcloud.marokiki.net
   existingSecret:
     enabled: true
+    secretName: nextcloud-secret
     usernameKey: nextcloud-username
     passwordKey: nextcloud-password
-    tokenKey: nextcloud-token
   datadir: /var/www/html/data
   extraVolumes:
     - name: nextcloud-nfs
@@ -63,9 +63,10 @@ externalDatabase:
   database: nextcloud
   existingSecret:  
     enabled: true
-    usernameKey: postgres-username
-    passwordKey: postgres-password
-    tokenKey: postgres-token
-  existingSecretName: netbox-postgres-secret
-  existingSecretKey: postgres-password
+    sercretName: nextcloud-secret
+    usernameKey: postgresql-username
+    passwordKey: postgresql-password
+persistence:
+  enabled: true
+  existingClaim: nextcloud-pvc
 
