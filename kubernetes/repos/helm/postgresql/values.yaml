@@ -1,7 +1,7 @@
 auth:
   username: "segre"
   database: "postgres"
-  existingSecret: "netbox-postgres-secret"
+  existingSecret: "postgres-secret"
   secretKeys:
     adminPasswordKey: password
     userPasswrodKey: postgres-password
@@ -20,5 +20,5 @@ primary:
       memory: "512Mi"
   persistence:
     enabled: true
-    existingClaim: "netbox-postgres-pvc"
+    existingClaim: "postgres-pvc"
   
