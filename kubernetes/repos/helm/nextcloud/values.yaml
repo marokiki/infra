@@ -71,4 +71,7 @@ externalDatabase:
 persistence:
   enabled: true
   existingClaim: nextcloud-pvc
-
+livenessProbe:
+  enabled: false
+readinessProbe:
+  enabled: false
