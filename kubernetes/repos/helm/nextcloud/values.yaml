@@ -75,3 +75,6 @@ livenessProbe:
   enabled: false
 readinessProbe:
   enabled: false
+service:
+  type: ClusterIP
+  port: 80
