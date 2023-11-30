@@ -22,11 +22,11 @@ affinity:
 postgresql:
   enabled: false
 externalDatabase:
-  host: netbox-postgresql.flux-system.svc.cluster.local
+  host: postgresql.flux-system.svc.cluster.local
   port: 5432
   database: netxbox
   username: segre
-  existingSecretName: netbox-postgres-secret
+  existingSecretName: postgres-secret
   existingSecretKey: postgres-password
 redis:
   # enabled: false
