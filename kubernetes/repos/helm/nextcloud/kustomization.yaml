@@ -9,6 +9,6 @@ configMapGenerator:
 configurations:
   - kustomizeconfig.yaml
 resources:
-  - helm.yaml
   - pvc.yaml
+  - helm.yaml
   - sealed-secret.yaml
