@@ -1,6 +1,5 @@
 auth:
   username: "segre"
-  database: "postgres"
   existingSecret: "postgres-secret"
   secretKeys:
     adminPasswordKey: password
