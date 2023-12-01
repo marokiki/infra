@@ -20,4 +20,7 @@ primary:
   persistence:
     enabled: true
     existingClaim: "postgres-pvc"
+  service:
+    type: LoadBalancer
+    loadBalancerIP: 192.168.20.202
   
