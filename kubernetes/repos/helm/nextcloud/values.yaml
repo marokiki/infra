@@ -61,7 +61,11 @@ nextcloud:
     proxy.config.php: |-
       <?php
       $CONFIG = array (
-      'trusted_proxies'   => ['192.168.20.107', '106.178.114.91'],
+        'trusted_proxies' => array(
+          0 => '192.168.20.107/24',
+          1 => '106.178.114.91/32',
+        ),
+        'forwarded_for_headers' => array('HTTP_X_FORWARDED_FOR'),
       );
 internalDatabase:
   enabled: false
