@@ -23,7 +23,6 @@ postgresql:
   enabled: false
 externalDatabase:
   host: postgresql.flux-system.svc.cluster.local
-  port: 5432
   database: netxbox
   username: segre
   existingSecretName: postgres-secret
