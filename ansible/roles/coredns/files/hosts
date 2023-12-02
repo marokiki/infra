@@ -23,7 +23,14 @@
 192.168.20.122 akatsuki-2.marokiki.net
 192.168.20.123 akatsuki-3.marokiki.net
 
-192.168.20.201 netbox.marokiki.net longhorn.marokiki.net ingress-nginx.marokiki.net kubernetes-dashboard.marokiki.net
+192.168.20.201 netbox.marokiki.net
+192.168.20.201 longhorn.marokiki.net
+192.168.20.201 ingress-nginx.marokiki.net
+192.168.20.201 kubernetes-dashboard.marokiki.net
+192.168.20.201 le4db.marokiki.net
+192.168.20.201 nextcloud.marokiki.net
+192.168.20.201 prometheus.marokiki.net
+
 192.168.20.107 www.marokiki.net
 
 240b:250:9800:4a20::1 goto.marokiki.net
