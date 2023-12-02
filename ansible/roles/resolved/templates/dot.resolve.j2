@@ -12,7 +12,7 @@ Domains=marokiki.net
 #LLMNR=no
 #Cache=no-negative
 #CacheFromLocalhost=no
-#DNSStubListener=yes
+DNSStubListener={{ 'no' if inventory_hostname == 'aroma.marokiki.net' else 'yes' }}
 #DNSStubListenerExtra=
 #ReadEtcHosts=yes
 #ResolveUnicastSingleLabel=no
