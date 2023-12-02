@@ -66,6 +66,7 @@ nextcloud:
           1 => '106.178.114.91/32',
         ),
         'forwarded_for_headers' => array('HTTP_X_FORWARDED_FOR'),
+        'overwriteprotocol' => 'https',
       );
 internalDatabase:
   enabled: false
