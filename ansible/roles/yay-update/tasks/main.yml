@@ -19,7 +19,7 @@
     mode: 0644
     validate: "visudo -cf %s"
 
-- name: Upgrade the system using yay
-  kewlfft.aur.aur:
-    upgrade: yes
-    use: yay
+# - name: Upgrade the system using yay
+#   kewlfft.aur.aur:
+#     upgrade: yes
+#     use: yay
