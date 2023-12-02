@@ -13,3 +13,4 @@ webhook
 cloudflare-external-dns
 cloudflare-lets-encrypt 
 nextcloud-secret
+alertmanager-secrets
