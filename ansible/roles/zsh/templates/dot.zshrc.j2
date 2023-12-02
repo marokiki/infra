@@ -33,9 +33,13 @@ alias kga="kubectl get all -A"
 alias kgn="kubectl get nodes -o wide"
 alias kgp="kubectl get pods -o wide"
 alias kd="kubectl describe"
+alias kgi="kubectl get ingress -A"
 alias kl="kubectl logs"
+alias kgew="kubectl get events -n flux-system --field-selector type=Warning"
 alias fga="flux get all -A"
-alias fgf="flux get all -A --status-selector ready=false"
+alias fgf="flux get all -A --status-selector ready=false; flux get all -A --status-selector ready=unknown"
+alias fgu="flux get all -A --status-selector ready=unknown"
+alias fl="flux logs --all-namespaces --level=error"
 alias watch="watch "
 alias ss="sudo systemctl start"
 alias sst="sudo systemctl status"
@@ -93,7 +97,5 @@ setopt hist_ignore_all_dups
 stty -ixon
 bindkey -e
 
-{% if p10k_file.stat.exists %}
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-{% endif %}
