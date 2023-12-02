@@ -39,4 +39,4 @@ alertmanager:
 extraScrapeConfigs: |
   - job_name: 'node'
     static_configs:
-    - targets: ['flear.marokiki.net:9100', 'ikazuchi.marokiki.net:9100', 'manaka.marokiki.net:9100', 'aroma.marokiki.net:9100', 'hikari.marokiki.net:9100', 'tatsumaki.marokiki.net:9100', 'anna.marokiki.net:9100', 'takenoko-1.marokiki.net:9100', 'takenoko-2.marokiki.net:9100', 'takenoko-3.marokiki.net:9100', 'takenoko-4.marokiki.net:9100', 'kinoko-1.marokiki.net:9100', 'kinoko-2.marokiki.net:9100']
+    - targets: ['ikazuchi.marokiki.net:9100', 'manaka.marokiki.net:9100', 'aroma.marokiki.net:9100', 'hikari.marokiki.net:9100', 'tatsumaki.marokiki.net:9100', 'anna.marokiki.net:9100', 'takenoko-1.marokiki.net:9100', 'takenoko-2.marokiki.net:9100', 'takenoko-3.marokiki.net:9100', 'takenoko-4.marokiki.net:9100', 'kinoko-1.marokiki.net:9100', 'kinoko-2.marokiki.net:9100']
