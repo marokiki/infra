@@ -16,6 +16,7 @@
     owner: root
     group: root
   when: "'node_exporter.service' not in ansible_facts.services"
+  become: true
 
 - name: Make node_exporter directory
   file:
@@ -25,6 +26,7 @@
     owner: root
     group: root
   when: "'node_exporter.service' not in ansible_facts.services"
+  become: true
 
 - name: Unarchive node_exporter
   unarchive:
@@ -32,6 +34,7 @@
     dest: /tmp/node_exporter
     remote_src: yes
   when: "'node_exporter.service' not in ansible_facts.services"
+  become: true
 
 - name: Copy node_exporter
   copy:
@@ -42,3 +45,4 @@
     group: root
     remote_src: yes
   when: "'node_exporter.service' not in ansible_facts.services"
+  become: true
