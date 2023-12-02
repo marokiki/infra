@@ -3,5 +3,5 @@
   become: no
 
   roles:
-   - role: zsh
+   - role: node_exporter
 
