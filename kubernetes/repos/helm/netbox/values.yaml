@@ -23,7 +23,7 @@ postgresql:
   enabled: false
 externalDatabase:
   host: postgresql.flux-system.svc.cluster.local
-  database: netxbox
+  database: netbox
   username: segre
   existingSecretName: postgres-secret
   existingSecretKey: postgres-password
