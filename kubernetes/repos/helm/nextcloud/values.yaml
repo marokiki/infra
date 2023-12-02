@@ -57,6 +57,12 @@ nextcloud:
         server: tatsumaki.marokiki.net
         path: /share/md0/nextcloud
         readOnly: false
+  configs:
+    config.php: |-
+      <?php
+      $CONFIG = array (
+      'trusted_proxies'   => ['192.168.20.107', '106.178.114.91'],
+      );
 internalDatabase:
   enabled: false
 externalDatabase:
