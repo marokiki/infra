@@ -1,0 +1,27 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: prometheus
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  url: https://grafana.github.io/helm-charts
+  timeout: 3m0s
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: grafana
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  chart:
+    spec:
+      chart: grafana
+      version: 7.0.11
+      sourceRef:
+        kind: HelmRepository
+        name: grafana
+  valuesFrom:
+  - kind: ConfigMap
+    name: values
