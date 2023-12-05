@@ -36,3 +36,8 @@ persistence:
   type: pvc
   enabled: true
   storageClassName: longhorn
+admin:
+  existingSecret: grafana-secret
+  userKey: admin-user
+  passwordKey: admin-password
+
