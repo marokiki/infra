@@ -10,6 +10,4 @@ configurations:
   - kustomizeconfig.yaml
 resources:
   - helm.yaml
-  - prometheus-pvc.yaml
-  - alertmanager-pvc.yaml
-  - sealed-secret.yaml
+
