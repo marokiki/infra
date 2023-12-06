@@ -6,6 +6,7 @@
 192.168.20.22 koshiki-2.marokiki.net
 192.168.20.31 mikura.marokiki.net
 192.168.20.32 izu.marokiki.net
+192.168.20.101 flare.marokiki.net
 192.168.20.102 ikazuchi.marokiki.net
 192.168.20.103 manaka.marokiki.net
 192.168.20.104 aroma.marokiki.net
@@ -30,6 +31,7 @@
 192.168.20.201 le4db.marokiki.net
 192.168.20.201 nextcloud.marokiki.net
 192.168.20.201 prometheus.marokiki.net
+192.168.20.201 grafana.marokiki.net
 
 192.168.20.107 www.marokiki.net
 
