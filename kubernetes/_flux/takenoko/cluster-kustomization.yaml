@@ -43,289 +43,289 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: sealed-secrets
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/sealed-secrets
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: cert-manager
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/cert-manager
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-    namespace: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: lets-encrypt
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/apps/lets-encrypt
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
 # ---
 # apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 # kind: Kustomization
 # metadata:
-#   name: internal-dns
+#   name: sealed-secrets
 #   namespace: flux-system
 # spec:
 #   interval: 10m0s
 #   retryInterval: 2m0s
 #   timeout: 3m0s
-#   path: ./kubernetes/apps/internal-dns
+#   path: ./kubernetes/repos/helm/sealed-secrets
 #   prune: true
 #   sourceRef:
 #     kind: GitRepository
 #     name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: flux-notification
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/apps/flux-notification
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: metallb
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/metallb
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: metallb-ip
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/apps/metallb-ip
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: longhorn
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/longhorn
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: longhorn-ui
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/apps/longhorn-ui
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: postgresql
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/postgresql
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: ingress-nginx
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/ingress-nginx
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: redis
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/redis
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: netbox
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/netbox
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
 # ---
 # apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 # kind: Kustomization
 # metadata:
-#   name: external-dns
+#   name: cert-manager
 #   namespace: flux-system
 # spec:
 #   interval: 10m0s
 #   retryInterval: 2m0s
 #   timeout: 3m0s
-#   path: ./kubernetes/repos/helm/external-dns
+#   path: ./kubernetes/repos/helm/cert-manager
 #   prune: true
 #   sourceRef:
 #     kind: GitRepository
 #     name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: kubernetes-dashboard
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/kubernetes-dashboard
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: le4-db
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/apps/le4db
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: nextcloud
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/nextcloud
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: prometheus
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/prometheus
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: grafana
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/grafana
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
+#     namespace: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: lets-encrypt
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/apps/lets-encrypt
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# # ---
+# # apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# # kind: Kustomization
+# # metadata:
+# #   name: internal-dns
+# #   namespace: flux-system
+# # spec:
+# #   interval: 10m0s
+# #   retryInterval: 2m0s
+# #   timeout: 3m0s
+# #   path: ./kubernetes/apps/internal-dns
+# #   prune: true
+# #   sourceRef:
+# #     kind: GitRepository
+# #     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: flux-notification
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/apps/flux-notification
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: metallb
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/metallb
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: metallb-ip
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/apps/metallb-ip
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: longhorn
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/longhorn
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: longhorn-ui
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/apps/longhorn-ui
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: postgresql
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/postgresql
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: ingress-nginx
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/ingress-nginx
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: redis
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/redis
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: netbox
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/netbox
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# # ---
+# # apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# # kind: Kustomization
+# # metadata:
+# #   name: external-dns
+# #   namespace: flux-system
+# # spec:
+# #   interval: 10m0s
+# #   retryInterval: 2m0s
+# #   timeout: 3m0s
+# #   path: ./kubernetes/repos/helm/external-dns
+# #   prune: true
+# #   sourceRef:
+# #     kind: GitRepository
+# #     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: kubernetes-dashboard
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/kubernetes-dashboard
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: le4-db
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/apps/le4db
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: nextcloud
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/nextcloud
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: prometheus
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/prometheus
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: grafana
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/grafana
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
