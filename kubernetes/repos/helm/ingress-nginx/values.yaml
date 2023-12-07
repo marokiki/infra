@@ -5,9 +5,9 @@ controller:
   service:
     enableHttp: true
     enableHttps: true
-    annotations:
-      external-dns.alpha.kubernetes.io/hostname: marokiki.net.
-    loadBalancerIP: 192.168.20.201
+    # annotations:
+    #   external-dns.alpha.kubernetes.io/hostname: marokiki.net.
+    # loadBalancerIP: 192.168.20.201
     ports:
       http: 80
       https: 443
