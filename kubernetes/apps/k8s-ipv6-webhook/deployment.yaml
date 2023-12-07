@@ -11,6 +11,10 @@ kind: Certificate
 metadata:
   name: webhook-server-cert
   namespace: flux-system
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    meta.helm.sh/release-name: k8s-ipv6-webhook
+    meta.helm.sh/release-namespace: flux-system
 spec:
   isCA: true
   dnsNames:
