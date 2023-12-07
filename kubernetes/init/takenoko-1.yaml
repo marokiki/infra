@@ -11,5 +11,6 @@ localAPIEndpoint:
   advertiseAddress: 192.168.20.111
   bindPort: 6443
 nodeRegistration:
+  criSocket: "unix:///var/run/crio/crio.sock"
   kubeletExtraArgs:
     node-ip: 192.168.20.111,240b:250:9800:4a20::111
