@@ -1,3 +1,35 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: selfsigned-issuer
+  namespace: flux-system
+spec:
+  selfSigned: {}
+
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: webhook-server-cert
+  namespace: flux-system
+spec:
+  dnsNames:
+  - k8s-ipv6-webhook.flux-system.svc
+  - k8s-ipv6-webhook.flux-system.svc.cluster.local
+  - k8s-ipv6-webhook
+  secretName: webhook-server-cert
+  issuerRef:
+    name: selfsigned-issuer
+    kind: Issuer
+  keyAlgorithm: rsa
+  keySize: 2048
+  keyEncoding: PKCS1
+  usages:
+  - digital signature
+  - key encipherment
+  - server auth
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,3 +55,13 @@ spec:
           limits:
             cpu: 100m
             memory: 256Mi
+        volumeMounts:
+        - mountPath: /tmp/k8s-webhook-server/serving-certs
+          name: cert
+          readOnly: true
+
+      volumes:
+      - name: cert
+        secret:
+          secretName: webhook-server-cert
+          defaultMode: 420
