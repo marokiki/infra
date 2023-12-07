@@ -17,6 +17,21 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
+  name: k8s-ipv6-webhook
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  retryInterval: 2m0s
+  timeout: 3m0s
+  path: ./kubernetes/apps/k8s-ipv6-webhook
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
   name: namespaces
   namespace: flux-system
 spec:
