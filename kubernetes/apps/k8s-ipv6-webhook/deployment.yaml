@@ -5,7 +5,6 @@ metadata:
   namespace: flux-system
 spec:
   selfSigned: {}
-
 ---
 apiVersion: cert-manager.io/v1
 kind: Certificate
@@ -13,6 +12,7 @@ metadata:
   name: webhook-server-cert
   namespace: flux-system
 spec:
+  isCA: true
   dnsNames:
   - k8s-ipv6-webhook.flux-system.svc
   - k8s-ipv6-webhook.flux-system.svc.cluster.local
@@ -21,14 +21,14 @@ spec:
   issuerRef:
     name: selfsigned-issuer
     kind: Issuer
-  keyAlgorithm: rsa
-  keySize: 2048
-  keyEncoding: PKCS1
+    group: cert-manager.io
+  privateKey:
+    algorithm: ECDSA
+    size: 256
   usages:
   - digital signature
   - key encipherment
   - server auth
-
 ---
 apiVersion: apps/v1
 kind: Deployment
