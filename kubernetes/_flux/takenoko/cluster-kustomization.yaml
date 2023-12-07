@@ -164,51 +164,51 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: longhorn
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/longhorn
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: longhorn-ui
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/apps/longhorn-ui
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: postgresql
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  retryInterval: 2m0s
-  timeout: 3m0s
-  path: ./kubernetes/repos/helm/postgresql
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: longhorn
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/longhorn
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: longhorn-ui
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/apps/longhorn-ui
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: postgresql
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   retryInterval: 2m0s
+#   timeout: 3m0s
+#   path: ./kubernetes/repos/helm/postgresql
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
 # ---
 # apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 # kind: Kustomization
