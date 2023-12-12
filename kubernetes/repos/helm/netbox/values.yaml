@@ -64,7 +64,7 @@ ingress:
   className: nginx
   annotations:
     meta.helm.sh/release-name: netbox
-    meta.helm.sh/release-namespace: cert-manager
+    meta.helm.sh/release-namespace: netbox
     nginx.ingress.kubernetes.io/auth-type: basic
     nginx.ingress.kubernetes.io/auth-secret: netbox-basic-auth
     nginx.ingress.kubernetes.io/auth-secret-type: auth-file
