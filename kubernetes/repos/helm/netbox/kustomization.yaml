@@ -12,3 +12,4 @@ resources:
   - helm.yaml
   - pvc.yaml
   - sealed-secret.yaml
+  - sealed-secret.netbox.yaml
