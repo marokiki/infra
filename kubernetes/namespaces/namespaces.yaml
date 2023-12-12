@@ -39,6 +39,6 @@ kind: Namespace
 metadata:
   name: kubernetes-dashboard
   labels:
-    kubernetes.io/metadata.name: netbox
+    kubernetes.io/metadata.name: kubernetes-dashboard
     kustomize.toolkit.fluxcd.io/name: namespaces
     kustomize.toolkit.fluxcd.io/namespace: flux-system
