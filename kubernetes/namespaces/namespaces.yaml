@@ -15,3 +15,13 @@ metadata:
     kubernetes.io/metadata.name: ingress-nginx
     kustomize.toolkit.fluxcd.io/name: namespaces
     kustomize.toolkit.fluxcd.io/namespace: flux-system
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: longhorn-system
+  labels:
+    kubernetes.io/metadata.name: longhorn-system
+    kustomize.toolkit.fluxcd.io/name: namespaces
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
+
