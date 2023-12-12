@@ -25,7 +25,7 @@ externalDatabase:
   host: postgresql.flux-system.svc.cluster.local
   database: netbox
   username: segre
-  existingSecretName: postgres-secret
+  existingSecretName: netbox
   existingSecretKey: postgres-password
 redis:
   # enabled: false
