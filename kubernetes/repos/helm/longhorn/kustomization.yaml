@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: longhorn-system
 configMapGenerator:
   - name: values
-    namespace: flux-system
+    namespace: longhorn-system
     files:
       - values.yaml
 configurations:
