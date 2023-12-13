@@ -60,3 +60,12 @@ metadata:
     kubernetes.io/metadata.name: nextcloud
     kustomize.toolkit.fluxcd.io/name: namespaces
     kustomize.toolkit.fluxcd.io/namespace: flux-system
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: monitoring
+  labels:
+    kubernetes.io/metadata.name: monitoring
+    kustomize.toolkit.fluxcd.io/name: namespaces
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
