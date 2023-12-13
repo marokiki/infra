@@ -1,3 +1,7 @@
 speaker:
   livenessProbe:
-    enable: false
+    enabled: true
+    failureThreshold: 3
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    timeoutSeconds: 30
