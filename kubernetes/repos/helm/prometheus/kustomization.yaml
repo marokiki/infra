@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: monitoring
 configMapGenerator:
   - name: values
-    namespace: flux-system
+    namespace: monitoring
     files:
       - values.yaml
 configurations:
