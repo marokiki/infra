@@ -27,7 +27,7 @@ datasources:
         type: prometheus
         access: proxy
         orgId: 1
-        url: http://prometheus-server.monitoring.svc.cluster.local
+        url: http://prometheus-server
         isDefault: true
         version: 1
         editable: true
