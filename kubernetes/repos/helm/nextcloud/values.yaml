@@ -56,17 +56,17 @@ nextcloud:
         server: tatsumaki.marokiki.net
         path: /share/md0/nextcloud
         readOnly: false
-  configs:
-    proxy.config.php: |-
-      <?php
-      $CONFIG = array (
-        'trusted_proxies' => array(
-          0 => '192.168.20.107/24',
-          1 => '106.178.114.91/32',
-        ),
-        'forwarded_for_headers' => array('HTTP_X_FORWARDED_FOR'),
-        'overwriteprotocol' => 'https',
-      );
+  # configs:
+  #   proxy.config.php: |-
+  #     <?php
+  #     $CONFIG = array (
+  #       'trusted_proxies' => array(
+  #         0 => '192.168.20.107/24',
+  #         1 => '106.178.114.91/32',
+  #       ),
+  #       'forwarded_for_headers' => array('HTTP_X_FORWARDED_FOR'),
+  #       'overwriteprotocol' => 'https',
+  #     );
 internalDatabase:
   enabled: false
 externalDatabase:
