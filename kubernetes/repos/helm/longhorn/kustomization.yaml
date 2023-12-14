@@ -10,4 +10,3 @@ configurations:
   - kustomizeconfig.yaml
 resources:
   - helm.yaml
-  - token.yaml
