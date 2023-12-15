@@ -24,6 +24,8 @@
 192.168.20.122 akatsuki-2.marokiki.net
 192.168.20.123 akatsuki-3.marokiki.net
 
+192.168.20.199 Anago.marokiki.net
+
 192.168.20.201 netbox.marokiki.net
 192.168.20.201 longhorn.marokiki.net
 192.168.20.201 ingress-nginx.marokiki.net
@@ -58,3 +60,6 @@
 240b:250:9800:4a20::121 akatsuki-1.marokiki.net
 240b:250:9800:4a20::122 akatsuki-2.marokiki.net
 240b:250:9800:4a20::123 akatsuki-3.marokiki.net
+
+240b:250:9800:4a20::199 Anago.marokiki.net
+
