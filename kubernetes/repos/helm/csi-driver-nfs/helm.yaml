@@ -20,6 +20,3 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: csi-driver-nfs
-  valuesFrom:
-  - kind: ConfigMap
-    name: values
