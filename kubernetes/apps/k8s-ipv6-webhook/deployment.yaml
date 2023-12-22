@@ -1,44 +1,7 @@
-# apiVersion: cert-manager.io/v1
-# kind: Issuer
-# metadata:
-#   name: selfsigned-issuer
-#   namespace: flux-system
-# spec:
-#   selfSigned: {}
-# ---
-# apiVersion: cert-manager.io/v1
-# kind: Certificate
-# metadata:
-#   name: webhook-server-cert
-#   namespace: flux-system
-#   labels:
-#     app.kubernetes.io/managed-by: Helm
-#     meta.helm.sh/release-name: k8s-ipv6-webhook
-#     meta.helm.sh/release-namespace: flux-system
-# spec:
-#   isCA: true
-#   dnsNames:
-#   - k8s-ipv6-webhook.flux-system.svc
-#   - k8s-ipv6-webhook.flux-system.svc.cluster.local
-#   - k8s-ipv6-webhook
-#   secretName: webhook-server-cert
-#   issuerRef:
-#     name: selfsigned-issuer
-#     kind: Issuer
-#     group: cert-manager.io
-#   privateKey:
-#     algorithm: ECDSA
-#     size: 256
-#   usages:
-#   - digital signature
-#   - key encipherment
-#   - server auth
-# ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: k8s-ipv6-webhook
-  namespace: flux-system
 spec:
   replicas: 1
   selector:
@@ -50,22 +13,5 @@ spec:
         app: k8s-ipv6-webhook
     spec:
       containers:
-      - name: webhook
+      - name: k8s-ipv6-webhook
         image: ghcr.io/segre5458/k8s-ipv6-webhook/webhook:latest
-        ports:
-        - containerPort: 9443
-          name: webhook-port
-        resources:
-          limits:
-            cpu: 100m
-            memory: 256Mi
-        volumeMounts:
-        - mountPath: /tmp/k8s-webhook-server/serving-certs
-          name: cert
-          readOnly: true
-
-      volumes:
-      - name: cert
-        secret:
-          secretName: webhook-server-cert
-          defaultMode: 420
