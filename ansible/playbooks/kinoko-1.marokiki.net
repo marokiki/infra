@@ -17,6 +17,7 @@
     - role: vim
     - role: tmux
     - role: zsh
+    - role: node_exporter
     - role: k8s
 
 

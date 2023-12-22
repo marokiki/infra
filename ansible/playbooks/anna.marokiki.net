@@ -1,12 +1,12 @@
 ---
-- hosts: akatsuki-1.marokiki.net
+- hosts: all
   become: false
 
   roles:
     - role: yay-update
       when: ansible_distribution in ['Archlinux']
-    - role: apt-update
-      when: ansible_distribution in ['Debian', 'Ubuntu']
+    # - role: apt-update
+    #   when: ansible_distribution in ['Debian', 'Ubuntu']
     - role: essentials
     - role: networkd
       vars_files:
@@ -18,6 +18,6 @@
     - role: tmux
     - role: zsh
     - role: node_exporter
-    - role: k8s
+    - role: nginx
 
 
