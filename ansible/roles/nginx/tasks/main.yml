@@ -25,7 +25,7 @@
     owner: root
     group: root
     force: yes
-    become: true
+  become: true
 
 - name: Copy nginx default configuration file
   template:
@@ -35,7 +35,7 @@
     owner: root
     group: root
     force: yes
-    become: true
+  become: true
 
 - name: Restart nginx
   ansible.builtin.service:
