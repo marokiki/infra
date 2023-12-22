@@ -41,9 +41,12 @@ alias fgf="flux get all -A --status-selector ready=false; flux get all -A --stat
 alias fgu="flux get all -A --status-selector ready=unknown"
 alias fl="flux logs --all-namespaces --level=error"
 alias watch="watch "
-alias ss="sudo systemctl start"
+alias s="sudo systemctl"
+alias sta="sudo systemctl start"
 alias sst="sudo systemctl status"
+alias sto="sudo systemctl stop"
 alias sr="sudo systemctl restart"
+alias sd="sudo systemctl disable"
 alias se="sudo systemctl enable"
 
 export EDITOR=vim
@@ -101,3 +104,17 @@ bindkey -e
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 PATH=$PATH:/usr/local/go/bin
+
+trapint() {
+  if zle; then
+    if [[ $BUFFER == "" ]]; then
+      zle get-line
+    else
+      zle kill-whole-line
+      zle yank
+      zle send-break
+    fi
+    zle reset-prompt
+  fi
+}
+trap trapint INT
