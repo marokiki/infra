@@ -1,5 +1,5 @@
 ---
-apiVersion: metallb.io/v1beta1
+apiVersion: metallb.io/v1beta2
 kind: IPAddressPool
 metadata:
   name: metallb
@@ -10,7 +10,7 @@ spec:
   - 240b:250:9800:4a20:100::201-240b:250:9800:4a20:100::229
   autoAssign: true
 ---
-apiVersion: metallb.io/v1beta1
+apiVersion: metallb.io/v1beta2
 kind: L2Advertisement
 metadata:
   name: metallb
