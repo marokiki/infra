@@ -9,7 +9,4 @@ configMapGenerator:
 configurations:
   - kustomizeconfig.yaml
 resources:
-  - prometheus-pvc.yaml
-  - alertmanager-pvc.yaml
-  - sealed-secret.yaml
   - helm.yaml
