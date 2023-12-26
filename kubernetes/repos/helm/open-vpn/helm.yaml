@@ -15,11 +15,11 @@ spec:
   interval: 1m0s
   chart:
     spec:
-      chart: personal-ovpn
+      chart: suda/personal-ovpn
       version: 0.2.2
       sourceRef:
         kind: HelmRepository
-        name: suda/personal-ovpn
+        name: personal-ovpn
   valuesFrom:
   - kind: ConfigMap
     name: values
