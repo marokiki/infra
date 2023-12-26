@@ -1,0 +1,4 @@
+wireguard:
+  clients:
+    - PublicKey: 5wK5jzq6Stu8/9D9djVkVQCbVfX8qF4V9V/GOOZXaig=
+      AllowIPs:
