@@ -1,20 +1,18 @@
 ---
-apiVersion: metallb.io/v1alpha1
+apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
   name: metallb
-  namespace: flux-system
 spec:
   addresses:
   - 192.168.20.201-192.168.20.229
   - 240b:250:9800:4a20:100::201-240b:250:9800:4a20:100::229
   autoAssign: true
 ---
-apiVersion: metallb.io/v1alpha1
+apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
 metadata:
   name: metallb
-  namespace: flux-system
 spec:
   ipAddressPools:
   - metallb
