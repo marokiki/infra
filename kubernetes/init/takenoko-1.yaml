@@ -4,7 +4,7 @@ clusterName: takenoko
 networking:
   podSubnet: 10.244.0.0/16,2001:db8:42:0::/56
   serviceSubnet: 10.96.0.0/16,2001:db8:42:1::/112
-controlPlaneEndpoint: 192.168.20.111:6443
+controlPlaneEndpoint: 192.168.20.114:6443
 ---
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: InitConfiguration
