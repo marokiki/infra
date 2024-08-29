@@ -3,6 +3,6 @@
   become: no
 
   roles:
-    - role: k8s
-      when: "'k8s' in group_names"
+    - role: coredns
+      when: inventory_hostname == 'aroma.marokiki.net'
 
