@@ -3,5 +3,6 @@
   become: no
 
   roles:
-   - role: node_exporter
+    - role: k8s
+      when: "'k8s' in group_names"
 
