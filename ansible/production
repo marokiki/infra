@@ -2,7 +2,6 @@
 takenoko-1.marokiki.net ansible_host=192.168.20.111
 takenoko-2.marokiki.net ansible_host=192.168.20.112
 takenoko-3.marokiki.net ansible_host=192.168.20.113
-takenoko-4.marokiki.net ansible_host=192.168.20.114
 kinoko-1.marokiki.net ansible_host=192.168.20.115
 kinoko-2.marokiki.net ansible_host=192.168.20.116
 
@@ -11,15 +10,13 @@ flare.marokiki.net ansible_host=192.168.20.101
 ikazuchi.marokiki.net ansible_host=192.168.20.102
 manaka.marokiki.net ansible_host=192.168.20.103 
 aroma.marokiki.net ansible_host=192.168.20.104 
-hikari.marokiki.net ansible_host=192.168.20.105
 tatsumaki.marokiki.net ansible_host=192.168.20.106 
 anna.marokiki.net ansible_host=192.168.20.107
 takenoko-1.marokiki.net ansible_host=192.168.20.111
 takenoko-2.marokiki.net ansible_host=192.168.20.112
 takenoko-3.marokiki.net ansible_host=192.168.20.113
-takenoko-4.marokiki.net ansible_host=192.168.20.114
 kinoko-1.marokiki.net ansible_host=192.168.20.115
 kinoko-2.marokiki.net ansible_host=192.168.20.116
 akatsuki-1.marokiki.net ansible_host=192.168.20.121
 akatsuki-2.marokiki.net ansible_host=192.168.20.122
-akatsuki-3.marokiki.net ansible_host=192.168.20.123
+chii.marokiki.net ansible_host=192.168.20.123

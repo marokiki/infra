@@ -10,7 +10,6 @@
 192.168.20.102 ikazuchi.marokiki.net
 192.168.20.103 manaka.marokiki.net
 192.168.20.104 aroma.marokiki.net
-192.168.20.105 hikari.marokiki.net
 192.168.20.106 tatsumaki.marokiki.net
 192.168.20.107 anna.marokiki.net
 192.168.20.108 emo.marokiki.net
@@ -19,12 +18,11 @@
 192.168.20.111 takenoko-1.marokiki.net
 192.168.20.112 takenoko-2.marokiki.net
 192.168.20.113 takenoko-3.marokiki.net
-192.168.20.114 takenoko-4.marokiki.net
 192.168.20.115 kinoko-1.marokiki.net
 192.168.20.116 kinoko-2.marokiki.net
 192.168.20.121 akatsuki-1.marokiki.net
 192.168.20.122 akatsuki-2.marokiki.net
-192.168.20.123 akatsuki-3.marokiki.net
+192.168.20.123 chii.marokiki.net
 
 192.168.20.199 Anago.marokiki.net
 
@@ -49,19 +47,17 @@
 240b:250:9800:4a20::102 ikazuchi.marokiki.net
 240b:250:9800:4a20::103 manaka.marokiki.net
 240b:250:9800:4a20::104 aroma.marokiki.net
-240b:250:9800:4a20::105 hikari.marokiki.net
 240b:250:9800:4a20::106 tatsumaki.marokiki.net
 240b:250:9800:4a20::107 anna.marokiki.net
 240b:250:9800:4a20::108 emo.marokiki.net
 240b:250:9800:4a20::111 takenoko-1.marokiki.net
 240b:250:9800:4a20::112 takenoko-2.marokiki.net
 240b:250:9800:4a20::113 takenoko-3.marokiki.net
-240b:250:9800:4a20::114 takenoko-4.marokiki.net
 240b:250:9800:4a20::115 kinoko-1.marokiki.net
 240b:250:9800:4a20::116 kinoko-2.marokiki.net
 240b:250:9800:4a20::121 akatsuki-1.marokiki.net
 240b:250:9800:4a20::122 akatsuki-2.marokiki.net
-240b:250:9800:4a20::123 akatsuki-3.marokiki.net
+240b:250:9800:4a20::123 chii.marokiki.net
 
 240b:250:9800:4a20::199 Anago.marokiki.net
 
