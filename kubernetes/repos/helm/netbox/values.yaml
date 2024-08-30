@@ -37,8 +37,8 @@ tasksRedis:
   ssl: true
   tasksRedis.insecureSkipTlsVerify: true
   sentinels: 
-    - redis://redis-master.flux-system.svc.cluster.local:6379
-    - redis://redis-master.flux-system.svc.cluster.local:26379
+    - redis://redis-master.database.svc.cluster.local:6379
+    - redis://redis-master.database.svc.cluster.local:26379
   sentinelService: redis-master
   username: segre
   existingSecretName: redis-secret
@@ -48,8 +48,8 @@ cachingRedis:
   ssl: true
   tasksRedis.insecureSkipTlsVerify: true
   sentinels: 
-    - redis://redis-master.flux-system.svc.cluster.local:6379
-    - redis://redis-master.flux-system.svc.cluster.local:26379
+    - redis://redis-master.database.svc.cluster.local:6379
+    - redis://redis-master.database.svc.cluster.local:26379
   sentinelService: redis-master
   username: segre
   existingSecretName: redis-secret
