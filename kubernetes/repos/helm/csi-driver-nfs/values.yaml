@@ -1,0 +1,3 @@
+node:
+  livenessProbe:
+    healthPort: 29654
