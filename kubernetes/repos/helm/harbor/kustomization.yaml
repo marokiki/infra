@@ -14,4 +14,4 @@ resources:
   - jobservice-pvc.yaml
   - trivy-pvc.yaml
   - sealed-secrets.postgres.yaml
-  - sealed-secret.redis.yaml
+  - sealed-secrets.redis.yaml
