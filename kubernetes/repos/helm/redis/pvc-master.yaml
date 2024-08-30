@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: redis-pvc-master
 spec:
-  storageClassName: longhorn
+  storageClassName: nfs-csi
   accessModes:
     - ReadWriteOnce
   resources:
