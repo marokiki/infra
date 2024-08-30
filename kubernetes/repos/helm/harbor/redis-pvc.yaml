@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: harbor-redis-pvc
+  name: data-harbor-redis-0
 spec:
   storageClassName: nfs-csi
   accessModes:

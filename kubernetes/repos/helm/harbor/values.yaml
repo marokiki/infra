@@ -26,13 +26,13 @@ persistence:
   enabled: true
   persistentVolumeClass:
     registry:
-      existingClaim: harbor-registry-pvc
+      existingClaim: harbor-registry
     jobservice:
-      existingClaim: harbor-jobservice-pvc
+      existingClaim: harbor-jobservice
     redis: 
-      existingClaim: harbor-redis-pvc
+      existingClaim: data-harbor-redis-0
     trivy:
-      existingClaim: harbor-trivy-pvc
+      existingClaim: data-harbor-trivy-0
 logLevel: debug
 database:
   type: external

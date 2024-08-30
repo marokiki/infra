@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: harbor-jobservice-pvc
+  name: harbor-jobservice
 spec:
   storageClassName: nfs-csi
   accessModes:
