@@ -24,15 +24,15 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-issuer
 persistence:
   enabled: true
-  # persistentVolumeClass:
-  #   registry:
-  #     existingClaim: harbor-registry
-  #   jobservice:
-  #     existingClaim: harbor-jobservice
-  #   redis: 
-  #     existingClaim: data-harbor-redis-0
-  #   trivy:
-  #     existingClaim: data-harbor-trivy-0
+  persistentVolumeClass:
+    registry:
+      storageClass: nfs-csi
+    jobservice:
+      storageClass: nfs-csi
+    redis: 
+      storageClass: nfs-csi
+    trivy:
+      storageClass: nfs-csi
 logLevel: debug
 database:
   type: external
