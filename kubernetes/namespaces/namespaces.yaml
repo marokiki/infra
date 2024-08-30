@@ -42,15 +42,15 @@ metadata:
 #     kubernetes.io/metadata.name: longhorn-system
 #     kustomize.toolkit.fluxcd.io/name: namespaces
 #     kustomize.toolkit.fluxcd.io/namespace: flux-system
-# ---
-# apiVersion: v1
-# kind: Namespace
-# metadata:
-#   name: netbox
-#   labels:
-#     kubernetes.io/metadata.name: netbox
-#     kustomize.toolkit.fluxcd.io/name: namespaces
-#     kustomize.toolkit.fluxcd.io/namespace: flux-system
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: netbox
+  labels:
+    kubernetes.io/metadata.name: netbox
+    kustomize.toolkit.fluxcd.io/name: namespaces
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
 ---
 apiVersion: v1
 kind: Namespace
