@@ -28,34 +28,32 @@ externalDatabase:
   existingSecretName: netbox-secret
   existingSecretKey: postgres-password
 redis:
-  # enabled: false
-  enabled: true
-  global:
-    defaultStorageClass: nfs-csi
+  enabled: false
+  # enabled: true
+#   global:
+#     defaultStorageClass: nfs-csi
 tasksRedis:
-  database: 1
-  # ssl: true
-  # tasksRedis.insecureSkipTlsVerify: true
-  # sentinels: 
-  #   - redis://redis-master.flux-system.svc.cluster.local:6379
-  #   - redis://redis-master.flux-system.svc.cluster.local:26379
-  # sentinelService: redis-master
-  # username: segre
-  # existingSecretName: redis-secret
-  # existingSecretKey: redis-password
-  # ssl: true
+#   database: 1
+  ssl: true
+  tasksRedis.insecureSkipTlsVerify: true
+  sentinels: 
+    - redis://redis-master.flux-system.svc.cluster.local:6379
+    - redis://redis-master.flux-system.svc.cluster.local:26379
+  sentinelService: redis-master
+  username: segre
+  existingSecretName: redis-secret
+  existingSecretKey: redis-password
 cachingRedis:
-  database: 2
-  # ssl: true
-  # tasksRedis.insecureSkipTlsVerify: true
-  # sentinels: 
-  #   - redis://redis-master.flux-system.svc.cluster.local:6379
-  #   - redis://redis-master.flux-system.svc.cluster.local:26379
-  # sentinelService: redis-master
-  # username: segre
-  # existingSecretName: redis-secret
-  # existingSecretKey: redis-password
-  # ssl: true
+  # database: 2
+  ssl: true
+  tasksRedis.insecureSkipTlsVerify: true
+  sentinels: 
+    - redis://redis-master.flux-system.svc.cluster.local:6379
+    - redis://redis-master.flux-system.svc.cluster.local:26379
+  sentinelService: redis-master
+  username: segre
+  existingSecretName: redis-secret
+  existingSecretKey: redis-password
 persistence: 
   enabled: true
   existingClaim: netbox-pvc
