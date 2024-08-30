@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: nextcloud-pvc
 spec:
-  storageClassName: longhorn
+  storageClassName: nfs-csi
   accessModes:
     - ReadWriteMany
   resources:
