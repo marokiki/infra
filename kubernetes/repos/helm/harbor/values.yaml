@@ -5,7 +5,7 @@ expose:
     secret:
       secretName: cloudflare-lets-encrypt-harbor
       hosts:
-        - netbox.marokiki.net
+        - harbor.marokiki.net
 ingress:
   className: nginx
   annotations:
@@ -25,4 +25,22 @@ ingress:
 persistence:
   enabled: true
   persistentVolumeClass:
-    existingClaim: harbor-pvc
+    registry:
+      exsistingClaim: harbor-registry-pvc
+    jobservice:
+      exsistingClaim: harbor-jobservice-pvc
+    trivy:
+      exsistingClaim: harbor-trivy-pvc
+logLevel: debug
+database:
+  type: external
+  external:
+    host: postgresql.database.svc.cluster.local
+    username: segre
+    existingSecret: harbor-postgres-secret
+redis:
+  type: external
+  external:
+    addr: redis-master.database.svc.cluster.local:6379
+    username: segre
+    existingSecret: harbor-redis-secret
