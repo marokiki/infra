@@ -39,8 +39,11 @@ database:
     username: segre
     existingSecret: harbor-postgres-secret
 redis:
-  type: external
-  external:
-    addr: redis-master.database.svc.cluster.local:6379
-    # username: segre
-    existingSecret: harbor-redis-secret
+  type: internal
+  # maybe bitnami/redis has a bug for redis username
+  # see https://github.com/bitnami/charts/issues/7709
+  # type: external
+  # external:
+  #   addr: redis-master.database.svc.cluster.local:6379
+  #   # username: segre
+  #   existingSecret: harbor-redis-secret
