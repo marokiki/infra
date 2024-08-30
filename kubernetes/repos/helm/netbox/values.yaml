@@ -30,6 +30,8 @@ externalDatabase:
 redis:
   # enabled: false
   enabled: true
+  global:
+    defaultStorageClass: nfs-csi
 tasksRedis:
   database: 1
   # ssl: true
