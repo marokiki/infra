@@ -22,7 +22,7 @@ affinity:
 postgresql:
   enabled: false
 externalDatabase:
-  host: postgresql.flux-system.svc.cluster.local
+  host: postgresql.database.svc.cluster.local
   database: netbox
   username: segre
   existingSecretName: netbox-secret
@@ -36,9 +36,11 @@ tasksRedis:
 #   database: 1
   ssl: true
   tasksRedis.insecureSkipTlsVerify: true
-  sentinels: 
+  host: redis-master.database.svc.cluster.local
+  port: 6379
+  # sentinels: 
     # - redis://redis-master.database.svc.cluster.local:6379
-    - redis-master.database.svc.cluster.local
+    # - redis-master.database.svc.cluster.local
   sentinelService: redis-master
   username: segre
   existingSecretName: redis-secret
@@ -47,9 +49,11 @@ cachingRedis:
   # database: 2
   ssl: true
   tasksRedis.insecureSkipTlsVerify: true
-  sentinels: 
+  host: redis-master.database.svc.cluster.local
+  port: 6379
+  # sentinels: 
     # - redis://redis-master.database.svc.cluster.local:6379
-    - redis-master.database.svc.cluster.local
+    # - redis-master.database.svc.cluster.local
   sentinelService: redis-master
   username: segre
   existingSecretName: redis-secret
