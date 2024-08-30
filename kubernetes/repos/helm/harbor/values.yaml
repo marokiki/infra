@@ -42,5 +42,5 @@ redis:
   type: external
   external:
     addr: redis-master.database.svc.cluster.local:6379
-    username: segre
+    # username: segre
     existingSecret: harbor-redis-secret
