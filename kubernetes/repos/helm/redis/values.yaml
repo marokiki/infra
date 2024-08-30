@@ -1,6 +1,6 @@
 auth:
-  enable: false
-  sentinel: false 
+  enable: true
+  sentinel: true
   existingSecret: redis-secret
   existingSecretPasswordKey: redis-password
 image:
