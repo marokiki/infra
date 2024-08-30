@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: netbox-pvc
 spec:
-  storageClassName: longhorn
+  storageClassName: nfs-csi
   accessModes:
     - ReadWriteMany
   resources:
