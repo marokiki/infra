@@ -11,7 +11,7 @@ spec:
     branch: master
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/segre5458/infra
+  url: ssh://git@github.com/marokiki/infra
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
