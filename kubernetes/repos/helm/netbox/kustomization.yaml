@@ -13,3 +13,4 @@ resources:
   - pvc.yaml
   - sealed-secret.yaml
   - sealed-secret.netbox.yaml
+  - sealed-secret.redis.yaml

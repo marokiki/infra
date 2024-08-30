@@ -1,11 +1,14 @@
 .vscode/
 kubernetes/apps/flux-notification/sealed-secrets-key.yaml
 cert.pem
+*.pem
 secret-values
 secrets-values
 secret.yaml
+secret.redis.yaml
 auth
 redis-password
+redis-secret
 secret-values-postgres
 secret-postgres.yaml
 cert-postgres.pem
