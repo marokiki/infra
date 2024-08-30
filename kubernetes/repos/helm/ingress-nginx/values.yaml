@@ -12,3 +12,5 @@ controller:
       http: http
       https: https
     type: LoadBalancer
+  annotations:
+    ingressclass.kubernetes.io/is-default-class: "true"
