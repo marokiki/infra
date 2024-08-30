@@ -6,7 +6,6 @@ provisioner: nfs.csi.k8s.io
 parameters:
   server: tatsumaki.marokiki.net
   share: /share/md0/kubernetes
-  mountPermission: "777"
   # csi.storage.k8s.io/provisioner-secret is only needed for providing mountOptions in DeleteVolume
   # csi.storage.k8s.io/provisioner-secret-name: "mount-options"
   # csi.storage.k8s.io/provisioner-secret-namespace: "default"
