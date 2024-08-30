@@ -12,6 +12,7 @@ resources:
   - helm.yaml
   - registry-pvc.yaml
   - jobservice-pvc.yaml
+  - redis-pvc.yaml
   - trivy-pvc.yaml
   - sealed-secrets.postgres.yaml
   - sealed-secrets.redis.yaml

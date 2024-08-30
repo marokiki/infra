@@ -29,6 +29,8 @@ persistence:
       exsistingClaim: harbor-registry-pvc
     jobservice:
       exsistingClaim: harbor-jobservice-pvc
+    redis: 
+      exsistingClaim: harbor-redis-pvc
     trivy:
       exsistingClaim: harbor-trivy-pvc
 logLevel: debug
