@@ -38,7 +38,7 @@ tasksRedis:
   tasksRedis.insecureSkipTlsVerify: true
   sentinels: 
     # - redis://redis-master.database.svc.cluster.local:6379
-    - redis://redis-master.database.svc.cluster.local
+    - redis-master.database.svc.cluster.local
   sentinelService: redis-master
   username: segre
   existingSecretName: redis-secret
@@ -49,7 +49,7 @@ cachingRedis:
   tasksRedis.insecureSkipTlsVerify: true
   sentinels: 
     # - redis://redis-master.database.svc.cluster.local:6379
-    - redis://redis-master.database.svc.cluster.local
+    - redis-master.database.svc.cluster.local
   sentinelService: redis-master
   username: segre
   existingSecretName: redis-secret
