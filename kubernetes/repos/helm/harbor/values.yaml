@@ -25,15 +25,6 @@ ingress:
     app.kubernetes.io/managed-by: Helm
 persistence:
   enabled: true
-  persistentVolumeClass:
-    registry:
-      storageClass: nfs-csi
-    jobservice:
-      storageClass: nfs-csi
-    redis: 
-      storageClass: nfs-csi
-    trivy:
-      storageClass: nfs-csi
 logLevel: debug
 database:
   type: external
