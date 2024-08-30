@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: docker-registry
 configMapGenerator:
   - name: values
-    namespace: flux-system
+    namespace: docker-registry
     files:
       - values.yaml
 configurations:
