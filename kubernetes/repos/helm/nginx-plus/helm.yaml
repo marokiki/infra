@@ -1,0 +1,25 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: nginx-plus
+spec:
+  interval: 10m0s
+  url: https://github.com/nginxinc/kubernetes-ingress/tree/v3.6.2/charts/nginx-ingress
+  timeout: 3m0s
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: nginx-plus
+spec:
+  interval: 1m0s
+  chart:
+    spec:
+      chart: nginx-ingress
+      version: 1.3.2
+      sourceRef:
+        kind: HelmRepository
+        name: nginx-ingress
+  valuesFrom:
+    - kind: ConfigMap
+      name: values-plus

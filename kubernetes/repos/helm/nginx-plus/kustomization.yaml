@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: nginx-ingress
+configMapGenerator:
+  - name: values-plus
+    namespace: nginx-ingress
+    files:
+      - values-plus.yaml
+configurations:
+  - kustomizeconfig.yaml
+resources:
+  - helm.yaml
+  - crd/*
+  - templates/*
+
