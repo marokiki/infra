@@ -10,6 +10,6 @@ configurations:
   - kustomizeconfig.yaml
 resources:
   - helm.yaml
-  - crds/*
-  - templates/*
+  - crds/*.yaml
+  - templates/*.yaml
 
