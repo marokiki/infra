@@ -21,7 +21,7 @@ expose:
       cert-manager.io/cluster-issuer: letsencrypt-issuer
       app.kubernetes.io/managed-by: Helm
 internalTSL:
-  enable: true
+  enabled: true
   certSource: auto
 #   certSource: secret
 #   secretName: cloudflare-lets-encrypt-harbor-internal
