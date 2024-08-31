@@ -20,19 +20,19 @@ expose:
       kubernetes.io/ingress.class: nginx
       cert-manager.io/cluster-issuer: letsencrypt-issuer
       app.kubernetes.io/managed-by: Helm
-internalTSL:
+internalTLS:
   enabled: true
-  # certSource: auto
-  certSource: secret
-  secretName: cloudflare-lets-encrypt-harbor-internal
-  jobservice:
-    secretName: cloudflare-lets-encrypt-harbor-internal-jobservice
-  registry:
-    secretName: cloudflare-lets-encrypt-harbor-internal-registry
-  portal:
-    secretName: cloudflare-lets-encrypt-harbor-internal-portal
-  chartmuseum:
-    secretName: cloudflare-lets-encrypt-harbor-internal-chartmuseum
+  certSource: auto
+  # certSource: secret
+  # secretName: cloudflare-lets-encrypt-harbor-internal
+  # jobservice:
+  #   secretName: cloudflare-lets-encrypt-harbor-internal-jobservice
+  # registry:
+  #   secretName: cloudflare-lets-encrypt-harbor-internal-registry
+  # portal:
+  #   secretName: cloudflare-lets-encrypt-harbor-internal-portal
+  # chartmuseum:
+  #   secretName: cloudflare-lets-encrypt-harbor-internal-chartmuseum
 persistence:
   enabled: true
 logLevel: debug
