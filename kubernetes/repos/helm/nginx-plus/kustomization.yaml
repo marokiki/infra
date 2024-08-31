@@ -10,6 +10,34 @@ configurations:
   - kustomizeconfig.yaml
 resources:
   - helm.yaml
-  - crds/*.yaml
-  - templates/*.yaml
-
+  - crds/appprotectdos.f5.com_apdoslogconfs.yaml
+  - crds/appprotect.f5.com_aplogconfs.yaml
+  - crds/externaldns.nginx.org_dnsendpoints.yaml
+  - crds/k8s.nginx.org_transportservers.yaml
+  - crds/appprotectdos.f5.com_apdospolicy.yaml
+  - crds/appprotect.f5.com_appolicies.yaml
+  - crds/k8s.nginx.org_globalconfigurations.yaml
+  - crds/k8s.nginx.org_virtualserverroutes.yaml
+  - crds/appprotectdos.f5.com_dosprotectedresources.yaml
+  - crds/appprotect.f5.com_apusersigs.yaml
+  - crds/k8s.nginx.org_policies.yaml
+  - crds/k8s.nginx.org_virtualservers.yaml
+  - templates/clusterrolebinding.yaml
+  - templates/controller-globalconfiguration.yaml
+  - templates/controller-prometheus-service.yaml
+  - templates/controller-servicemonitor.yaml
+  - templates/clusterrole.yaml
+  - templates/controller-hpa.yaml
+  - templates/controller-rolebinding.yaml
+  - templates/controller-service.yaml
+  - templates/controller-configmap.yaml
+  - templates/controller-ingress-class.yaml
+  - templates/controller-role.yaml
+  - templates/controller-wildcard-secret.yaml
+  - templates/controller-daemonset.yaml
+  - templates/controller-leader-election-configmap.yaml
+  - templates/controller-secret.yaml
+  - templates/_helpers.tpl
+  - templates/controller-deployment.yaml
+  - templates/controller-pdb.yaml
+  - templates/controller-serviceaccount.yaml
