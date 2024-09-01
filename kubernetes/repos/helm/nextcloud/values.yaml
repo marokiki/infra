@@ -1,6 +1,4 @@
 replicaCount: 1
-image:
-  tag: 27.1.3
 ingress:
   enabled: true
   className: nginx
@@ -82,10 +80,6 @@ externalDatabase:
 persistence:
   enabled: true
   existingClaim: nextcloud-pvc
-livenessProbe:
-  enabled: false
-readinessProbe:
-  enabled: false
 service:
   type: ClusterIP
   port: 80
