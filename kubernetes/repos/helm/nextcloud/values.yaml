@@ -72,7 +72,7 @@ nextcloud:
         'logfile' => 'nextcloud.log',
         'loglevel' => 0,
         'logdateformat' => 'F d, Y H:i:s',
-        'logtimezone' => 'Asia/Tokyo',
+        'logtimezone' => 'Asia/Tokyo'
       );
 internalDatabase:
   enabled: false
