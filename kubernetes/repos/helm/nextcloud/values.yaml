@@ -65,6 +65,15 @@ nextcloud:
         'forwarded_for_headers' => array('HTTP_X_FORWARDED_FOR'),
         'overwriteprotocol' => 'https',
       );
+    logging.config.php: |-
+      <?php
+      $CONFIG = array (
+        'log_type' => 'file',
+        'logfile' => '/var/log/nextcloud/nextcloud.log',
+        'loglevel' => 0,
+        'logdateformat' => 'F d, Y H:i:s',
+        'logtimezone' => 'Asia/Tokyo',
+      );
 internalDatabase:
   enabled: false
 externalDatabase:
