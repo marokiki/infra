@@ -3,7 +3,7 @@ expose:
   tls:
     enabled: true
     secret:
-      secretName: cloudflare-lets-encrypt-harbor
+      secretName: cloudflare-lets-encrypt-harbor-ingress
       hosts:
         - harbor.marokiki.net
   ingress:
