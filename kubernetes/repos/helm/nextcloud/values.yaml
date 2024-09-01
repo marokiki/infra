@@ -63,10 +63,11 @@ nextcloud:
       <?php
       $CONFIG = array (
         'log_type' => 'file',
-        'logfile' => 'nextcloud.log',
+        'logfile' => '/var/log/nextcloud.log',
         'loglevel' => 0,
-        'logdateformat' => 'F d, Y H:i:s',
+        'logdateformat' => 'F d, Y H:i:s'
       );
+
     proxy.config.php: |-
       <?php
       $CONFIG = array (
