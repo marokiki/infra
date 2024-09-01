@@ -35,6 +35,7 @@ internalTLS:
   #   secretName: cloudflare-lets-encrypt-harbor-internal-chartmuseum
 persistence:
   enabled: true
+externalURL: https://harbor.marokiki.net
 logLevel: debug
 database:
   type: external
