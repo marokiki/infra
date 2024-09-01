@@ -69,7 +69,7 @@ nextcloud:
       <?php
       $CONFIG = array (
         'log_type' => 'file',
-        'logfile' => '/var/log/nextcloud/nextcloud.log',
+        'logfile' => 'nextcloud.log',
         'loglevel' => 0,
         'logdateformat' => 'F d, Y H:i:s',
         'logtimezone' => 'Asia/Tokyo',
