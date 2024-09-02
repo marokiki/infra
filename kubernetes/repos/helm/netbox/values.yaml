@@ -89,7 +89,7 @@ ingress:
             service:
               name: netbox
               port:
-                number: 80
+                number: 8080
 housekeeping:
   enabled: true
 worker:
