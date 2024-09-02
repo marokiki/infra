@@ -82,14 +82,14 @@ ingress:
         - netbox.marokiki.net
   hosts:
     - host: netbox.marokiki.net
-      paths: 
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: netbox
-              port:
-                number: 8080
+      # paths: 
+      #   - path: /
+      #     pathType: Prefix
+      #     backend:
+      #       service:
+      #         name: netbox
+      #         port:
+      #           number: 8080
 housekeeping:
   enabled: true
 worker:
