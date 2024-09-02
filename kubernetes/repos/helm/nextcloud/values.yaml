@@ -53,15 +53,15 @@ nextcloud:
     usernameKey: nextcloud-username
     passwordKey: nextcloud-password
   datadir: /var/www/html/data
-  extraVolumes:
-    - name: nextcloud-nfs
-      nfs:
-        server: tatsumaki.marokiki.net
-        path: /share/md0/
-        readOnly: false
-  extraVolumeMounts:
-    - name: nextcloud-nfs
-      mountPath: /mnt/nfs
+  # extraVolumes:
+  #   - name: nextcloud-nfs
+  #     nfs:
+  #       server: tatsumaki.marokiki.net
+  #       path: /share/md0/
+  #       readOnly: false
+  # extraVolumeMounts:
+  #   - name: nextcloud-nfs
+  #     mountPath: /mnt/nfs
   extraSidecarContainers: 
     - name: nextcloud-logger
       image: busybox
