@@ -42,7 +42,7 @@ tasksRedis:
     # - redis-master.database.svc.cluster.local
   sentinelService: redis-master
   username: segre
-  # existingSecretName: redis-secret
+  existingSecretName: redis-secret
   existingSecretPasswordKey: redis-password
 cachingRedis:
   # database: 2
@@ -55,7 +55,7 @@ cachingRedis:
     # - redis-master.database.svc.cluster.local
   sentinelService: redis-master
   username: segre
-  # existingSecretName: redis-secret
+  existingSecretName: redis-secret
   existingSecretPasswordKey: redis-password
 externalRedis:
   existingSecretName: redis-secret
