@@ -42,6 +42,9 @@ ingress:
         - nextcloud.marokiki.net
   path: /
   pathType: Prefix
+phpClientHttpsFix:
+  enabled: true
+  protocol: https
 nextcloud:
   host: nextcloud.marokiki.net
   existingSecret:
@@ -50,12 +53,15 @@ nextcloud:
     usernameKey: nextcloud-username
     passwordKey: nextcloud-password
   datadir: /var/www/html/data
-  # extraVolumes:
-  #   - name: nextcloud-nfs
-  #     nfs:
-  #       server: tatsumaki.marokiki.net
-  #       path: /share/md0/nextcloud
-  #       readOnly: false
+  extraVolumes:
+    - name: nextcloud-nfs
+      nfs:
+        server: tatsumaki.marokiki.net
+        path: /share/md0/
+        readOnly: false
+  extraVolumeMounts:
+    - name: nextcloud-nfs
+      mountPath: /mnt/nfs
   extraSidecarContainers: 
     - name: nextcloud-logger
       image: busybox
