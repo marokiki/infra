@@ -1,28 +1,6 @@
 server:
   ingress:
-    enabled: true
-    ingressClassName: nginx
-    annotations:
-      meta.helm.sh/release-name: prometheus
-      meta.helm.sh/release-namespace: monitoring
-      nginx.ingress.kubernetes.io/auth-type: basic
-      nginx.ingress.kubernetes.io/ssl-redirect: 'true'
-      nginx.ingress.kubernetes.io/auth-secret: prometheus-basic-auth
-      nginx.ingress.kubernetes.io/auth-secret-type: auth-file
-      nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required '
-      nginx.ingress.kubernetes.io/proxy-body-size: 10000m
-      nginx.ingress.kubernetes.io/backend-protocol: HTTPS
-      kubernetes.io/tls-acme: "true"
-      kubernetes.io/ingress.class: nginx
-      cert-manager.io/cluster-issuer: letsencrypt-issuer
-    hosts:
-      - prometheus.marokiki.net 
-    path: /
-    pathType: Prefix
-    tls:
-      - secretName: cloudflare-lets-encrypt-prometheus
-        hosts:
-          - prometheus.marokiki.net
+    enabled: false
   persistentVolume:
     existingClaim: prometheus-pvc
   extraSecretMounts:
