@@ -29,36 +29,36 @@ externalDatabase:
   existingSecretName: netbox-secret
   existingSecretKey: postgres-password
 redis:
-  enabled: true
+  enabled: false
   # enabled: true
 #   global:
 #     defaultStorageClass: nfs-csi
 tasksRedis:
 #   database: 1
   ssl: true
-  # tasksRedis.insecureSkipTlsVerify: true
-  # host: redis-master.database.svc.cluster.local
-  # port: 6379
+  # insecureSkipTlsVerify: true
+  host: redis-master.database.svc.cluster.local
+  port: 6379
   # sentinels: 
     # - redis://redis-master.database.svc.cluster.local:6379
     # - redis-master.database.svc.cluster.local
-  # sentinelService: redis-master
-  # username: segre
-  # existingSecretName: redis-secret
-  # existingSecretKey: redis-password
+  sentinelService: redis-master
+  username: segre
+  existingSecretName: redis-secret
+  existingSecretKey: redis-password
 cachingRedis:
   # database: 2
   ssl: true
-  # tasksRedis.insecureSkipTlsVerify: true
-  # host: redis-master.database.svc.cluster.local
-  # port: 6379
+  # insecureSkipTlsVerify: true
+  host: redis-master.database.svc.cluster.local
+  port: 6379
   # sentinels: 
     # - redis://redis-master.database.svc.cluster.local:6379
     # - redis-master.database.svc.cluster.local
-  # sentinelService: redis-master
-  # username: segre
-  # existingSecretName: redis-secret
-  # existingSecretKey: redis-password
+  sentinelService: redis-master
+  username: segre
+  existingSecretName: redis-secret
+  existingSecretKey: redis-password
 persistence: 
   enabled: true
   existingClaim: netbox-pvc
