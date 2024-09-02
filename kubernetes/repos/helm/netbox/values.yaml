@@ -82,7 +82,7 @@ ingress:
         - netbox.marokiki.net
   hosts:
     - host: netbox.marokiki.net
-      # paths: 
+      paths: 
       #   - path: /
       #     pathType: Prefix
       #     backend:
