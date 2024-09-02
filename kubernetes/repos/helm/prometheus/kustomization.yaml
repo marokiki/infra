@@ -12,5 +12,4 @@ resources:
   - prometheus-pvc.yaml
   - alertmanager-pvc.yaml
   - sealed-secret.yaml
-  - sealed-secret.basic.yaml
   - helm.yaml
