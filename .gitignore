@@ -23,3 +23,4 @@ kubernetes/repos/helm/netbox/cert.netbox.pem
 kubernetes/repos/helm/netbox/secret.netbox.yaml
 postgres-secret
 secret.postgres.yaml
+secret.basic.yaml
