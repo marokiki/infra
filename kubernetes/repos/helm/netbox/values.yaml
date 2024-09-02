@@ -1,10 +1,5 @@
 replicaCount: 1
 dbWaitDebug: true
-image:
-  repository: netboxcommunity/netbox
-  pullPolicy: IfNotPresent
-cors:
-  originAllowAll: true
 superuser:
   name: segre
   email: segre@marokiki.net
