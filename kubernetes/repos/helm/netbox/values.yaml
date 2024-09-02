@@ -64,6 +64,7 @@ persistence:
   existingClaim: netbox-pvc
 service:
   type: ClusterIP
+  port: 8080
 ingress:
   enabled: true
   className: nginx
@@ -83,14 +84,13 @@ ingress:
   hosts:
     - host: netbox.marokiki.net
       paths: 
-        - /
-      #   - path: /
-      #     pathType: Prefix
-      #     backend:
-      #       service:
-      #         name: netbox
-      #         port:
-      #           number: 8080
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: netbox
+            port:
+              number: 8080
 housekeeping:
   enabled: true
 worker:
