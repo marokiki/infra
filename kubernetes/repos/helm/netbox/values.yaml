@@ -1,4 +1,4 @@
-replicaCount: 2
+replicaCount: 1
 dbWaitDebug: true
 image:
   repository: netboxcommunity/netbox
@@ -32,8 +32,8 @@ externalDatabase:
   existingSecretName: netbox-secret
   existingSecretKey: postgres-password
 redis:
-  # enabled: false
-  enabled: true
+  enabled: false
+  # enabled: true
 #   global:
 #     defaultStorageClass: nfs-csi
 tasksRedis:
