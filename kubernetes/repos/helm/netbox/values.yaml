@@ -27,8 +27,8 @@ externalDatabase:
   existingSecretName: netbox-secret
   existingSecretPasswordKey: postgres-password
 redis:
-  enabled: false
-  # enabled: true
+  # enabled: false
+  enabled: true
 #   global:
 #     defaultStorageClass: nfs-csi
 tasksRedis:
