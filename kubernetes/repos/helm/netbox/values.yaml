@@ -56,7 +56,7 @@ cachingRedis:
   sentinelService: redis-master
   username: segre
   existingSecretName: redis-secret
-  existingSecretPasswordKey: redis-caching-password
+  existingSecretPasswordKey: redis-cache-password
 externalRedis:
   existingSecretName: redis-secret
 persistence: 
