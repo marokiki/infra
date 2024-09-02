@@ -43,7 +43,7 @@ tasksRedis:
   sentinelService: redis-master
   username: segre
   existingSecretName: redis-secret
-  existingSecretPasswordKey: redis-password
+  existingSecretPasswordKey: redis-tasks-password
 cachingRedis:
   # database: 2
   ssl: true
@@ -56,7 +56,7 @@ cachingRedis:
   sentinelService: redis-master
   username: segre
   existingSecretName: redis-secret
-  existingSecretPasswordKey: redis-password
+  existingSecretPasswordKey: redis-caching-password
 externalRedis:
   existingSecretName: redis-secret
 persistence: 
