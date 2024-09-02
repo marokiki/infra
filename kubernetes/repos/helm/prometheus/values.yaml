@@ -1,6 +1,7 @@
 server:
   ingress:
     enabled: true
+    ingressClassName: nginx
     annotations:
       meta.helm.sh/release-name: prometheus
       meta.helm.sh/release-namespace: monitoring
