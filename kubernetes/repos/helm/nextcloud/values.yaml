@@ -95,7 +95,7 @@ persistence:
   enabled: true
   existingClaim: nextcloud-pvc
 livenessProbe:
-  enabled: true
+  enabled: false
 readinessProbe:
   enabled: false
 startupProbe:
