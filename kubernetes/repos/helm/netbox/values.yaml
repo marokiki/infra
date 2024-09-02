@@ -23,8 +23,8 @@ logging:
       level: DEBUG
   version: 1
 postgresql:
-  # enabled: false
-  enabled: true
+  enabled: false
+  # enabled: true
 externalDatabase:
   host: postgresql.database.svc.cluster.local
   database: netbox
