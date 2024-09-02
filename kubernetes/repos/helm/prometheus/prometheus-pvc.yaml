@@ -3,9 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: prometheus-pvc
 spec:
-  storageClassName: longhorn
+  storageClassName: nfs-csi
   accessModes:
     - ReadWriteMany
   resources:
     requests:
-      storage: 10Gi
+      storage: 3Gi

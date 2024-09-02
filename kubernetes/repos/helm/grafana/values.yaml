@@ -34,7 +34,7 @@ datasources:
 persistence:
   type: pvc
   enabled: true
-  storageClassName: longhorn
+  storageClassName: nfs-csi
 admin:
   existingSecret: grafana-secret
   userKey: admin-user
