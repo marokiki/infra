@@ -25,7 +25,7 @@ externalDatabase:
   database: netbox
   username: segre
   existingSecretName: netbox-secret
-  existingSecretPasswordKey: postgres-password
+  existingSecretKey: postgres-password
 redis:
   enabled: false
   # enabled: true
@@ -34,7 +34,7 @@ redis:
 tasksRedis:
 #   database: 1
   ssl: true
-  insecureSkipTlsVerify: true
+  # insecureSkipTlsVerify: true
   host: redis-master.database.svc.cluster.local
   port: 6379
   # sentinels: 
@@ -42,12 +42,12 @@ tasksRedis:
     # - redis-master.database.svc.cluster.local
   sentinelService: redis-master
   username: segre
-  # existingSecretName: redis-secret
-  existingSecretPasswordKey: redis-password
+  existingSecretName: redis-secret
+  existingSecretKey: redis-password
 cachingRedis:
   # database: 2
   ssl: true
-  insecureSkipTlsVerify: true
+  # insecureSkipTlsVerify: true
   host: redis-master.database.svc.cluster.local
   port: 6379
   # sentinels: 
@@ -55,17 +55,17 @@ cachingRedis:
     # - redis-master.database.svc.cluster.local
   sentinelService: redis-master
   username: segre
-  # existingSecretName: redis-secret
-  existingSecretPasswordKey: redis-password
-externalRedis:
   existingSecretName: redis-secret
+  existingSecretKey: redis-password
 persistence: 
   enabled: true
   existingClaim: netbox-pvc
+service:
+  type: ClusterIP
+  port: 8080
 ingress:
   enabled: true
-  ingressClassName: nginx
-  hostname: netbox.marokiki.net
+  className: nginx
   annotations:
     meta.helm.sh/release-name: netbox
     meta.helm.sh/release-namespace: netbox
@@ -75,10 +75,10 @@ ingress:
     kubernetes.io/tls-acme: "true"
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-issuer
-  tls: true
-    # - secretName: cloudflare-lets-encrypt-netbox
-    #   hosts:
-    #     - netbox.marokiki.net
+  tls:
+    - secretName: cloudflare-lets-encrypt-netbox
+      hosts:
+        - netbox.marokiki.net
   hosts:
     - host: netbox.marokiki.net
       paths: 
@@ -88,7 +88,7 @@ ingress:
           service:
             name: netbox
             port:
-              number: 80
+              number: 8080
 housekeeping:
   enabled: true
 worker:
