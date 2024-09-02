@@ -46,7 +46,7 @@ prometheus-node-exporter:
 extraScrapeConfigs: |
   - job_name: 'node'
     static_configs:
-    - targets
+    - targets:
       - 'flare.marokiki.net:9100'
       - 'ikazuchi.marokiki.net:9100'
       - 'manaka.marokiki.net:9100'
