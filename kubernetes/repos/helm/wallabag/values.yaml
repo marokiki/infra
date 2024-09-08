@@ -10,6 +10,21 @@ env:
       secretKeyRef:
         name: wallabag-secrets
         key: postgres-user
+  SYMFONY__ENV__MAILER_TRANSPORT: smtp
+  SYMFONY__ENV__MAILER_USER: 
+    valueFrom:
+      secretKeyRef:
+        name: wallabag-secrets
+        key: mailer-user
+  SYMFONY__ENV__MAILER_PASSWORD:
+    valueFrom:
+      secretKeyRef:
+        name: wallabag-secrets
+        key: mailer-password
+  SYMFONY__ENV__MAILER_HOST: smtp.gmail.com
+  SYMFONY__ENV__MAILER_PORT: 465
+  SYMFONY__ENV__MAILER_ENCRYPTION: ssl
+  SYMFONY__ENV__MAILER_AUTH_MODE: login
   SYMFONY__ENV__REDIS_HOST: redis-master.database.svc.cluster.local
   SYMFONY__ENV__REDIS_PORT: 6379
   SYMFONY__ENV__DOMAIN_NAME: https://wallabag.marokiki.net
