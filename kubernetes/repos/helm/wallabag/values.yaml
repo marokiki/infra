@@ -12,7 +12,7 @@ env:
         key: postgres-user
   SYMFONY__ENV__REDIS_HOST: redis-master.database.svc.cluster.local
   SYMFONY__ENV__REDIS_PORT: 6379
-  SYMFONY__ENV__DOMAIN_NAME: wallabag.marokiki.net
+  SYMFONY__ENV__DOMAIN_NAME: https://wallabag.marokiki.net
   SYMFONY__ENV__REDIS_PASSWORD:
     valueFrom:
       secretKeyRef:
@@ -24,7 +24,7 @@ ingress:
     annotations:
       meta.helm.sh/release-name: wallabag
       meta.helm.sh/release-namespace: article
-      # nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+      nginx.ingress.kubernetes.io/ssl-redirect: 'true'
       nginx.ingress.kubernetes.io/proxy-body-size: 10000m
       # nginx.ingress.kubernetes.io/backend-protocol: HTTPS
       kubernetes.io/tls-acme: "true"
