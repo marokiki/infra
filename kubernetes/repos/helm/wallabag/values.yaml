@@ -12,6 +12,7 @@ env:
         key: postgres-user
   SYMFONY__ENV__REDIS_HOST: redis-master.database.svc.cluster.local
   SYMFONY__ENV__REDIS_PORT: 6379
+  SYMFONY__ENV__DOMAIN_NAME: wallabag.marokiki.net
   SYMFONY__ENV__REDIS_PASSWORD:
     valueFrom:
       secretKeyRef:
