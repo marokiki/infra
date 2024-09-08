@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: article
+configMapGenerator:
+  - name: values
+    namespace: article
+    files:
+      - values.yaml
+configurations:
+  - kustomizeconfig.yaml
+resources:
+  - helm.yaml
+  - sealed-secret.yaml

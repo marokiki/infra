@@ -1,0 +1,25 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: k8s-at-home
+spec:
+  interval: 10m0s
+  url: https://geek-cookbook.github.io/charts/
+  timeout: 3m0s
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: wallabag
+spec:
+  interval: 1m0s
+  chart:
+    spec:
+      chart: wallabag
+      version: 7.2.0
+      sourceRef:
+        kind: HelmRepository
+        name: k8s-at-home
+  valuesFrom:
+  - kind: ConfigMap
+    name: values

@@ -123,3 +123,12 @@ metadata:
     kubernetes.io/metadata.name: nginx-ingress
     kustomize.toolkit.fluxcd.io/name: namespaces
     kustomize.toolkit.fluxcd.io/namespace: flux-system
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: article
+  labels:
+    kubernetes.io/metadata.name: article
+    kustomize.toolkit.fluxcd.io/name: namespaces
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
