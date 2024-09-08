@@ -35,6 +35,9 @@ ingress:
         paths: 
           - path: /
             pathType: Prefix
+            service:
+              name: wallabag
+              port: 80
     tls:
       - secretName: cloudflare-lets-encrypt-wallabag
         hosts:
@@ -46,3 +49,9 @@ probes:
     enabled: false
   readiness:
     enabled: false
+service:
+  main:
+    ports:
+      http:
+        port: 80
+        targetPort: 80
