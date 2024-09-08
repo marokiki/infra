@@ -23,7 +23,7 @@ ingress:
     annotations:
       meta.helm.sh/release-name: wallabag
       meta.helm.sh/release-namespace: article
-      nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+      # nginx.ingress.kubernetes.io/ssl-redirect: 'true'
       nginx.ingress.kubernetes.io/proxy-body-size: 10000m
       nginx.ingress.kubernetes.io/backend-protocol: HTTPS
       kubernetes.io/tls-acme: "true"
