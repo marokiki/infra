@@ -25,6 +25,11 @@ env:
   SYMFONY__ENV__MAILER_PORT: 465
   SYMFONY__ENV__MAILER_ENCRYPTION: ssl
   SYMFONY__ENV__MAILER_AUTH_MODE: login
+  SYMFONY__ENV__FROM_EMAIL: 
+    valuesFrom:
+      secretKeyRef:
+        name: wallabag-secrets
+        key: mailer-user
   SYMFONY__ENV__REDIS_HOST: redis-master.database.svc.cluster.local
   SYMFONY__ENV__REDIS_PORT: 6379
   SYMFONY__ENV__DOMAIN_NAME: https://wallabag.marokiki.net
