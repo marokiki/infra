@@ -11,3 +11,7 @@
     dest: "{{ home_dir }}/.vimrc"
     force: yes
     
+- name: make vim directory for undo
+  file:
+    path: "{{ home_dir }}/.vim/undo"
+    state: directory
