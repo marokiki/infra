@@ -37,7 +37,6 @@ set noswapfile
 set nofoldenable
 set title
 set number
-set clipboard=unnamed,autoselect
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 syntax on
 set nrformats=
@@ -72,4 +71,9 @@ if has("autocmd")
     \   exe "normal! g'\"" |
     \ endif
   augroup END
+endif
+
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
 endif
