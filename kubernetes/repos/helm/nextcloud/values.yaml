@@ -4,7 +4,7 @@ ingress:
   className: nginx
   annotations:
     meta.helm.sh/release-name: nextcloud
-    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "false"
     # nginx.ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     kubernetes.io/tls-acme: "true"
@@ -85,6 +85,7 @@ nextcloud:
           1 => '106.178.114.91/32',
         ),
         'forwarded_for_headers' => array('HTTP_X_FORWARDED_FOR'),
+        'forcessl' => true,
         'overwriteprotocol' => 'https',
       );
 
