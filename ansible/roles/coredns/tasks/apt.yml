@@ -10,21 +10,28 @@
 
 - name: Install coredns with binary
   ansible.builtin.get_url:
-    url: https://github.com/coredns/coredns/releases/download/v1.11.1/coredns_1.11.1_linux_arm64.tgz
-    dest: /tmp/coredns_1.11.1_linux_arm64.tgz
+    url: https://github.com/coredns/coredns/releases/download/v1.12.1/coredns_1.12.1_linux_amd64.tgz
+    dest: /tmp/coredns_1.12.1_linux_amd64.tgz
   when: not coredns.stat.exists
+
+- name: Ensure destination directory for coredns exists
+  ansible.builtin.file:
+    path: /tmp/coredns_1.12.1_linux_amd64
+    state: directory
+    mode: '0755'
 
 - name: Extract coredns
   ansible.builtin.unarchive:
-    src: /tmp/coredns_1.11.1_linux_arm64.tgz
-    dest: /tmp/coredns_1.11.1_linux_arm64
+    src: /tmp/coredns_1.12.1_linux_amd64.tgz
+    dest: /tmp/coredns_1.12.1_linux_amd64
     remote_src: yes
   when: not coredns.stat.exists
 
 - name: Copy coredns to /usr/local/bin
   ansible.builtin.copy:
-    src: /tmp/coredns_1.11.1_linux_arm64/coredns
+    src: /tmp/coredns_1.12.1_linux_amd64/coredns
     dest: /usr/local/bin/coredns
     mode: 0755
+    remote_src: yes
   become: true
   when: not coredns.stat.exists

@@ -11,7 +11,7 @@
 192.168.20.103 manaka.marokiki.net
 192.168.20.104 aroma.marokiki.net
 192.168.20.106 tatsumaki.marokiki.net
-192.168.20.107 anna.marokiki.net
+192.168.20.107 fs.marokiki.net
 192.168.20.108 emo.marokiki.net
 192.168.20.110 takenoko.marokiki.net
 192.168.20.115 takenoko.marokiki.net
@@ -35,7 +35,7 @@
 192.168.20.201 prometheus.marokiki.net
 192.168.20.201 grafana.marokiki.net
 
-192.168.20.107 www.marokiki.net
+192.168.20.107 fs.marokiki.net
 
 240b:250:9800:4a20::1 goto.marokiki.net
 240b:250:9800:4a20::11 yaku-1.marokiki.net
@@ -48,7 +48,7 @@
 240b:250:9800:4a20::103 manaka.marokiki.net
 240b:250:9800:4a20::104 aroma.marokiki.net
 240b:250:9800:4a20::106 tatsumaki.marokiki.net
-240b:250:9800:4a20::107 anna.marokiki.net
+240b:250:9800:4a20::107 fs.marokiki.net
 240b:250:9800:4a20::108 emo.marokiki.net
 240b:250:9800:4a20::111 takenoko-1.marokiki.net
 240b:250:9800:4a20::112 takenoko-2.marokiki.net

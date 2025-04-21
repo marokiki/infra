@@ -5,3 +5,6 @@ bridge: false
 bridge_name:
 ipv6: true
 ipv6_network: "::104"
+ansible_ssh_user: root
+home_dir : /root
+user_name : root
