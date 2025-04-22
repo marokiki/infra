@@ -10,10 +10,11 @@
 192.168.20.102 web.marokiki.net
 192.168.20.103 manaka.marokiki.net
 192.168.20.104 aroma.marokiki.net
-192.168.20.105 jenkins.marokiki.net
+192.168.20.105 ci.marokiki.net
 192.168.20.106 tatsumaki.marokiki.net
 192.168.20.107 fs.marokiki.net
-192.168.20.108 emo.marokiki.net
+192.168.20.108 nc.marokiki.net
+192.168.20.109 wg.marokiki.net
 192.168.20.110 takenoko.marokiki.net
 192.168.20.115 takenoko.marokiki.net
 192.168.20.111 takenoko-1.marokiki.net
@@ -27,15 +28,6 @@
 
 192.168.20.199 Anago.marokiki.net
 
-192.168.20.201 netbox.marokiki.net
-192.168.20.201 longhorn.marokiki.net
-192.168.20.201 ingress-nginx.marokiki.net
-192.168.20.201 kubernetes-dashboard.marokiki.net
-192.168.20.201 le4db.marokiki.net
-192.168.20.201 nextcloud.marokiki.net
-192.168.20.201 prometheus.marokiki.net
-192.168.20.201 grafana.marokiki.net
-
 240b:250:9800:4a20::1 goto.marokiki.net
 240b:250:9800:4a20::11 yaku-1.marokiki.net
 240b:250:9800:4a20::12 yaku-2.marokiki.net
@@ -46,10 +38,11 @@
 240b:250:9800:4a20::102 web.marokiki.net
 240b:250:9800:4a20::103 manaka.marokiki.net
 240b:250:9800:4a20::104 aroma.marokiki.net
-240b:250:9800:4a20::105 jenkins.marokiki.net
+240b:250:9800:4a20::105 ci.marokiki.net
 240b:250:9800:4a20::106 tatsumaki.marokiki.net
 240b:250:9800:4a20::107 fs.marokiki.net
-240b:250:9800:4a20::108 emo.marokiki.net
+240b:250:9800:4a20::108 nc.marokiki.net
+240b:250:9800:4a20::109 wg.marokiki.net
 240b:250:9800:4a20::111 takenoko-1.marokiki.net
 240b:250:9800:4a20::112 takenoko-2.marokiki.net
 240b:250:9800:4a20::113 takenoko-3.marokiki.net
