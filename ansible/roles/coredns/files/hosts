@@ -35,8 +35,6 @@
 192.168.20.201 prometheus.marokiki.net
 192.168.20.201 grafana.marokiki.net
 
-192.168.20.107 fs.marokiki.net
-
 240b:250:9800:4a20::1 goto.marokiki.net
 240b:250:9800:4a20::11 yaku-1.marokiki.net
 240b:250:9800:4a20::12 yaku-2.marokiki.net
