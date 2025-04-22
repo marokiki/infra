@@ -14,7 +14,5 @@
     - role: resolved
     - role: sshd
     - role: vim
-    - role: tmux
     - role: zsh
-    - role: node_exporter
     - role: coredns

@@ -14,3 +14,30 @@
   loop:
     - nfs-kernel-server
   when: ansible_distribution in ['Debian', 'Ubuntu']
+
+- name: Setup nfs exports
+  copy:
+    src: nfs_exports
+    dest: /etc/exports
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Start nfs server
+  systemd:
+    name: "{{ item }}"
+    enabled: true
+    state: started
+  loop:
+    - nfs-kernel-server
+  when: ansible_distribution in ['Debian', 'Ubuntu']
+
+- name: Start nfs server
+  systemd:
+    name: "{{ item }}"
+    enabled: true
+    state: started
+  loop:
+    - nfs-server
+    - rpcbind
+  when: ansible_distribution == 'Archlinux'

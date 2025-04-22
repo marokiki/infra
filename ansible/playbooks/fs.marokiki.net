@@ -1,5 +1,5 @@
 ---
-- hosts: aroma.marokiki.net
+- hosts: fs.marokiki.net
   become: no
 
   roles:
@@ -16,3 +16,4 @@
     - role: sshd
     - role: vim
     - role: zsh
+    - role: nfs
