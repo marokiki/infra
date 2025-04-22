@@ -7,9 +7,10 @@
 192.168.20.31 mikura.marokiki.net
 192.168.20.32 izu.marokiki.net
 192.168.20.101 flare.marokiki.net
-192.168.20.102 ikazuchi.marokiki.net
+192.168.20.102 web.marokiki.net
 192.168.20.103 manaka.marokiki.net
 192.168.20.104 aroma.marokiki.net
+192.168.20.105 jenkins.marokiki.net
 192.168.20.106 tatsumaki.marokiki.net
 192.168.20.107 fs.marokiki.net
 192.168.20.108 emo.marokiki.net
@@ -42,9 +43,10 @@
 240b:250:9800:4a20::22 koshiki-2.marokiki.net
 240b:250:9800:4a20::31 mikura.marokiki.net
 240b:250:9800:4a20::32 izu.marokiki.net
-240b:250:9800:4a20::102 ikazuchi.marokiki.net
+240b:250:9800:4a20::102 web.marokiki.net
 240b:250:9800:4a20::103 manaka.marokiki.net
 240b:250:9800:4a20::104 aroma.marokiki.net
+240b:250:9800:4a20::105 jenkins.marokiki.net
 240b:250:9800:4a20::106 tatsumaki.marokiki.net
 240b:250:9800:4a20::107 fs.marokiki.net
 240b:250:9800:4a20::108 emo.marokiki.net
