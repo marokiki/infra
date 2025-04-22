@@ -6,6 +6,7 @@
   loop:
     - nfs-utils
   when: ansible_distribution == 'Archlinux'
+  become: true
 
 - name: Install nfs
   apt:
@@ -14,14 +15,16 @@
   loop:
     - nfs-kernel-server
   when: ansible_distribution in ['Debian', 'Ubuntu']
+  become: true
 
 - name: Setup nfs exports
   copy:
-    src: nfs_exports
+    src: exports
     dest: /etc/exports
     owner: root
     group: root
     mode: 0644
+  become: true
 
 - name: Start nfs server
   systemd:
@@ -31,6 +34,7 @@
   loop:
     - nfs-kernel-server
   when: ansible_distribution in ['Debian', 'Ubuntu']
+  become: true
 
 - name: Start nfs server
   systemd:
@@ -41,3 +45,4 @@
     - nfs-server
     - rpcbind
   when: ansible_distribution == 'Archlinux'
+  become: true
