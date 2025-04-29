@@ -54,3 +54,59 @@
 
 240b:250:9800:4a20::199 Anago.marokiki.net
 
+192.168.20.1 goto.i.marokiki.net
+192.168.20.2 takashima.i.marokiki.net
+192.168.20.11 yaku-1.i.marokiki.net
+192.168.20.12 yaku-2.i.marokiki.net
+192.168.20.21 koshiki-1.i.marokiki.net
+192.168.20.22 koshiki-2.i.marokiki.net
+192.168.20.31 mikura.i.marokiki.net
+192.168.20.32 izu.i.marokiki.net
+192.168.20.101 flare.i.marokiki.net
+192.168.20.102 web.i.marokiki.net
+192.168.20.103 manaka.i.marokiki.net
+192.168.20.104 aroma.i.marokiki.net
+192.168.20.105 ci.i.marokiki.net
+192.168.20.106 tatsumaki.i.marokiki.net
+192.168.20.107 fs.i.marokiki.net
+192.168.20.108 nc.i.marokiki.net
+192.168.20.109 wg.i.marokiki.net
+192.168.20.110 takenoko.i.marokiki.net
+192.168.20.115 takenoko.i.marokiki.net
+192.168.20.111 takenoko-1.i.marokiki.net
+192.168.20.112 takenoko-2.i.marokiki.net
+192.168.20.113 takenoko-3.i.marokiki.net
+192.168.20.115 kinoko-1.i.marokiki.net
+192.168.20.116 kinoko-2.i.marokiki.net
+192.168.20.121 akatsuki-1.i.marokiki.net
+192.168.20.122 akatsuki-2.i.marokiki.net
+192.168.20.123 chii.i.marokiki.net
+
+192.168.20.199 Anago.i.marokiki.net
+
+240b:250:9800:4a20::1 goto.i.marokiki.net
+240b:250:9800:4a20::11 yaku-1.i.marokiki.net
+240b:250:9800:4a20::12 yaku-2.i.marokiki.net
+240b:250:9800:4a20::21 koshiki-1.i.marokiki.net
+240b:250:9800:4a20::22 koshiki-2.i.marokiki.net
+240b:250:9800:4a20::31 mikura.i.marokiki.net
+240b:250:9800:4a20::32 izu.i.marokiki.net
+240b:250:9800:4a20::102 web.i.marokiki.net
+240b:250:9800:4a20::103 manaka.i.marokiki.net
+240b:250:9800:4a20::104 aroma.i.marokiki.net
+240b:250:9800:4a20::105 ci.i.marokiki.net
+240b:250:9800:4a20::106 tatsumaki.i.marokiki.net
+240b:250:9800:4a20::107 fs.i.marokiki.net
+240b:250:9800:4a20::108 nc.i.marokiki.net
+240b:250:9800:4a20::109 wg.i.marokiki.net
+240b:250:9800:4a20::111 takenoko-1.i.marokiki.net
+240b:250:9800:4a20::112 takenoko-2.i.marokiki.net
+240b:250:9800:4a20::113 takenoko-3.i.marokiki.net
+240b:250:9800:4a20::115 kinoko-1.i.marokiki.net
+240b:250:9800:4a20::116 kinoko-2.i.marokiki.net
+240b:250:9800:4a20::121 akatsuki-1.i.marokiki.net
+240b:250:9800:4a20::122 akatsuki-2.i.marokiki.net
+240b:250:9800:4a20::123 chii.i.marokiki.net
+
+240b:250:9800:4a20::199 Anago.i.marokiki.net
+
