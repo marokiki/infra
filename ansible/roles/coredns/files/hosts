@@ -1,11 +1,7 @@
 192.168.20.1 goto.marokiki.net
 192.168.20.2 takashima.marokiki.net
-192.168.20.11 yaku-1.marokiki.net
-192.168.20.12 yaku-2.marokiki.net
-192.168.20.21 koshiki-1.marokiki.net
-192.168.20.22 koshiki-2.marokiki.net
-192.168.20.31 mikura.marokiki.net
-192.168.20.32 izu.marokiki.net
+192.168.20.3 tsushima.marokiki.net
+
 192.168.20.101 flare.marokiki.net
 192.168.20.102 web.marokiki.net
 192.168.20.103 manaka.marokiki.net
@@ -15,26 +11,20 @@
 192.168.20.107 fs.marokiki.net
 192.168.20.108 nc.marokiki.net
 192.168.20.109 wg.marokiki.net
-192.168.20.110 takenoko.marokiki.net
-192.168.20.115 takenoko.marokiki.net
+192.168.20.110 cr.marokiki.net
 192.168.20.111 takenoko-1.marokiki.net
 192.168.20.112 takenoko-2.marokiki.net
 192.168.20.113 takenoko-3.marokiki.net
-192.168.20.115 kinoko-1.marokiki.net
-192.168.20.116 kinoko-2.marokiki.net
-192.168.20.121 akatsuki-1.marokiki.net
-192.168.20.122 akatsuki-2.marokiki.net
-192.168.20.123 chii.marokiki.net
+192.168.20.115 rms.marokiki.net
 
 192.168.20.199 Anago.marokiki.net
 
+
 240b:250:9800:4a20::1 goto.marokiki.net
-240b:250:9800:4a20::11 yaku-1.marokiki.net
-240b:250:9800:4a20::12 yaku-2.marokiki.net
-240b:250:9800:4a20::21 koshiki-1.marokiki.net
-240b:250:9800:4a20::22 koshiki-2.marokiki.net
-240b:250:9800:4a20::31 mikura.marokiki.net
-240b:250:9800:4a20::32 izu.marokiki.net
+240b:250:9800:4a20::2 takashima.marokiki.net
+240b:250:9800:4a20::3 takashima.marokiki.net
+
+240b:250:9800:4a20::101 flare.marokiki.net
 240b:250:9800:4a20::102 web.marokiki.net
 240b:250:9800:4a20::103 manaka.marokiki.net
 240b:250:9800:4a20::104 aroma.marokiki.net
@@ -43,14 +33,11 @@
 240b:250:9800:4a20::107 fs.marokiki.net
 240b:250:9800:4a20::108 nc.marokiki.net
 240b:250:9800:4a20::109 wg.marokiki.net
+240b:250:9800:4a20::110 cr.marokiki.net
 240b:250:9800:4a20::111 takenoko-1.marokiki.net
 240b:250:9800:4a20::112 takenoko-2.marokiki.net
 240b:250:9800:4a20::113 takenoko-3.marokiki.net
-240b:250:9800:4a20::115 kinoko-1.marokiki.net
-240b:250:9800:4a20::116 kinoko-2.marokiki.net
-240b:250:9800:4a20::121 akatsuki-1.marokiki.net
-240b:250:9800:4a20::122 akatsuki-2.marokiki.net
-240b:250:9800:4a20::123 chii.marokiki.net
+240b:250:9800:4a20::115 rms.marokiki.net
 
 240b:250:9800:4a20::199 Anago.marokiki.net
 
