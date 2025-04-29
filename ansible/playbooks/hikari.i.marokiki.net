@@ -1,18 +1,19 @@
 ---
-- hosts: aroma.marokiki.net
+- hosts: hikari.i.marokiki.net
   become: no
 
   roles:
-    - role: essentials
-    - role: apt-update
-      when: ansible_distribution in ['Debian', 'Ubuntu']
     - role: yay-update
       when: ansible_distribution in ['Archlinux']
+    - role: apt-update
+      when: ansible_distribution in ['Debian', 'Ubuntu']
+    - role: essentials
     - role: networkd
       vars_files:
         - ../host_vars/{{ ansible_hostname }}
     - role: resolved
     - role: sshd
     - role: vim
+    - role: tmux
     - role: zsh
-    - role: coredns
+    - role: node_exporter

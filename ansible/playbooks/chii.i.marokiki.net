@@ -1,19 +1,21 @@
 ---
-- hosts: fs.marokiki.net
-  become: no
+- hosts: chii.i.marokiki.net
+  become: false
 
   roles:
-    - role: essentials
-    - role: qemu-guest-agent
-    - role: apt-update
-      when: ansible_distribution in ['Debian', 'Ubuntu']
     - role: yay-update
       when: ansible_distribution in ['Archlinux']
+    # - role: apt-update
+    #   when: ansible_distribution in ['Debian', 'Ubuntu']
+    - role: essentials
     - role: networkd
       vars_files:
         - ../host_vars/{{ ansible_hostname }}
     - role: resolved
     - role: sshd
     - role: vim
+    - role: tmux
     - role: zsh
-    - role: nfs
+    - role: node_exporter
+
+

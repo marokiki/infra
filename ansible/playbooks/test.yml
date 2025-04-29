@@ -4,5 +4,4 @@
 
   roles:
     - role: coredns
-      when: inventory_hostname == 'aroma.marokiki.net'
-
+      when: inventory_hostname == 'aroma.i.marokiki.net'

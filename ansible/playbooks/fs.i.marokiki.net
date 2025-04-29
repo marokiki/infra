@@ -1,19 +1,19 @@
 ---
-- hosts: hikari.marokiki.net
+- hosts: fs.i.marokiki.net
   become: no
 
   roles:
-    - role: yay-update
-      when: ansible_distribution in ['Archlinux']
+    - role: essentials
+    - role: qemu-guest-agent
     - role: apt-update
       when: ansible_distribution in ['Debian', 'Ubuntu']
-    - role: essentials
+    - role: yay-update
+      when: ansible_distribution in ['Archlinux']
     - role: networkd
       vars_files:
         - ../host_vars/{{ ansible_hostname }}
     - role: resolved
     - role: sshd
     - role: vim
-    - role: tmux
     - role: zsh
-    - role: node_exporter
+    - role: nfs

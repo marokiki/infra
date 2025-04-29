@@ -1,5 +1,5 @@
 ---
-- hosts: takenoko-3.marokiki.net
+- hosts: akatsuki-1.i.marokiki.net
   become: false
 
   roles:
@@ -12,7 +12,7 @@
       vars_files:
         - ../host_vars/{{ ansible_hostname }}
     - role: resolved
-      when: inventory_hostname != 'aroma.marokiki.net'
+      when: inventory_hostname != 'aroma.i.marokiki.net'
     - role: sshd
     - role: vim
     - role: tmux
