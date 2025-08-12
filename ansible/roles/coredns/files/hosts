@@ -18,7 +18,7 @@
 192.168.20.114 klee.i.marokiki.net
 192.168.20.115 netbox.i.marokiki.net
 192.168.20.116 grafana.i.marokiki.net
-192.168.20.117 shindan.i.marokiki.net
+192.168.20.117 sindan.i.marokiki.net
 
 192.168.20.199 Anago.i.marokiki.net
 
@@ -43,6 +43,6 @@
 240b:250:9800:4a20::114 klee.i.marokiki.net
 240b:250:9800:4a20::115 netbox.i.marokiki.net
 240b:250:9800:4a20::116 grafana.i.marokiki.net
-240b:250:9800:4a20::117 shindan.i.marokiki.net
+240b:250:9800:4a20::117 sindan.i.marokiki.net
 
 240b:250:9800:4a20::199 Anago.i.marokiki.net
